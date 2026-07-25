@@ -14,17 +14,12 @@
   const submitBtn = form.querySelector('[type="submit"]');
   const statusEl = document.getElementById('form-status');
 
-  /** Human-readable labels for stored interest values (CIR / policy roadmap). */
+  /** Human-readable labels for stored interest values. */
   const INTEREST_LABELS = {
-    planning_map: '周邊 S16／規劃申請地圖（免費）',
-    policy_ib_cs: '活化工廈／強拍門檻提示（本頁參考 · App 開發中）',
-    policy_ozp_col: 'OZP 柱一／柱二用途提示（本頁參考 · App 開發中）',
-    note_ai_improve: 'AI 整理現場筆記（Premium）',
-    pdf_brochure: '可分享 PDF（含周邊 S16 與政策摘要）（Premium）',
-    planning_alerts: '關注樓宇／範圍有新申請推送（Premium）',
-    lot_boundary: '地段／界線搜尋（意向）',
-    gfa_estimate: 'GFA／地積比估算（意向）',
-    white_label_pdf: '品牌／White-label PDF（意向）',
+    planning_map: '規劃申請地圖（免費）',
+    note_ai_improve: 'AI 整理筆記（Premium）',
+    pdf_brochure: '可分享 PDF（Premium）',
+    planning_alerts: '規劃申請通知（Premium）',
     note_templates: '五類 workflow 筆記',
     ai_faq: 'AI 物業問答',
   };
@@ -68,7 +63,6 @@
       name: String(data.get('name') || '').trim(),
       email: String(data.get('email') || '').trim(),
       role: String(data.get('role') || '').trim(),
-      focus: String(data.get('focus') || '').trim(),
       district: String(data.get('district') || '').trim(),
       interests: interests.join(', '),
       interestLabels: interestLabels.join(' · '),

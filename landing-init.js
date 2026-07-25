@@ -9,11 +9,6 @@
     planning_alerts: 'planning_alerts',
     ozp: 'planning_alerts',
     planning_map: 'planning_map',
-    policy_ib_cs: 'policy_ib_cs',
-    policy_ozp_col: 'policy_ozp_col',
-    lot_boundary: 'lot_boundary',
-    gfa_estimate: 'gfa_estimate',
-    white_label_pdf: 'white_label_pdf',
   };
 
   /**

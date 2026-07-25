@@ -620,74 +620,9 @@ select:focus-visible {
   color: var(--premium);
 }
 
-/* Reference / roadmap badge — honest shipping status for LP-only content */
-.tier-badge--ref {
-  background: var(--surface-soft);
-  color: var(--muted);
-  border: 1px solid var(--line);
-}
-
 /* Deprecated: use .point-card-footer instead */
 .tier-badge--inline {
   margin-top: 10px;
-}
-
-/* Policy Cheatsheet: three short cards + disclaimer (progressive disclosure) */
-.policy-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 28px;
-}
-
-@media (min-width: 768px) {
-  .policy-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.policy-card {
-  padding: 22px 20px;
-}
-
-.policy-card h3 {
-  margin: 0 0 10px;
-  font-size: var(--text-xl);
-}
-
-.policy-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: var(--text-base);
-}
-
-.policy-note {
-  margin-top: 12px !important;
-  font-size: 0.9375rem !important;
-  color: var(--text) !important;
-}
-
-.policy-disclaimer {
-  margin: 24px auto 0;
-  max-width: 52rem;
-  padding: 14px 18px;
-  border-radius: var(--radius-sm);
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.pain-grid--3 {
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-  .pain-grid--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 /* Planning callout + feature CTA row */
