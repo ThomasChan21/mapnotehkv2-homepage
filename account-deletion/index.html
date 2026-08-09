@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MapNoteHK — Account deletion</title>
+  <meta name="description" content="Request deletion of your MapNoteHK account and associated personal data." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body>
+  <!--
+    Apple 5.1.1(v) / Google Play: this path must open the deletion form directly.
+    In-app Delete account opens https://mapnotehk.com/account-deletion
+  -->
+  <a class="skip-link" href="#main">Skip</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="delete-page">
+    <div class="container">
+      <div class="delete-card">
+        <div class="delete-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18" />
+            <path d="M8 6V4h8v2" />
+            <path d="M19 6l-1 14H6L5 6" />
+            <path d="M10 11v6M14 11v6" />
+          </svg>
+        </div>
+        <h1 data-i18n="delete.title"></h1>
+        <p class="lead" data-i18n="delete.lead"></p>
+
+        <form id="account-deletion-form" class="form-stack" novalidate>
+          <label>
+            <span data-i18n="delete.email"></span>
+            <input
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              data-i18n-placeholder="delete.emailPh"
+            />
+          </label>
+          <label>
+            <span data-i18n="delete.phone"></span>
+            <input
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              data-i18n-placeholder="delete.phonePh"
+            />
+          </label>
+          <label>
+            <span data-i18n="delete.reason"></span>
+            <select name="reason" required>
+              <option value="" data-i18n="delete.reasonDefault"></option>
+              <option value="unused" data-i18n="delete.reasonUnused"></option>
+              <option value="privacy" data-i18n="delete.reasonPrivacy"></option>
+              <option value="alternative" data-i18n="delete.reasonAlt"></option>
+              <option value="other" data-i18n="delete.reasonOther"></option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="delete.detail"></span>
+            <textarea
+              name="detail"
+              data-i18n-placeholder="delete.detailPh"
+            ></textarea>
+          </label>
+          <button class="btn btn-danger" type="submit" data-i18n="delete.submit"></button>
+          <p id="delete-form-status" class="form-status" hidden></p>
+        </form>
+        <p class="delete-note" data-i18n="delete.note"></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    window.MapNotePage = { base: '../', active: '' };
+  </script>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/chrome.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/site.js"></script>
+</body>
+</html>
