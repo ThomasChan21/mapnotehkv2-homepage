@@ -116,7 +116,7 @@ window.MapNoteI18n = {
         '已收到你的刪除請求。我們目標於 1–2 個工作天內處理，並刪除帳戶及相關資料。',
       'delete.error': '提交失敗，請稍後再試或電郵 support@mapnotehk.com。',
       'delete.note':
-        '刪除帳戶時，我們會一併移除相關個人資料（包括筆記與媒體），不會只刪帳號而留下 PII。',
+        '刪除帳戶時，我們會一併移除與你帳號相關的資料（例如電郵、電話、筆記與相片／影片等），不會只刪帳號而留下這些資料。',
     },
     en: {
       'meta.homeTitle': 'MapNoteHK | Map notes for Hong Kong property pros',
@@ -231,7 +231,7 @@ window.MapNoteI18n = {
         'We received your deletion request. We aim to process it within 1–2 business days and erase the account and associated data.',
       'delete.error': 'Submission failed. Try again later or email support@mapnotehk.com.',
       'delete.note':
-        'When we delete an account, we also remove associated personal data (including notes and media). We do not keep PII after account removal.',
+        'When we delete your account, we also remove data linked to it (such as your email, phone number, notes, and photos/videos). We do not keep that information after the account is removed.',
     },
   },
 };
