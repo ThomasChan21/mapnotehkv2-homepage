@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MapNoteHK — Contact</title>
+  <meta name="description" content="Contact MapNoteHK." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1 data-i18n="contact.title"></h1>
+        <p data-i18n="contact.lead"></p>
+      </div>
+
+      <div class="contact-layout">
+        <section class="panel">
+          <ul class="contact-list">
+            <li>
+              <span data-i18n="contact.phoneLabel"></span>
+              <a id="contact-phone" href="#"></a>
+            </li>
+            <li>
+              <span data-i18n="contact.emailLabel"></span>
+              <a id="contact-email" href="mailto:support@mapnotehk.com">support@mapnotehk.com</a>
+            </li>
+            <li>
+              <span data-i18n="contact.addressLabel"></span>
+              <div id="contact-address"></div>
+            </li>
+          </ul>
+          <h3 data-i18n="contact.mapTitle"></h3>
+          <iframe
+            id="contact-map"
+            class="map-frame"
+            title="MapNoteHK location"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+
+        <section class="panel">
+          <h3 data-i18n="contact.formTitle"></h3>
+          <form id="contact-form" class="form-stack" novalidate>
+            <label>
+              <span data-i18n="contact.name"></span>
+              <input name="name" type="text" required autocomplete="name" />
+            </label>
+            <label>
+              <span data-i18n="contact.email"></span>
+              <input name="email" type="email" required autocomplete="email" />
+            </label>
+            <label>
+              <span data-i18n="contact.message"></span>
+              <textarea name="message" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit" data-i18n="contact.submit"></button>
+            <p id="contact-form-status" class="form-status" hidden></p>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    window.MapNotePage = { base: '../', active: 'contact' };
+  </script>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/chrome.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/site.js"></script>
+</body>
+</html>

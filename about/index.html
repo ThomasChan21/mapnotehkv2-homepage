@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MapNoteHK — About</title>
+  <meta name="description" content="About MapNoteHK." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1 data-i18n="about.title"></h1>
+        <p data-i18n="about.lead"></p>
+      </div>
+
+      <article class="panel" style="margin-bottom: 1rem;">
+        <h3 data-i18n="about.storyTitle"></h3>
+        <p data-i18n="about.storyBody"></p>
+      </article>
+
+      <div class="section-head" style="margin-top: 2rem;">
+        <h2 data-i18n="about.teamTitle"></h2>
+        <p data-i18n="about.teamBody"></p>
+      </div>
+      <div class="team-grid">
+        <div class="placeholder-box" data-i18n="about.teamPlaceholder"></div>
+        <div class="placeholder-box" data-i18n="about.teamPlaceholder"></div>
+        <div class="placeholder-box" data-i18n="about.teamPlaceholder"></div>
+      </div>
+
+      <article class="panel" style="margin-top: 1.5rem;">
+        <h3 data-i18n="about.trustTitle"></h3>
+        <p data-i18n="about.trustBody"></p>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    window.MapNotePage = { base: '../', active: 'about' };
+  </script>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/chrome.js"></script>
+  <script src="../js/site.js"></script>
+</body>
+</html>
