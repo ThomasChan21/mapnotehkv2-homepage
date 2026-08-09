@@ -24,9 +24,10 @@ window.MapNoteI18n = {
       'footer.tagline': '香港地產專業人士的地圖筆記工具',
       'footer.rights': '© MapNoteHK. 保留所有權利。',
       'footer.deleteAccount': '刪除帳戶',
-      'home.heroTitle': '睇樓、跟客、追規劃 — 全在同一張香港地圖',
+      // Professional tone: who it is for + what it is (not a feature checklist).
+      'home.heroTitle': '為香港地產代理而設的地圖筆記',
       'home.heroLead':
-        'MapNoteHK 專為香港地產代理與物業專業人士而設：地圖筆記、規劃申請圖層、AI 整理與可分享 PDF，工作流程一站完成。',
+        '專為香港地產代理與物業專業人士：地圖筆記、規劃圖層、AI 整理與可分享 PDF。',
       'home.ctaPrimary': '聯絡我們',
       'home.ctaSecondary': '了解產品',
       'home.quickTitle': '快速連結',
@@ -133,9 +134,10 @@ window.MapNoteI18n = {
       'footer.tagline': 'Map notes built for Hong Kong property professionals',
       'footer.rights': '© MapNoteHK. All rights reserved.',
       'footer.deleteAccount': 'Delete account',
-      'home.heroTitle': 'Site visits, clients, and planning — on one Hong Kong map',
+      // Professional tone: audience-first; keep lead short so it does not repeat the title.
+      'home.heroTitle': 'Map notes for Hong Kong property pros',
       'home.heroLead':
-        'MapNoteHK is built for Hong Kong agents and property professionals: map-pinned notes, planning layers, AI polish, and shareable PDFs in one workflow.',
+        'Built for Hong Kong agents and property professionals: map notes, planning layers, AI polish, and shareable PDFs.',
       'home.ctaPrimary': 'Contact Us',
       'home.ctaSecondary': 'See services',
       'home.quickTitle': 'Quick links',
