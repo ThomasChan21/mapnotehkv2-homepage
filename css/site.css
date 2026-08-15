@@ -250,7 +250,7 @@ a:hover {
   grid-template-columns: 1.25fr 1fr;
   align-items: center;
   gap: 2.5rem;
-  padding: 4.5rem 0 5.5rem;
+  padding: 3.25rem 0 3.75rem;
 }
 
 .hero-copy {
@@ -421,38 +421,39 @@ a:hover {
   font-size: 0.92rem;
 }
 
-/* Feature showcase — alternating copy/screenshot rows */
-.feature-row {
+/* Feature showcase — compact card grid keeps the page short; mobile uses a
+   horizontal snap strip so five features never stack into a long page */
+.features-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 2.5rem;
-  padding: 2.25rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
 }
 
-.feature-row + .feature-row {
-  border-top: 1px dashed var(--line);
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
-.feature-row.is-flipped .feature-copy {
-  order: 2;
-}
-
-.feature-row.is-flipped .feature-shot {
-  order: 1;
+.feature-copy {
+  padding: 0.95rem 1.15rem 1.15rem;
 }
 
 .feature-copy h3 {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.12rem;
   letter-spacing: -0.01em;
-  margin: 0.6rem 0 0.5rem;
+  margin: 0.55rem 0 0.4rem;
 }
 
 .feature-copy p {
   margin: 0;
   color: var(--ink-soft);
-  max-width: 46ch;
+  font-size: 0.92rem;
 }
 
 .tag {
@@ -479,19 +480,22 @@ a:hover {
   color: #b45309;
 }
 
-.feature-shot {
-  justify-self: center;
-}
-
-/* Height-capped to match the square hero video; width follows the phone aspect */
+/* Screenshot peeks from the card's top edge — cover-cropped so all five
+   cards share one height and the grid stays compact */
 .feature-shot img {
   display: block;
-  height: 360px;
-  width: auto;
-  max-width: 100%;
-  border-radius: 24px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--paper);
+}
+
+/* Homepage bands use tighter padding than the shared .section default */
+.types,
+#features,
+.plans {
+  padding: 2.5rem 0;
 }
 
 /* Plans band */
@@ -863,8 +867,8 @@ textarea {
 @media (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
-    padding: 3.5rem 0 4.5rem;
+    gap: 2rem;
+    padding: 2.5rem 0 3rem;
     text-align: center;
   }
 
@@ -913,23 +917,41 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .feature-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.75rem 0;
+  /* Cards become a horizontal snap strip — no long vertical stack on phones */
+  .features-grid {
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+    grid-auto-columns: min(250px, 72vw);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
   }
 
-  /* Match the hero video's mobile height (280px square) */
-  .feature-shot img {
-    height: 280px;
+  .features-grid::-webkit-scrollbar {
+    display: none;
   }
 
-  .feature-row.is-flipped .feature-copy {
-    order: 1;
+  .feature-card {
+    scroll-snap-align: start;
   }
 
-  .feature-row.is-flipped .feature-shot {
-    order: 2;
+  .types-grid {
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .types-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .type-card {
+    scroll-snap-align: start;
   }
 
   .header-row {
