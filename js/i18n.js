@@ -29,8 +29,12 @@ window.MapNoteI18n = {
       'home.heroTitle': '五類筆記，一張地圖。',
       'home.heroLead':
         'MapNoteHK 地圖筆記正式登場 — 專為香港地產代理而設。物業、考察、客戶、報價、成交，由睇樓到簽約，每個環節都記在官方地圖的相應位置。',
-      'home.ctaPrimary': '探索功能',
+      'home.ctaPrimary': '觀看示範',
       'home.ctaSecondary': '聯絡我們',
+      // Demo video band (short muted loop, straight after the hero).
+      'home.demoTitle': '5 秒睇完，即刻上手',
+      'home.demoLead': '打開 App，五類筆記已標記在香港地圖上 — 一睇就明點用。',
+      'home.demoAria': 'MapNoteHK App 操作示範短片',
       'home.storeSmall': '下載',
       'home.storeIos': 'App Store',
       'home.storeAndroid': 'Google Play',
@@ -188,8 +192,12 @@ window.MapNoteI18n = {
       'home.heroTitle': 'Five note types. One map.',
       'home.heroLead':
         'MapNoteHK is out now — built for Hong Kong estate agents. Property, visits, clients, offers and deals, from viewing to closing, pinned where they belong on the official map.',
-      'home.ctaPrimary': 'Explore features',
+      'home.ctaPrimary': 'Watch the demo',
       'home.ctaSecondary': 'Contact us',
+      // Demo video band (short muted loop, straight after the hero).
+      'home.demoTitle': 'See it in action',
+      'home.demoLead': 'Open the app and the five note types are already pinned on the Hong Kong map — one look and you get it.',
+      'home.demoAria': 'Short demo video of the MapNoteHK app in use',
       'home.storeSmall': 'Download on',
       'home.storeIos': 'App Store',
       'home.storeAndroid': 'Google Play',

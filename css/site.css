@@ -373,6 +373,37 @@ a:hover {
   font-weight: 600;
 }
 
+/* Demo video band — centered square loop with phone-style frame */
+.demo {
+  padding-top: 2.5rem;
+}
+
+.section-head-center {
+  text-align: center;
+}
+
+.section-head-center p {
+  margin-inline: auto;
+}
+
+.demo-frame {
+  width: min(520px, 100%);
+  margin-inline: auto;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: var(--ink);
+}
+
+.demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 /* Five note types — --tc carries the in-app legend colour per card */
 .types-grid {
   display: grid;
