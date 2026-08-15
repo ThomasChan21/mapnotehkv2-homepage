@@ -549,6 +549,10 @@ a:hover {
   max-height: 400px;
   width: auto;
   max-width: 100%;
+}
+
+/* Paper variant (PDF pages): tighter radius + stronger lift reads as documents */
+.showcase-duo-paper img {
   border-radius: 6px;
   box-shadow: 0 16px 38px rgba(7, 24, 32, 0.28);
 }

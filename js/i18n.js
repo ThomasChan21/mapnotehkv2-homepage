@@ -76,6 +76,7 @@ window.MapNoteI18n = {
         '相片、地址、呎吋、地圖自動排版成 PDF 簡報，即刻分享給客戶，匯報更體面。',
       // Screenshot alt text (accessibility).
       'home.f1Alt': 'App 截圖：釘在香港官方地圖上的筆記',
+      'home.f1bAlt': 'App 截圖：地段界線、小一校網與配套圖層疊加顯示',
       'home.f2Alt': 'App 截圖：地圖上的城規會規劃申請個案',
       'home.f3Alt': 'App 截圖：附在筆記內的現場相片與文件',
       'home.f4Alt': 'App 截圖：廣東話語音輸入與 AI 潤飾筆記',
@@ -239,6 +240,7 @@ window.MapNoteI18n = {
         'Photos, address, specs and map auto-layout into a polished PDF you can share with clients on the spot.',
       // Screenshot alt text (accessibility).
       'home.f1Alt': 'App screenshot: notes pinned to Hong Kong’s official map',
+      'home.f1bAlt': 'App screenshot: lot boundaries, primary school nets and amenity layers overlaid',
       'home.f2Alt': 'App screenshot: Town Planning Board cases on the map',
       'home.f3Alt': 'App screenshot: site photos and files attached to a note',
       'home.f4Alt': 'App screenshot: Cantonese voice input and AI-polished notes',
