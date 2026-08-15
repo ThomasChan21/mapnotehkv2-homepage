@@ -187,10 +187,54 @@ function bindLangButtons() {
   });
 }
 
+/**
+ * Wires the feature showcase tab switcher on the homepage.
+ * Clicking (or arrow-keying to) a feature tab reveals its full screenshot
+ * panel; follows the WAI-ARIA tabs pattern with roving tabindex.
+ * Input: none (reads #feature-showcase from the DOM). Output: void.
+ * @returns {void}
+ */
+function initFeatureShowcase() {
+  const root = document.getElementById('feature-showcase');
+  if (!root) return;
+  const tabs = Array.from(root.querySelectorAll('[role="tab"]'));
+  const panels = Array.from(root.querySelectorAll('[role="tabpanel"]'));
+
+  /** Activates one tab by id and shows its matching panel. */
+  const activate = (id) => {
+    tabs.forEach((tab) => {
+      const on = tab.id === id;
+      tab.classList.toggle('is-active', on);
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach((panel) => {
+      const on = panel.getAttribute('aria-labelledby') === id;
+      panel.classList.toggle('is-active', on);
+      panel.hidden = !on;
+    });
+  };
+
+  tabs.forEach((tab) => tab.addEventListener('click', () => activate(tab.id)));
+
+  root.addEventListener('keydown', (event) => {
+    const next = ['ArrowDown', 'ArrowRight'];
+    const prev = ['ArrowUp', 'ArrowLeft'];
+    if (!next.includes(event.key) && !prev.includes(event.key)) return;
+    const current = tabs.findIndex((tab) => tab.classList.contains('is-active'));
+    const offset = next.includes(event.key) ? 1 : -1;
+    const target = tabs[(current + offset + tabs.length) % tabs.length];
+    target.focus();
+    activate(target.id);
+    event.preventDefault();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   window.MapNoteChrome.renderChrome();
   bindLangButtons();
   applyI18n(getLang());
+  initFeatureShowcase();
   if (typeof window.MapNoteFormsInit === 'function') {
     window.MapNoteFormsInit();
   }

@@ -421,39 +421,107 @@ a:hover {
   font-size: 0.92rem;
 }
 
-/* Feature showcase — compact card grid keeps the page short; mobile uses a
-   horizontal snap strip so five features never stack into a long page */
-.features-grid {
+/* Feature showcase — tab switcher: compact list left, full-size screenshot
+   right. Whole screens are shown (never cropped) and the section stays short. */
+.showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
 }
 
-.feature-card {
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--line);
+.showcase-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* Each tab: tag + title always visible; body text only on the active tab */
+.showcase-item {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  border: 1px solid transparent;
   border-radius: var(--radius);
-  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.showcase-item:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.showcase-item:focus-visible {
+  outline: 2px solid var(--jade-deep);
+  outline-offset: 2px;
+}
+
+.showcase-item.is-active {
+  background: #fff;
+  border-color: var(--line);
   box-shadow: var(--shadow);
 }
 
-.feature-copy {
-  padding: 0.95rem 1.15rem 1.15rem;
+.showcase-item-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
-.feature-copy h3 {
+.showcase-item-title {
   font-family: var(--font-display);
-  font-size: 1.12rem;
+  font-size: 1.08rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
-  margin: 0.55rem 0 0.4rem;
 }
 
-.feature-copy p {
-  margin: 0;
+.showcase-item-body {
+  display: none;
   color: var(--ink-soft);
   font-size: 0.92rem;
+}
+
+.showcase-item.is-active .showcase-item-body {
+  display: block;
+}
+
+/* Screenshot stage: tinted backdrop, the active panel fades in full-size */
+.showcase-stage {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) * 1.5);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(28, 138, 120, 0.14), transparent 55%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(232, 240, 243, 0.9));
+}
+
+.showcase-panel[hidden] {
+  display: none;
+}
+
+.showcase-panel.is-active {
+  animation: fadeIn 0.25s ease both;
+}
+
+.showcase-panel img {
+  display: block;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 55px rgba(7, 24, 32, 0.22);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
 }
 
 .tag {
@@ -478,17 +546,6 @@ a:hover {
 .tag-premium {
   background: rgba(180, 83, 9, 0.12);
   color: #b45309;
-}
-
-/* Screenshot peeks from the card's top edge — cover-cropped so all five
-   cards share one height and the grid stays compact */
-.feature-shot img {
-  display: block;
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  object-position: top center;
-  background: var(--paper);
 }
 
 /* Homepage bands use tighter padding than the shared .section default */
@@ -917,23 +974,35 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  /* Cards become a horizontal snap strip — no long vertical stack on phones */
-  .features-grid {
-    grid-template-columns: unset;
+  /* Showcase stacks: tabs become a horizontal snap strip above the stage */
+  .showcase {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .showcase-list {
     grid-auto-flow: column;
-    grid-auto-columns: min(250px, 72vw);
+    grid-auto-columns: min(230px, 68vw);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 0.5rem;
     scrollbar-width: none;
   }
 
-  .features-grid::-webkit-scrollbar {
+  .showcase-list::-webkit-scrollbar {
     display: none;
   }
 
-  .feature-card {
+  .showcase-item {
     scroll-snap-align: start;
+  }
+
+  .showcase-stage {
+    padding: 1rem;
+  }
+
+  .showcase-panel img {
+    height: 320px;
   }
 
   .types-grid {

@@ -54,6 +54,8 @@ window.MapNoteI18n = {
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': '為現場工作而設的功能',
       'home.featuresLead': '由落區睇樓到向客戶匯報，每個功能都圍繞代理日常而設。',
+      // Feature switcher tablist label (screen readers).
+      'home.showcaseLabel': 'App 功能預覽',
       'home.tagFree': '免費',
       'home.tagPremium': 'Premium',
       'home.tagFreePremium': '免費 + Premium',
@@ -214,6 +216,8 @@ window.MapNoteI18n = {
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': 'Features built for the field',
       'home.featuresLead': 'From viewings to client reporting, every feature is shaped around an agent’s day.',
+      // Feature switcher tablist label (screen readers).
+      'home.showcaseLabel': 'App feature preview',
       'home.tagFree': 'Free',
       'home.tagPremium': 'Premium',
       'home.tagFreePremium': 'Free + Premium',

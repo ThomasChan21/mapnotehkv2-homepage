@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/site.css" />
+  <link rel="stylesheet" href="./css/site.css?v=20260815" />
 </head>
 <body data-title-key="meta.homeTitle" data-desc-key="meta.homeDesc">
   <a class="skip-link" href="#main">Skip</a>
@@ -107,66 +107,80 @@
           <p data-i18n="home.featuresLead"></p>
         </div>
 
-        <div class="features-grid">
-          <article class="feature-card">
-            <picture class="feature-shot">
-              <source type="image/webp" srcset="./assets/feature-map-280.webp 280w, ./assets/feature-map-560.webp 560w" sizes="(max-width: 860px) 250px, 350px" />
-              <img src="./assets/feature-map-560.png" srcset="./assets/feature-map-280.png 280w, ./assets/feature-map-560.png 560w" sizes="(max-width: 860px) 250px, 350px" width="456" height="1024" data-i18n-alt="home.f1Alt" alt="" loading="lazy" decoding="async" />
-            </picture>
-            <div class="feature-copy">
-              <span class="tag tag-free" data-i18n="home.tagFree"></span>
-              <h3 data-i18n="home.f1Title"></h3>
-              <p data-i18n="home.f1Body"></p>
-            </div>
-          </article>
+        <!-- Feature switcher: pick a feature on the left, see the full app
+             screenshot on the right. All five titles stay visible; one tap
+             swaps the screenshot — nothing is cropped away. -->
+        <div class="showcase" id="feature-showcase">
+          <div class="showcase-list" role="tablist" data-i18n-aria-label="home.showcaseLabel" aria-label="App features">
+            <button type="button" class="showcase-item is-active" role="tab" id="tab-f1" aria-controls="panel-f1" aria-selected="true">
+              <span class="showcase-item-head">
+                <span class="tag tag-free" data-i18n="home.tagFree"></span>
+                <span class="showcase-item-title" data-i18n="home.f1Title"></span>
+              </span>
+              <span class="showcase-item-body" data-i18n="home.f1Body"></span>
+            </button>
+            <button type="button" class="showcase-item" role="tab" id="tab-f2" aria-controls="panel-f2" aria-selected="false" tabindex="-1">
+              <span class="showcase-item-head">
+                <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
+                <span class="showcase-item-title" data-i18n="home.f2Title"></span>
+              </span>
+              <span class="showcase-item-body" data-i18n="home.f2Body"></span>
+            </button>
+            <button type="button" class="showcase-item" role="tab" id="tab-f3" aria-controls="panel-f3" aria-selected="false" tabindex="-1">
+              <span class="showcase-item-head">
+                <span class="tag tag-free" data-i18n="home.tagFree"></span>
+                <span class="showcase-item-title" data-i18n="home.f3Title"></span>
+              </span>
+              <span class="showcase-item-body" data-i18n="home.f3Body"></span>
+            </button>
+            <button type="button" class="showcase-item" role="tab" id="tab-f4" aria-controls="panel-f4" aria-selected="false" tabindex="-1">
+              <span class="showcase-item-head">
+                <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
+                <span class="showcase-item-title" data-i18n="home.f4Title"></span>
+              </span>
+              <span class="showcase-item-body" data-i18n="home.f4Body"></span>
+            </button>
+            <button type="button" class="showcase-item" role="tab" id="tab-f5" aria-controls="panel-f5" aria-selected="false" tabindex="-1">
+              <span class="showcase-item-head">
+                <span class="tag tag-premium" data-i18n="home.tagPremium"></span>
+                <span class="showcase-item-title" data-i18n="home.f5Title"></span>
+              </span>
+              <span class="showcase-item-body" data-i18n="home.f5Body"></span>
+            </button>
+          </div>
 
-          <article class="feature-card">
-            <picture class="feature-shot">
-              <source type="image/webp" srcset="./assets/feature-planning-280.webp 280w, ./assets/feature-planning-560.webp 560w" sizes="(max-width: 860px) 250px, 350px" />
-              <img src="./assets/feature-planning-560.png" srcset="./assets/feature-planning-280.png 280w, ./assets/feature-planning-560.png 560w" sizes="(max-width: 860px) 250px, 350px" width="456" height="1024" data-i18n-alt="home.f2Alt" alt="" loading="lazy" decoding="async" />
-            </picture>
-            <div class="feature-copy">
-              <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
-              <h3 data-i18n="home.f2Title"></h3>
-              <p data-i18n="home.f2Body"></p>
+          <div class="showcase-stage">
+            <div class="showcase-panel is-active" role="tabpanel" id="panel-f1" aria-labelledby="tab-f1">
+              <picture>
+                <source type="image/webp" srcset="./assets/feature-map-280.webp 280w, ./assets/feature-map-560.webp 560w" sizes="(max-width: 860px) 240px, 330px" />
+                <img src="./assets/feature-map-560.png" srcset="./assets/feature-map-280.png 280w, ./assets/feature-map-560.png 560w" sizes="(max-width: 860px) 240px, 330px" width="456" height="1024" data-i18n-alt="home.f1Alt" alt="" decoding="async" />
+              </picture>
             </div>
-          </article>
-
-          <article class="feature-card">
-            <picture class="feature-shot">
-              <source type="image/webp" srcset="./assets/feature-media-280.webp 280w, ./assets/feature-media-560.webp 560w" sizes="(max-width: 860px) 250px, 350px" />
-              <img src="./assets/feature-media-560.png" srcset="./assets/feature-media-280.png 280w, ./assets/feature-media-560.png 560w" sizes="(max-width: 860px) 250px, 350px" width="456" height="1024" data-i18n-alt="home.f3Alt" alt="" loading="lazy" decoding="async" />
-            </picture>
-            <div class="feature-copy">
-              <span class="tag tag-free" data-i18n="home.tagFree"></span>
-              <h3 data-i18n="home.f3Title"></h3>
-              <p data-i18n="home.f3Body"></p>
+            <div class="showcase-panel" role="tabpanel" id="panel-f2" aria-labelledby="tab-f2" hidden>
+              <picture>
+                <source type="image/webp" srcset="./assets/feature-planning-280.webp 280w, ./assets/feature-planning-560.webp 560w" sizes="(max-width: 860px) 240px, 330px" />
+                <img src="./assets/feature-planning-560.png" srcset="./assets/feature-planning-280.png 280w, ./assets/feature-planning-560.png 560w" sizes="(max-width: 860px) 240px, 330px" width="456" height="1024" data-i18n-alt="home.f2Alt" alt="" loading="lazy" decoding="async" />
+              </picture>
             </div>
-          </article>
-
-          <article class="feature-card">
-            <picture class="feature-shot">
-              <source type="image/webp" srcset="./assets/feature-ai-280.webp 280w, ./assets/feature-ai-560.webp 560w" sizes="(max-width: 860px) 250px, 350px" />
-              <img src="./assets/feature-ai-560.png" srcset="./assets/feature-ai-280.png 280w, ./assets/feature-ai-560.png 560w" sizes="(max-width: 860px) 250px, 350px" width="456" height="1024" data-i18n-alt="home.f4Alt" alt="" loading="lazy" decoding="async" />
-            </picture>
-            <div class="feature-copy">
-              <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
-              <h3 data-i18n="home.f4Title"></h3>
-              <p data-i18n="home.f4Body"></p>
+            <div class="showcase-panel" role="tabpanel" id="panel-f3" aria-labelledby="tab-f3" hidden>
+              <picture>
+                <source type="image/webp" srcset="./assets/feature-media-280.webp 280w, ./assets/feature-media-560.webp 560w" sizes="(max-width: 860px) 240px, 330px" />
+                <img src="./assets/feature-media-560.png" srcset="./assets/feature-media-280.png 280w, ./assets/feature-media-560.png 560w" sizes="(max-width: 860px) 240px, 330px" width="456" height="1024" data-i18n-alt="home.f3Alt" alt="" loading="lazy" decoding="async" />
+              </picture>
             </div>
-          </article>
-
-          <article class="feature-card">
-            <picture class="feature-shot">
-              <source type="image/webp" srcset="./assets/feature-pdf-280.webp 280w, ./assets/feature-pdf-560.webp 560w" sizes="(max-width: 860px) 250px, 350px" />
-              <img src="./assets/feature-pdf-560.png" srcset="./assets/feature-pdf-280.png 280w, ./assets/feature-pdf-560.png 560w" sizes="(max-width: 860px) 250px, 350px" width="456" height="1024" data-i18n-alt="home.f5Alt" alt="" loading="lazy" decoding="async" />
-            </picture>
-            <div class="feature-copy">
-              <span class="tag tag-premium" data-i18n="home.tagPremium"></span>
-              <h3 data-i18n="home.f5Title"></h3>
-              <p data-i18n="home.f5Body"></p>
+            <div class="showcase-panel" role="tabpanel" id="panel-f4" aria-labelledby="tab-f4" hidden>
+              <picture>
+                <source type="image/webp" srcset="./assets/feature-ai-280.webp 280w, ./assets/feature-ai-560.webp 560w" sizes="(max-width: 860px) 240px, 330px" />
+                <img src="./assets/feature-ai-560.png" srcset="./assets/feature-ai-280.png 280w, ./assets/feature-ai-560.png 560w" sizes="(max-width: 860px) 240px, 330px" width="456" height="1024" data-i18n-alt="home.f4Alt" alt="" loading="lazy" decoding="async" />
+              </picture>
             </div>
-          </article>
+            <div class="showcase-panel" role="tabpanel" id="panel-f5" aria-labelledby="tab-f5" hidden>
+              <picture>
+                <source type="image/webp" srcset="./assets/feature-pdf-280.webp 280w, ./assets/feature-pdf-560.webp 560w" sizes="(max-width: 860px) 240px, 330px" />
+                <img src="./assets/feature-pdf-560.png" srcset="./assets/feature-pdf-280.png 280w, ./assets/feature-pdf-560.png 560w" sizes="(max-width: 860px) 240px, 330px" width="456" height="1024" data-i18n-alt="home.f5Alt" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -209,9 +223,9 @@
   <script>
     window.MapNotePage = { base: './', active: 'home' };
   </script>
-  <script src="./js/site-config.js"></script>
-  <script src="./js/i18n.js"></script>
-  <script src="./js/chrome.js"></script>
-  <script src="./js/site.js"></script>
+  <script src="./js/site-config.js?v=20260815"></script>
+  <script src="./js/i18n.js?v=20260815"></script>
+  <script src="./js/chrome.js?v=20260815"></script>
+  <script src="./js/site.js?v=20260815"></script>
 </body>
 </html>
