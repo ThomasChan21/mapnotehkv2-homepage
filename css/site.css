@@ -284,7 +284,10 @@ a:hover {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  max-width: 16ch;
+  /* No ch-based width cap: ch counts Latin digits, so 16ch fits only ~8 CJK
+     glyphs and orphaned the final 「。」. The grid column constrains width;
+     text-wrap: balance keeps any wrap even in both languages. */
+  text-wrap: balance;
   margin: 0 0 1rem;
   line-height: 1.15;
 }
@@ -932,12 +935,6 @@ textarea {
   .hero h1,
   .hero-lead {
     margin-inline: auto;
-  }
-
-  /* Stacked hero: let the headline use the full content width so short CJK
-     phrases don't leave the final character dangling on its own line */
-  .hero h1 {
-    max-width: 100%;
   }
 
   .hero-actions,
