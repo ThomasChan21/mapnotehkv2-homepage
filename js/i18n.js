@@ -77,7 +77,8 @@ window.MapNoteI18n = {
       // Screenshot alt text (accessibility).
       'home.f1Alt': 'App 截圖：釘在香港官方地圖上的筆記',
       'home.f1bAlt': 'App 截圖：地段界線、小一校網與配套圖層疊加顯示',
-      'home.f2Alt': 'App 截圖：地圖上的城規會規劃申請個案',
+      'home.f2Alt': 'App 截圖：各區城規會規劃申請釘在地圖上',
+      'home.f2bAlt': 'App 截圖：規劃申請個案詳情、申請用途與附件',
       'home.f3Alt': 'App 截圖：附在筆記內的現場相片與文件',
       'home.f4Alt': 'App 截圖：廣東話語音輸入與 AI 潤飾筆記',
       'home.f5AltP1': 'PDF 簡報第 1 頁：放盤封面、物業資料與代理聯絡',
@@ -241,7 +242,8 @@ window.MapNoteI18n = {
       // Screenshot alt text (accessibility).
       'home.f1Alt': 'App screenshot: notes pinned to Hong Kong’s official map',
       'home.f1bAlt': 'App screenshot: lot boundaries, primary school nets and amenity layers overlaid',
-      'home.f2Alt': 'App screenshot: Town Planning Board cases on the map',
+      'home.f2Alt': 'App screenshot: Town Planning Board applications pinned across districts',
+      'home.f2bAlt': 'App screenshot: planning application detail with proposed uses and attachments',
       'home.f3Alt': 'App screenshot: site photos and files attached to a note',
       'home.f4Alt': 'App screenshot: Cantonese voice input and AI-polished notes',
       'home.f5AltP1': 'PDF brochure page 1: listing cover, property details and agent contact',
