@@ -29,12 +29,10 @@ window.MapNoteI18n = {
       'home.heroTitle': '五類筆記，一張地圖。',
       'home.heroLead':
         'MapNoteHK 地圖筆記正式登場 — 專為香港地產代理而設。物業、考察、客戶、報價、成交，由睇樓到簽約，每個環節都記在官方地圖的相應位置。',
-      'home.ctaPrimary': '觀看示範',
+      'home.ctaPrimary': '探索功能',
       'home.ctaSecondary': '聯絡我們',
-      // Demo video band (short muted loop, straight after the hero).
-      'home.demoTitle': '5 秒睇完，即刻上手',
-      'home.demoLead': '打開 App，五類筆記已標記在香港地圖上 — 一睇就明點用。',
-      'home.demoAria': 'MapNoteHK App 操作示範短片',
+      // Hero demo video (muted loop in place of a static screenshot).
+      'home.heroVideoAria': 'MapNoteHK App 操作示範短片',
       'home.storeSmall': '下載',
       'home.storeIos': 'App Store',
       'home.storeAndroid': 'Google Play',
@@ -75,7 +73,6 @@ window.MapNoteI18n = {
       'home.f5Body':
         '相片、地址、呎吋、地圖自動排版成 PDF 簡報，即刻分享給客戶，匯報更體面。',
       // Screenshot alt text (accessibility).
-      'home.heroShotAlt': 'MapNoteHK App 介面 — 香港地圖上標記五類筆記',
       'home.f1Alt': 'App 截圖：釘在香港官方地圖上的筆記',
       'home.f2Alt': 'App 截圖：地圖上的城規會規劃申請個案',
       'home.f3Alt': 'App 截圖：附在筆記內的現場相片與文件',
@@ -192,12 +189,10 @@ window.MapNoteI18n = {
       'home.heroTitle': 'Five note types. One map.',
       'home.heroLead':
         'MapNoteHK is out now — built for Hong Kong estate agents. Property, visits, clients, offers and deals, from viewing to closing, pinned where they belong on the official map.',
-      'home.ctaPrimary': 'Watch the demo',
+      'home.ctaPrimary': 'Explore features',
       'home.ctaSecondary': 'Contact us',
-      // Demo video band (short muted loop, straight after the hero).
-      'home.demoTitle': 'See it in action',
-      'home.demoLead': 'Open the app and the five note types are already pinned on the Hong Kong map — one look and you get it.',
-      'home.demoAria': 'Short demo video of the MapNoteHK app in use',
+      // Hero demo video (muted loop in place of a static screenshot).
+      'home.heroVideoAria': 'Short demo video of the MapNoteHK app in use',
       'home.storeSmall': 'Download on',
       'home.storeIos': 'App Store',
       'home.storeAndroid': 'Google Play',
@@ -238,7 +233,6 @@ window.MapNoteI18n = {
       'home.f5Body':
         'Photos, address, specs and map auto-layout into a polished PDF you can share with clients on the spot.',
       // Screenshot alt text (accessibility).
-      'home.heroShotAlt': 'MapNoteHK app — five note types pinned on the Hong Kong map',
       'home.f1Alt': 'App screenshot: notes pinned to Hong Kong’s official map',
       'home.f2Alt': 'App screenshot: Town Planning Board cases on the map',
       'home.f3Alt': 'App screenshot: site photos and files attached to a note',

@@ -313,10 +313,13 @@ a:hover {
   animation: rise 0.7s ease 0.1s both;
 }
 
-.hero-shot img {
+/* Square demo video sits slightly wider than the old portrait screenshot */
+.hero-video {
   display: block;
-  width: min(300px, 70vw);
+  width: min(360px, 72vw);
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 32px 70px rgba(2, 12, 16, 0.5);
@@ -371,37 +374,6 @@ a:hover {
   font-family: var(--font-display);
   font-size: 1.02rem;
   font-weight: 600;
-}
-
-/* Demo video band — centered square loop with phone-style frame */
-.demo {
-  padding-top: 2.5rem;
-}
-
-.section-head-center {
-  text-align: center;
-}
-
-.section-head-center p {
-  margin-inline: auto;
-}
-
-.demo-frame {
-  width: min(520px, 100%);
-  margin-inline: auto;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  background: var(--ink);
-}
-
-.demo-video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 
 /* Five note types — --tc carries the in-app legend colour per card */
@@ -904,8 +876,8 @@ textarea {
     justify-content: center;
   }
 
-  .hero-shot img {
-    width: min(240px, 62vw);
+  .hero-video {
+    width: min(280px, 66vw);
   }
 }
 
