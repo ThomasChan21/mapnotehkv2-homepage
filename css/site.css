@@ -934,6 +934,12 @@ textarea {
     margin-inline: auto;
   }
 
+  /* Stacked hero: let the headline use the full content width so short CJK
+     phrases don't leave the final character dangling on its own line */
+  .hero h1 {
+    max-width: 100%;
+  }
+
   .hero-actions,
   .hero .store-badges {
     justify-content: center;
