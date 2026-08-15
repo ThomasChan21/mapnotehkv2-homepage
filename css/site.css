@@ -483,10 +483,12 @@ a:hover {
   justify-self: center;
 }
 
+/* Height-capped to match the square hero video; width follows the phone aspect */
 .feature-shot img {
   display: block;
-  width: min(280px, 60vw);
-  height: auto;
+  height: 360px;
+  width: auto;
+  max-width: 100%;
   border-radius: 24px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -915,6 +917,11 @@ textarea {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1.75rem 0;
+  }
+
+  /* Match the hero video's mobile height (280px square) */
+  .feature-shot img {
+    height: 280px;
   }
 
   .feature-row.is-flipped .feature-copy {
