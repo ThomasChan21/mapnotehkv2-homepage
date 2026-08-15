@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/site.css?v=20260815c" />
+  <link rel="stylesheet" href="./css/site.css?v=20260815f" />
 </head>
 <body data-title-key="meta.homeTitle" data-desc-key="meta.homeDesc">
   <a class="skip-link" href="#main">Skip</a>
@@ -175,10 +175,17 @@
               </picture>
             </div>
             <div class="showcase-panel" role="tabpanel" id="panel-f5" aria-labelledby="tab-f5" hidden>
-              <picture>
-                <source type="image/webp" srcset="./assets/feature-pdf-280.webp 280w, ./assets/feature-pdf-560.webp 560w" sizes="(max-width: 860px) 240px, 330px" />
-                <img src="./assets/feature-pdf-560.png" srcset="./assets/feature-pdf-280.png 280w, ./assets/feature-pdf-560.png 560w" sizes="(max-width: 860px) 240px, 330px" width="456" height="1024" data-i18n-alt="home.f5Alt" alt="" loading="lazy" decoding="async" />
-              </picture>
+              <!-- Real generated brochure: cover + photo gallery shown as a page pair -->
+              <div class="showcase-duo">
+                <picture>
+                  <source type="image/webp" srcset="./assets/feature-pdf-p1-320.webp 320w, ./assets/feature-pdf-p1-640.webp 640w" sizes="(max-width: 860px) 42vw, 283px" />
+                  <img src="./assets/feature-pdf-p1-640.png" srcset="./assets/feature-pdf-p1-320.png 320w, ./assets/feature-pdf-p1-640.png 640w" sizes="(max-width: 860px) 42vw, 283px" width="640" height="905" data-i18n-alt="home.f5AltP1" alt="" loading="lazy" decoding="async" />
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="./assets/feature-pdf-p2-320.webp 320w, ./assets/feature-pdf-p2-640.webp 640w" sizes="(max-width: 860px) 42vw, 283px" />
+                  <img src="./assets/feature-pdf-p2-640.png" srcset="./assets/feature-pdf-p2-320.png 320w, ./assets/feature-pdf-p2-640.png 640w" sizes="(max-width: 860px) 42vw, 283px" width="640" height="905" data-i18n-alt="home.f5AltP2" alt="" loading="lazy" decoding="async" />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -223,9 +230,9 @@
   <script>
     window.MapNotePage = { base: './', active: 'home' };
   </script>
-  <script src="./js/site-config.js?v=20260815"></script>
-  <script src="./js/i18n.js?v=20260815"></script>
-  <script src="./js/chrome.js?v=20260815"></script>
-  <script src="./js/site.js?v=20260815"></script>
+  <script src="./js/site-config.js?v=20260815f"></script>
+  <script src="./js/i18n.js?v=20260815f"></script>
+  <script src="./js/chrome.js?v=20260815f"></script>
+  <script src="./js/site.js?v=20260815f"></script>
 </body>
 </html>

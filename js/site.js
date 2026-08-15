@@ -215,7 +215,13 @@ function initFeatureShowcase() {
     });
   };
 
-  tabs.forEach((tab) => tab.addEventListener('click', () => activate(tab.id)));
+  /* Delegate clicks at the root: a single listener keeps working even if a
+     tab node is re-rendered, and lets us confirm wiring via the marker below. */
+  root.addEventListener('click', (event) => {
+    const tab = event.target.closest('[role="tab"]');
+    if (tab && root.contains(tab)) activate(tab.id);
+  });
+  root.dataset.showcaseInit = 'true';
 
   root.addEventListener('keydown', (event) => {
     const next = ['ArrowDown', 'ArrowRight'];

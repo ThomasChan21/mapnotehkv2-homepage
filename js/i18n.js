@@ -79,7 +79,8 @@ window.MapNoteI18n = {
       'home.f2Alt': 'App 截圖：地圖上的城規會規劃申請個案',
       'home.f3Alt': 'App 截圖：附在筆記內的現場相片與文件',
       'home.f4Alt': 'App 截圖：廣東話語音輸入與 AI 潤飾筆記',
-      'home.f5Alt': 'App 截圖：自動生成的物業 PDF 簡報',
+      'home.f5AltP1': 'PDF 簡報第 1 頁：放盤封面、物業資料與代理聯絡',
+      'home.f5AltP2': 'PDF 簡報第 2 頁：物業相片記錄',
       // Plans band.
       'home.plansTitle': '免費開始，按需升級',
       'home.plansLead': '免費方案已涵蓋五類筆記與規劃地圖；Premium 解鎖進階工具。',
@@ -241,7 +242,8 @@ window.MapNoteI18n = {
       'home.f2Alt': 'App screenshot: Town Planning Board cases on the map',
       'home.f3Alt': 'App screenshot: site photos and files attached to a note',
       'home.f4Alt': 'App screenshot: Cantonese voice input and AI-polished notes',
-      'home.f5Alt': 'App screenshot: auto-generated property PDF brochure',
+      'home.f5AltP1': 'PDF brochure page 1: listing cover, property details and agent contact',
+      'home.f5AltP2': 'PDF brochure page 2: property photo gallery',
       // Plans band.
       'home.plansTitle': 'Start free, upgrade when you need',
       'home.plansLead': 'The free plan covers all five note types and the planning map. Premium unlocks the advanced tools.',

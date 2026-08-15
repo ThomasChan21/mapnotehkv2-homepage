@@ -492,11 +492,14 @@ a:hover {
   display: block;
 }
 
-/* Screenshot stage: tinted backdrop, the active panel fades in full-size */
+/* Screenshot stage: tinted backdrop, the active panel fades in full-size.
+   min-height keeps the stage constant across tabs (400px visual + padding)
+   so switching features never shifts the layout below. */
 .showcase-stage {
   display: grid;
   place-items: center;
   padding: 1.5rem;
+  min-height: 448px;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) * 1.5);
   background:
@@ -520,6 +523,34 @@ a:hover {
   border-radius: 18px;
   border: 1px solid var(--line);
   box-shadow: 0 22px 55px rgba(7, 24, 32, 0.22);
+}
+
+/* Brochure pair (feature 5): two A4 pages side by side. Each <picture> gets
+   an equal flex column with a definite width, so the img inside can size to
+   min(100% width, 400px height) without a circular percentage. Tighter
+   radius + lift reads as paper. */
+.showcase-duo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.showcase-duo picture {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.showcase-duo img {
+  height: auto;
+  max-height: 400px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px rgba(7, 24, 32, 0.28);
 }
 
 @keyframes fadeIn {
@@ -1002,10 +1033,16 @@ textarea {
 
   .showcase-stage {
     padding: 1rem;
+    min-height: 352px;
   }
 
   .showcase-panel img {
     height: 320px;
+  }
+
+  .showcase-duo img {
+    height: auto;
+    max-height: 320px;
   }
 
   .types-grid {
