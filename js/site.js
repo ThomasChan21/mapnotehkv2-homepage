@@ -43,6 +43,10 @@ function applyI18n(lang) {
     const key = el.getAttribute('data-i18n-aria-label');
     if (key) el.setAttribute('aria-label', t(key, lang));
   });
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (key) el.setAttribute('alt', t(key, lang));
+  });
 
   const titleKey = document.body.getAttribute('data-title-key');
   if (titleKey) {
@@ -60,6 +64,7 @@ function applyI18n(lang) {
   });
 
   fillContactPlaceholders(lang);
+  renderStoreBadges(lang);
 }
 
 /**
@@ -103,6 +108,70 @@ function fillContactPlaceholders(lang) {
 function setLang(lang) {
   localStorage.setItem(window.MapNoteI18n.storageKey, lang);
   applyI18n(lang);
+}
+
+/** SVG icons for the store badges (Apple / Google Play), monochrome to match tokens. */
+const STORE_ICONS = {
+  ios: '<svg viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.9-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 139.9 0 195.8 0 278.3c0 27.5 5.1 55.9 15.2 85.2 13.5 39.5 62.2 136.2 113.1 134.8 26.6-.7 45.6-19 85.6-19 39.4 0 57.2 19 85.9 19 52.3-.9 97.4-89.6 110.3-129.1-69.4-32.9-91.4-62.5-91.4-99.5zM262.1 104.5c27.6-33.5 27.1-80.5 26.9-104.5-26.8 1.6-58.2 18.1-77.1 41.1-20.4 24.7-37.8 63.8-31 101.4 29.9 2.3 59.8-9.4 81.2-38z"/></svg>',
+  android:
+    '<svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>',
+};
+
+/**
+ * Builds one store badge link.
+ * @param {'ios' | 'android'} store - which store icon/label to use
+ * @param {string} url - live store URL from site-config.js
+ * @param {'en' | 'zh-Hant'} lang - active language for labels
+ * @returns {HTMLAnchorElement}
+ */
+function buildStoreBadge(store, url, lang) {
+  const badge = document.createElement('a');
+  badge.className = 'store-btn';
+  badge.href = url;
+  badge.target = '_blank';
+  badge.rel = 'noopener';
+  badge.setAttribute(
+    'aria-label',
+    t(store === 'ios' ? 'home.storeIosAria' : 'home.storeAndroidAria', lang)
+  );
+  const name = t(store === 'ios' ? 'home.storeIos' : 'home.storeAndroid', lang);
+  badge.innerHTML = `${STORE_ICONS[store]}<span><small>${t('home.storeSmall', lang)}</small><strong>${name}</strong></span>`;
+  return badge;
+}
+
+/**
+ * Renders store badges wherever store links are configured.
+ * Hero: replaces the text CTAs with badges; download band: unhidden and filled.
+ * When no links are set, the static text CTAs stay and the band stays hidden.
+ * @param {'en' | 'zh-Hant'} lang
+ * @returns {void}
+ */
+function renderStoreBadges(lang) {
+  const links = (window.MapNoteSiteConfig && window.MapNoteSiteConfig.storeLinks) || {};
+  const configured = [
+    ['ios', links.ios],
+    ['android', links.android],
+  ].filter((entry) => typeof entry[1] === 'string' && entry[1].length > 0);
+
+  const heroActions = document.getElementById('hero-actions');
+  const downloadSection = document.getElementById('download-section');
+  const downloadBadges = document.getElementById('download-badges');
+
+  if (heroActions && configured.length > 0) {
+    heroActions.innerHTML = '';
+    heroActions.classList.add('store-badges');
+    configured.forEach(([store, url]) => heroActions.appendChild(buildStoreBadge(store, url, lang)));
+  }
+
+  if (downloadSection && downloadBadges) {
+    downloadBadges.innerHTML = '';
+    if (configured.length > 0) {
+      configured.forEach(([store, url]) => downloadBadges.appendChild(buildStoreBadge(store, url, lang)));
+      downloadSection.hidden = false;
+    } else {
+      downloadSection.hidden = true;
+    }
+  }
 }
 
 /**

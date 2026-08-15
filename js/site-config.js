@@ -24,6 +24,17 @@ window.MapNoteSiteConfig = {
   },
 
   /**
+   * App store download links shown on the homepage.
+   * TODO: paste the live App Store / Google Play URLs.
+   * Empty string → that badge stays hidden; hero falls back to text CTAs
+   * and the download band is not rendered.
+   */
+  storeLinks: {
+    ios: '',
+    android: '',
+  },
+
+  /**
    * Formspree (or other) endpoints.
    * Empty string → show success UI only and log payload (dev stub).
    */
