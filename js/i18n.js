@@ -25,7 +25,7 @@ window.MapNoteI18n = {
       'footer.rights': '© MapNoteHK. 保留所有權利。',
       'footer.deleteAccount': '刪除帳戶',
       // Homepage = official product home for the released app: announce launch, show features.
-      'home.heroBadge': '全新推出 · 現已上架',
+      'home.heroBadge': '全新推出 · 即將上架',
       'home.heroTitle': '五類筆記，一張地圖。',
       'home.heroLead':
         'MapNoteHK 地圖筆記正式登場 — 專為香港地產代理而設。物業、考察、客戶、報價、成交，由睇樓到簽約，每個環節都記在官方地圖的相應位置。',
@@ -192,7 +192,7 @@ window.MapNoteI18n = {
       'footer.rights': '© MapNoteHK. All rights reserved.',
       'footer.deleteAccount': 'Delete account',
       // Homepage = official product home for the released app: announce launch, show features.
-      'home.heroBadge': 'New · Now available',
+      'home.heroBadge': 'New · Launching soon',
       'home.heroTitle': 'Five note types. One map.',
       'home.heroLead':
         'MapNoteHK is out now — built for Hong Kong estate agents. Property, visits, clients, offers and deals, from viewing to closing, pinned where they belong on the official map.',
