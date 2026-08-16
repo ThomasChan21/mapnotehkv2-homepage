@@ -65,9 +65,9 @@ window.MapNoteI18n = {
       'home.f2Title': '城規會申請，地圖即睇',
       'home.f2Body':
         '今年規劃申請個案直接標記在地圖上；Premium 再解鎖 OZP 分區圖則與規劃通知，高度放寬、改變用途，早人一步掌握。',
-      'home.f3Title': '相片文件，跟盤歸檔',
+      'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
-        '現場相片與 PDF 直接附在筆記內，按物業歸類 — 資料不再散落 WhatsApp 與紙張。',
+        '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
       'home.f4Title': '廣東話語音輸入 · AI 潤飾',
       'home.f4Body':
         '現場講完即轉文字；Premium 以 AI 潤飾筆記，你確認後才儲存，對客內容更專業。',
@@ -79,7 +79,8 @@ window.MapNoteI18n = {
       'home.f1bAlt': 'App 截圖：地段界線、小一校網與配套圖層疊加顯示',
       'home.f2Alt': 'App 截圖：各區城規會規劃申請釘在地圖上',
       'home.f2bAlt': 'App 截圖：規劃申請個案詳情、申請用途與附件',
-      'home.f3Alt': 'App 截圖：附在筆記內的現場相片與文件',
+      'home.f3Alt': 'App 截圖：可按類型地區篩選、關鍵字搜尋的筆記列表',
+      'home.f3bAlt': 'App 截圖：筆記詳情附帶現場相片與 PDF 文件',
       'home.f4Alt': 'App 截圖：廣東話語音輸入與 AI 潤飾筆記',
       'home.f5AltP1': 'PDF 簡報第 1 頁：放盤封面、物業資料與代理聯絡',
       'home.f5AltP2': 'PDF 簡報第 2 頁：物業相片記錄',
@@ -230,9 +231,9 @@ window.MapNoteI18n = {
       'home.f2Title': 'Planning applications on the map',
       'home.f2Body':
         'Town Planning Board cases pinned where they happen. Premium adds OZP zoning plans and planning alerts — hear about height relaxations and change of use first.',
-      'home.f3Title': 'Photos and files, filed to the listing',
+      'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
-        'Site photos and PDFs attach straight to the note, filed by property — no more scattering across WhatsApp and paper.',
+        'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
       'home.f4Title': 'Cantonese voice input · AI polish',
       'home.f4Body':
         'Speak on site and get text. Premium polishes your notes with AI — you approve before anything is saved.',
@@ -244,7 +245,8 @@ window.MapNoteI18n = {
       'home.f1bAlt': 'App screenshot: lot boundaries, primary school nets and amenity layers overlaid',
       'home.f2Alt': 'App screenshot: Town Planning Board applications pinned across districts',
       'home.f2bAlt': 'App screenshot: planning application detail with proposed uses and attachments',
-      'home.f3Alt': 'App screenshot: site photos and files attached to a note',
+      'home.f3Alt': 'App screenshot: searchable notes list with type and district filters',
+      'home.f3bAlt': 'App screenshot: note detail with site photos and PDF files attached',
       'home.f4Alt': 'App screenshot: Cantonese voice input and AI-polished notes',
       'home.f5AltP1': 'PDF brochure page 1: listing cover, property details and agent contact',
       'home.f5AltP2': 'PDF brochure page 2: property photo gallery',
