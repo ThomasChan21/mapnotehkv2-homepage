@@ -210,12 +210,9 @@ a:hover {
   color: white;
 }
 
-/* Hero — one composition, brand first */
+/* Hero — launch announcement beside the app screenshot */
 .hero {
   position: relative;
-  min-height: min(88vh, 720px);
-  display: grid;
-  align-items: end;
   overflow: hidden;
   color: white;
   background:
@@ -246,34 +243,58 @@ a:hover {
   pointer-events: none;
 }
 
-.hero-inner {
+.hero-grid {
   position: relative;
   z-index: 1;
-  padding: 5.5rem 0 4rem;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3.25rem 0 3.75rem;
+}
+
+.hero-copy {
   animation: rise 0.7s ease both;
 }
 
-.brand-mark {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 3.8rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin: 0 0 0.75rem;
-  line-height: 1.05;
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5eead4;
+  box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.25);
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3.2vw, 1.85rem);
-  font-weight: 500;
-  max-width: 28ch;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* No ch-based width cap: ch counts Latin digits, so 16ch fits only ~8 CJK
+     glyphs and orphaned the final 「。」. The grid column constrains width;
+     text-wrap: balance keeps any wrap even in both languages. */
+  text-wrap: balance;
   margin: 0 0 1rem;
-  line-height: 1.35;
+  line-height: 1.15;
 }
 
 .hero-lead {
-  max-width: 48ch;
-  margin: 0 0 1.5rem;
+  max-width: 46ch;
+  margin: 0 0 1.75rem;
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.05rem;
 }
@@ -288,6 +309,421 @@ a:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.35);
   color: white;
+}
+
+.hero-shot {
+  justify-self: center;
+  animation: rise 0.7s ease 0.1s both;
+}
+
+/* Square demo video sits slightly wider than the old portrait screenshot */
+.hero-video {
+  display: block;
+  width: min(360px, 72vw);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 32px 70px rgba(2, 12, 16, 0.5);
+}
+
+/* Store badges — dark pill, store glyph + two-line label */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 52px;
+  padding: 0.45rem 1.1rem;
+  border-radius: 12px;
+  background: #02090d;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: white;
+  text-decoration: none;
+  line-height: 1.15;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.store-btn:hover {
+  transform: translateY(-1px);
+  background: #0b1c24;
+  color: white;
+}
+
+.store-btn svg {
+  width: 24px;
+  height: 24px;
+  flex: none;
+}
+
+.store-btn span {
+  display: grid;
+  text-align: left;
+}
+
+.store-btn small {
+  font-size: 0.68rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.store-btn strong {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+/* Five note types — --tc carries the in-app legend colour per card */
+.types-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.type-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem 1.25rem;
+  box-shadow: var(--shadow);
+  animation: rise 0.6s ease both;
+}
+
+.type-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  background: color-mix(in srgb, var(--tc) 12%, white);
+  color: var(--tc);
+}
+
+.type-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.type-card h3 {
+  font-family: var(--font-display);
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.type-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+/* Feature showcase — tab switcher: compact list left, full-size screenshot
+   right. Whole screens are shown (never cropped) and the section stays short. */
+.showcase {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.showcase-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* Each tab: tag + title always visible; body text only on the active tab */
+.showcase-item {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.showcase-item:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.showcase-item:focus-visible {
+  outline: 2px solid var(--jade-deep);
+  outline-offset: 2px;
+}
+
+.showcase-item.is-active {
+  background: #fff;
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.showcase-item-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.showcase-item-title {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.showcase-item-body {
+  display: none;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.showcase-item.is-active .showcase-item-body {
+  display: block;
+}
+
+/* Screenshot stage: tinted backdrop, the active panel fades in full-size.
+   min-height keeps the stage constant across tabs (400px visual + padding)
+   so switching features never shifts the layout below. */
+.showcase-stage {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  min-height: 448px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) * 1.5);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(28, 138, 120, 0.14), transparent 55%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(232, 240, 243, 0.9));
+}
+
+.showcase-panel[hidden] {
+  display: none;
+}
+
+.showcase-panel.is-active {
+  animation: fadeIn 0.25s ease both;
+}
+
+.showcase-panel img {
+  display: block;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 55px rgba(7, 24, 32, 0.22);
+}
+
+/* Brochure pair (feature 5): two A4 pages side by side. Each <picture> gets
+   an equal flex column with a definite width, so the img inside can size to
+   min(100% width, 400px height) without a circular percentage. Tighter
+   radius + lift reads as paper. */
+.showcase-duo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.showcase-duo picture {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.showcase-duo img {
+  height: auto;
+  max-height: 400px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Paper variant (PDF pages): tighter radius + stronger lift reads as documents */
+.showcase-duo-paper img {
+  border-radius: 6px;
+  box-shadow: 0 16px 38px rgba(7, 24, 32, 0.28);
+}
+
+/* Phone variant: premium floating device frame around app screenshots.
+   Realistic hardware scale: bezel ≈ 3.5% of width (like iPhone 15 Pro),
+   corner radius ≈ 15% of width (not a pill), and a subtle metallic edge.
+   The device is slightly lifted and tilted in 3D so it reads as a product
+   shot, not a flat black card. ::before is the Dynamic Island cutout. */
+.showcase-duo picture.phone-frame {
+  --phone-radius: 22px;
+  --phone-bezel: 6px;
+  position: relative;
+  padding: var(--phone-bezel);
+  border-radius: var(--phone-radius);
+  background: linear-gradient(160deg, #4b5157 0%, #23272b 34%, #0f1215 68%, #2e3338 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.72),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 2px 4px rgba(7, 24, 32, 0.18),
+    0 12px 26px rgba(7, 24, 32, 0.26),
+    0 28px 56px rgba(7, 24, 32, 0.14);
+  transform: perspective(1400px) rotateX(1.6deg) translateY(-2px);
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+/* Second device in the pair leans the opposite way for a showroom look */
+.showcase-duo picture.phone-frame:nth-child(2) {
+  transform: perspective(1400px) rotateX(1.6deg) rotateY(-2.2deg) translateY(-2px);
+}
+
+.showcase-duo picture.phone-frame:first-child {
+  transform: perspective(1400px) rotateX(1.6deg) rotateY(2.2deg) translateY(-2px);
+}
+
+.showcase-duo picture.phone-frame:hover {
+  transform: perspective(1400px) rotateX(0deg) rotateY(0deg) translateY(-6px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.72),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 4px 8px rgba(7, 24, 32, 0.16),
+    0 18px 40px rgba(7, 24, 32, 0.3),
+    0 40px 80px rgba(7, 24, 32, 0.18);
+}
+
+.showcase-duo picture.phone-frame::before {
+  /* Dynamic Island: width ≈ 21% of screen, height ≈ 2.9% of screen, sits
+     just below the bezel (≈ 1.4% into the screen). */
+  content: "";
+  position: absolute;
+  top: calc(var(--phone-bezel) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21%;
+  height: 2.9%;
+  min-height: 9px;
+  border-radius: 999px;
+  background: #020407;
+  box-shadow: inset 0 0 2px 1px rgba(40, 52, 68, 0.9);
+  z-index: 2;
+}
+
+.showcase-duo picture.phone-frame img {
+  border-radius: calc(var(--phone-radius) - var(--phone-bezel));
+  border: 0;
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.tag-free {
+  background: rgba(28, 138, 120, 0.12);
+  color: var(--jade-deep);
+}
+
+.tag-mix {
+  background: rgba(3, 105, 161, 0.12);
+  color: #0369a1;
+}
+
+.tag-premium {
+  background: rgba(180, 83, 9, 0.12);
+  color: #b45309;
+}
+
+/* Homepage bands use tighter padding than the shared .section default */
+.types,
+#features,
+.plans {
+  padding: 2.5rem 0;
+}
+
+/* Plans band */
+.plans-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.plan-card h3 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.plan-card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.plan-card.is-premium {
+  border-color: rgba(28, 138, 120, 0.5);
+  background: linear-gradient(160deg, rgba(28, 138, 120, 0.1), rgba(255, 255, 255, 0.9) 55%);
+}
+
+.plans-actions {
+  margin-top: 1.5rem;
+}
+
+/* Download band — dark closing section */
+.download {
+  margin-top: 1.5rem;
+  background: var(--ink);
+  color: white;
+  padding: 3.5rem 0;
+}
+
+.download-inner {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.download-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.download-inner p {
+  margin: 0 0 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.download .store-btn {
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .section {
@@ -351,6 +787,40 @@ a:hover {
   color: var(--jade-deep);
 }
 
+/* About page — mission band: same jade tint as the premium plan card */
+.panel-mission {
+  border-color: rgba(28, 138, 120, 0.5);
+  background: linear-gradient(160deg, rgba(28, 138, 120, 0.1), rgba(255, 255, 255, 0.9) 55%);
+}
+
+.panel-mission .mission-statement {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* About page — "How we build" numbered steps (an <ol> reusing .card-grid) */
+.steps-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+  background: rgba(28, 138, 120, 0.12);
+  color: var(--jade-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
 .benefit {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
@@ -405,10 +875,33 @@ a:hover {
 
 .map-frame {
   width: 100%;
-  min-height: 240px;
+  min-height: 320px;
   border: 0;
   border-radius: 12px;
   background: var(--mist);
+  /* MapLibre container: clip the canvas to the rounded corners */
+  position: relative;
+  overflow: hidden;
+}
+
+/* LandsD acknowledgement pill — keep legible over the basemap */
+.map-frame .maplibregl-ctrl-attrib {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.map-frame .maplibregl-ctrl-attrib a {
+  color: var(--ink-soft);
+}
+
+/* Shown inside .map-frame when tiles/styles cannot be fetched */
+.map-fallback {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
 }
 
 .form-stack {
@@ -590,6 +1083,29 @@ textarea {
   }
 }
 
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0 3rem;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero-lead {
+    margin-inline: auto;
+  }
+
+  .hero-actions,
+  .hero .store-badges {
+    justify-content: center;
+  }
+
+  .hero-video {
+    width: min(280px, 66vw);
+  }
+}
+
 @media (max-width: 860px) {
   .nav-toggle {
     display: inline-flex;
@@ -620,6 +1136,61 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  /* Showcase stacks: tabs become a horizontal snap strip above the stage */
+  .showcase {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .showcase-list {
+    grid-auto-flow: column;
+    grid-auto-columns: min(230px, 68vw);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .showcase-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .showcase-item {
+    scroll-snap-align: start;
+  }
+
+  .showcase-stage {
+    padding: 1rem;
+    min-height: 352px;
+  }
+
+  .showcase-panel img {
+    height: 320px;
+  }
+
+  .showcase-duo img {
+    height: auto;
+    max-height: 320px;
+  }
+
+  .types-grid {
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .types-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .type-card {
+    scroll-snap-align: start;
+  }
+
   .header-row {
     flex-wrap: wrap;
   }
@@ -628,5 +1199,24 @@ textarea {
     width: 100%;
     justify-content: flex-end;
     margin-left: 0;
+  }
+}
+
+/* Respect reduced-motion: disable entrance animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-copy,
+  .hero-shot,
+  .type-card,
+  .panel {
+    animation: none;
+  }
+
+  .btn,
+  .store-btn {
+    transition: none;
   }
 }

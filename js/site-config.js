@@ -9,18 +9,32 @@ window.MapNoteSiteConfig = {
 
   /**
    * Public contact details.
-   * TODO: replace phone/address when ready (currently Coming soon).
+   * TODO: replace address when ready (currently Coming soon).
    */
   contact: {
     email: 'support@mapnotehk.com',
-    phone: null,
-    phoneDisplayZh: '即將公佈',
-    phoneDisplayEn: 'Coming soon',
     addressZh: '地址即將公佈（香港）',
     addressEn: 'Address coming soon (Hong Kong)',
-    /** OpenStreetMap embed centred on Hong Kong (replace with office pin later) */
-    mapEmbedUrl:
-      'https://www.openstreetmap.org/export/embed.html?bbox=114.05%2C22.25%2C114.25%2C22.35&layer=mapnik&marker=22.3027%2C114.1772',
+    /**
+     * Contact page map: Lands Department CSDI vector tiles (see js/map.js).
+     * Centre is a Hong Kong overview until the office address is public —
+     * then drop the centre onto the office and raise zoom to ~15.
+     */
+    map: {
+      center: [114.1694, 22.3193],
+      zoom: 10.5,
+    },
+  },
+
+  /**
+   * App store download links shown on the homepage.
+   * TODO: paste the live App Store / Google Play URLs.
+   * Empty string → that badge stays hidden; hero falls back to text CTAs
+   * and the download band is not rendered.
+   */
+  storeLinks: {
+    ios: '',
+    android: '',
   },
 
   /**
