@@ -70,7 +70,7 @@ window.MapNoteI18n = {
         '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
       'home.f4Title': '廣東話語音輸入 · AI 專家回答',
       'home.f4Body':
-        '現場講完即轉文字；Premium 知識庫收錄大量代理熱門問題，由 AI 專家即時回答，一問即有答。',
+        '現場講完即轉文字；知識庫收錄過千條代理常見問題，AI 即時搵到最相關答案。',
       'home.f5Title': '一鍵生成物業 PDF 簡報',
       'home.f5Body':
         '相片、地址、呎吋、地圖自動排版成 PDF 簡報，即刻分享給客戶，匯報更體面。',
@@ -105,7 +105,7 @@ window.MapNoteI18n = {
       'services.item2Body': '城規會規劃個案標記在地圖上；Premium 加 OZP 分區圖則與規劃通知。',
       'services.item2Benefit': '好處：周邊變化早人一步知道，減少手動搜尋。',
       'services.item3Title': '廣東話語音 · AI 專家',
-      'services.item3Body': '語音轉文字加快現場輸入；Premium 知識庫的熱門問題由 AI 專家即時回答。',
+      'services.item3Body': '語音轉文字加快現場輸入；知識庫過千條代理常見問題，AI 即時搵到最相關答案。',
       'services.item3Benefit': '好處：少打字、內容更清晰，仍由你確認後才儲存。',
       'services.item4Title': 'PDF 簡報與團隊共享',
       'services.item4Body': 'Premium 一鍵生成物業 PDF 簡報；團隊共享筆記，內部協作更順。',
@@ -237,7 +237,7 @@ window.MapNoteI18n = {
         'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
       'home.f4Title': 'Cantonese voice input · AI expert answers',
       'home.f4Body':
-        'Speak on site and get text. Premium’s knowledge base is packed with agents’ most-asked questions, answered instantly by the AI expert.',
+        'Speak on site and get text. The knowledge base covers 1,000+ agent FAQs — AI finds the most relevant answer instantly.',
       'home.f5Title': 'One-tap property PDF brochures',
       'home.f5Body':
         'Photos, address, specs and map auto-layout into a polished PDF you can share with clients on the spot.',
@@ -275,7 +275,7 @@ window.MapNoteI18n = {
       'services.item2Benefit': 'Benefit: know about neighbourhood change first — less manual searching.',
       'services.item3Title': 'Cantonese voice · AI expert',
       'services.item3Body':
-        'Speech-to-text speeds up field entry; Premium’s knowledge base hot questions get instant AI expert answers.',
+        'Speech-to-text speeds up field entry; AI instantly finds the most relevant answer across 1,000+ agent FAQs.',
       'services.item3Benefit': 'Benefit: less typing, clearer notes — you approve before save.',
       'services.item4Title': 'PDF brochures & team sharing',
       'services.item4Body':
