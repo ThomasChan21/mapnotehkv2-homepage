@@ -56,12 +56,26 @@ function MapNoteFormsInit() {
       event.preventDefault();
       const status = document.getElementById('contact-form-status');
       const fd = new FormData(contactForm);
-      const payload = {
-        form: 'contact',
-        name: String(fd.get('name') || ''),
-        email: String(fd.get('email') || ''),
-        message: String(fd.get('message') || ''),
-      };
+      const name = String(fd.get('name') || '').trim();
+      const email = String(fd.get('email') || '').trim();
+      const message = String(fd.get('message') || '').trim();
+
+      /* Block empty/invalid submissions — the form uses novalidate, so this
+         manual check is the only gate before anything is sent. Focus the
+         first invalid field so keyboard/screen-reader users land on it. */
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!name || !emailOk || !message) {
+        setStatus(status, window.MapNoteSite.t('contact.invalid', langOf()), 'err');
+        const firstInvalid = !name
+          ? contactForm.elements.name
+          : !emailOk
+            ? contactForm.elements.email
+            : contactForm.elements.message;
+        if (firstInvalid && typeof firstInvalid.focus === 'function') firstInvalid.focus();
+        return;
+      }
+
+      const payload = { form: 'contact', name, email, message };
       try {
         await postForm(cfg.contactEndpoint, payload);
         setStatus(status, window.MapNoteSite.t('contact.success', langOf()), 'ok');

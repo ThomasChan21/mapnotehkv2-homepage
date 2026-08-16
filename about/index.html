@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/site.css?v=20260816i" />
+  <link rel="stylesheet" href="../css/site.css?v=20260816p" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip</a>
@@ -21,25 +21,85 @@
         <p data-i18n="about.lead"></p>
       </div>
 
+      <!-- Story: who we are, without naming individuals -->
       <article class="panel" style="margin-bottom: 1rem;">
         <h3 data-i18n="about.storyTitle"></h3>
         <p data-i18n="about.storyBody"></p>
       </article>
 
-      <div class="section-head" style="margin-top: 2rem;">
-        <h2 data-i18n="about.teamTitle"></h2>
-        <p data-i18n="about.teamBody"></p>
+      <!-- Mission: jade-tinted band with a display-font statement -->
+      <article class="panel panel-mission" style="margin-bottom: 2rem;">
+        <h3 data-i18n="about.missionTitle"></h3>
+        <p class="mission-statement" data-i18n="about.missionBody"></p>
+      </article>
+
+      <!-- Values: what guides the product; icon chips reuse the homepage type-icon pattern -->
+      <div class="section-head">
+        <h2 data-i18n="about.valuesTitle"></h2>
+        <p data-i18n="about.valuesLead"></p>
       </div>
-      <div class="team-grid">
-        <div class="placeholder-box" data-i18n="about.teamPlaceholder"></div>
-        <div class="placeholder-box" data-i18n="about.teamPlaceholder"></div>
-        <div class="placeholder-box" data-i18n="about.teamPlaceholder"></div>
+      <div class="card-grid">
+        <article class="panel">
+          <span class="type-icon" style="--tc: #0d9488" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1 1.1-.49 1.1-1.1-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z" /></svg>
+          </span>
+          <h3 data-i18n="about.value1Title"></h3>
+          <p data-i18n="about.value1Body"></p>
+        </article>
+        <article class="panel">
+          <span class="type-icon" style="--tc: #0369a1" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" /></svg>
+          </span>
+          <h3 data-i18n="about.value2Title"></h3>
+          <p data-i18n="about.value2Body"></p>
+        </article>
+        <article class="panel">
+          <span class="type-icon" style="--tc: #4f46e5" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" /></svg>
+          </span>
+          <h3 data-i18n="about.value3Title"></h3>
+          <p data-i18n="about.value3Body"></p>
+        </article>
+        <article class="panel">
+          <span class="type-icon" style="--tc: #b45309" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z" /></svg>
+          </span>
+          <h3 data-i18n="about.value4Title"></h3>
+          <p data-i18n="about.value4Body"></p>
+        </article>
       </div>
 
-      <article class="panel" style="margin-top: 1.5rem;">
-        <h3 data-i18n="about.trustTitle"></h3>
-        <p data-i18n="about.trustBody"></p>
-      </article>
+      <!-- How we build: numbered steps instead of a team wall -->
+      <div class="section-head" style="margin-top: 2rem;">
+        <h2 data-i18n="about.buildTitle"></h2>
+        <p data-i18n="about.buildLead"></p>
+      </div>
+      <ol class="card-grid steps-grid">
+        <li class="panel">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3 data-i18n="about.step1Title"></h3>
+          <p data-i18n="about.step1Body"></p>
+        </li>
+        <li class="panel">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3 data-i18n="about.step2Title"></h3>
+          <p data-i18n="about.step2Body"></p>
+        </li>
+        <li class="panel">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3 data-i18n="about.step3Title"></h3>
+          <p data-i18n="about.step3Body"></p>
+        </li>
+      </ol>
+
+      <!-- Closing CTA: same banner pattern as the services page pricing strip -->
+      <div class="panel pricing-banner" style="margin-top: 2rem;">
+        <div>
+          <h3 data-i18n="about.ctaTitle"></h3>
+          <p data-i18n="about.ctaBody"></p>
+        </div>
+        <a class="btn btn-primary" href="../contact/" data-i18n="about.ctaBtn"></a>
+      </div>
     </div>
   </main>
 
@@ -48,9 +108,9 @@
   <script>
     window.MapNotePage = { base: '../', active: 'about' };
   </script>
-  <script src="../js/site-config.js?v=20260816i"></script>
-  <script src="../js/i18n.js?v=20260816i"></script>
-  <script src="../js/chrome.js?v=20260816i"></script>
-  <script src="../js/site.js?v=20260816i"></script>
+  <script src="../js/site-config.js?v=20260816p"></script>
+  <script src="../js/i18n.js?v=20260816p"></script>
+  <script src="../js/chrome.js?v=20260816p"></script>
+  <script src="../js/site.js?v=20260816p"></script>
 </body>
 </html>

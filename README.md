@@ -8,7 +8,7 @@ Static bilingual website (繁體中文 / English) for **mapnotehk.com** — the 
 |------|---------|
 | `/` | Official homepage — launch announcement, five note types, feature showcase, Free/Premium, download CTAs |
 | `/services/` | Feature details / benefits / pricing note |
-| `/about/` | Story, team placeholders, trust signals |
+| `/about/` | Story, mission, values, how we build, contact CTA |
 | `/contact/` | Phone/email/address, map embed, message form |
 | `/privacy/` | Privacy summary + link to deletion form |
 | `/account-deletion/` | Self-serve account deletion request form |
@@ -28,8 +28,8 @@ Open `http://localhost:3000/account-deletion/` to verify the deletion deep link.
 Edit `js/site-config.js`:
 
 - `storeLinks.ios` / `storeLinks.android` — live App Store / Google Play URLs; while empty, the homepage shows text CTAs and hides the download band
-- `contact.email` / `contact.phone` / address strings
-- `contact.mapEmbedUrl` (replace HK overview with office pin)
+- `contact.email` / address strings
+- `contact.map.center` / `contact.map.zoom` — contact page shows the Lands Department CSDI vector map (js/map.js); point the centre at the office when the address is public
 - `forms.contactEndpoint` / `forms.accountDeletionEndpoint` (Formspree or API)
 
 Language preference is stored in `localStorage` key `mapnotehk_lang`.
@@ -37,10 +37,7 @@ Language preference is stored in `localStorage` key `mapnotehk_lang`.
 ## Placeholders (fill when ready)
 
 - App Store / Google Play URLs (`storeLinks` in `js/site-config.js`)
-- Hong Kong phone number
-- Office / shop address + map pin
-- Team names and photos
-- Awards / memberships
+- Office / shop address (contact map centres on it once public)
 - Detailed pricing (currently Free/Premium + request a quote)
 - Dedicated Formspree form for account deletion (optional; currently shares contact endpoint)
 

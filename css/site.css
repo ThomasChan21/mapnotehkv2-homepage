@@ -533,7 +533,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.85rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -555,6 +555,73 @@ a:hover {
 .showcase-duo-paper img {
   border-radius: 6px;
   box-shadow: 0 16px 38px rgba(7, 24, 32, 0.28);
+}
+
+/* Phone variant: premium floating device frame around app screenshots.
+   Realistic hardware scale: bezel ≈ 3.5% of width (like iPhone 15 Pro),
+   corner radius ≈ 15% of width (not a pill), and a subtle metallic edge.
+   The device is slightly lifted and tilted in 3D so it reads as a product
+   shot, not a flat black card. ::before is the Dynamic Island cutout. */
+.showcase-duo picture.phone-frame {
+  --phone-radius: 22px;
+  --phone-bezel: 6px;
+  position: relative;
+  padding: var(--phone-bezel);
+  border-radius: var(--phone-radius);
+  background: linear-gradient(160deg, #4b5157 0%, #23272b 34%, #0f1215 68%, #2e3338 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.72),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 2px 4px rgba(7, 24, 32, 0.18),
+    0 12px 26px rgba(7, 24, 32, 0.26),
+    0 28px 56px rgba(7, 24, 32, 0.14);
+  transform: perspective(1400px) rotateX(1.6deg) translateY(-2px);
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+/* Second device in the pair leans the opposite way for a showroom look */
+.showcase-duo picture.phone-frame:nth-child(2) {
+  transform: perspective(1400px) rotateX(1.6deg) rotateY(-2.2deg) translateY(-2px);
+}
+
+.showcase-duo picture.phone-frame:first-child {
+  transform: perspective(1400px) rotateX(1.6deg) rotateY(2.2deg) translateY(-2px);
+}
+
+.showcase-duo picture.phone-frame:hover {
+  transform: perspective(1400px) rotateX(0deg) rotateY(0deg) translateY(-6px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.72),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 4px 8px rgba(7, 24, 32, 0.16),
+    0 18px 40px rgba(7, 24, 32, 0.3),
+    0 40px 80px rgba(7, 24, 32, 0.18);
+}
+
+.showcase-duo picture.phone-frame::before {
+  /* Dynamic Island: width ≈ 21% of screen, height ≈ 2.9% of screen, sits
+     just below the bezel (≈ 1.4% into the screen). */
+  content: "";
+  position: absolute;
+  top: calc(var(--phone-bezel) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21%;
+  height: 2.9%;
+  min-height: 9px;
+  border-radius: 999px;
+  background: #020407;
+  box-shadow: inset 0 0 2px 1px rgba(40, 52, 68, 0.9);
+  z-index: 2;
+}
+
+.showcase-duo picture.phone-frame img {
+  border-radius: calc(var(--phone-radius) - var(--phone-bezel));
+  border: 0;
+  box-shadow: none;
 }
 
 @keyframes fadeIn {
@@ -720,6 +787,40 @@ a:hover {
   color: var(--jade-deep);
 }
 
+/* About page — mission band: same jade tint as the premium plan card */
+.panel-mission {
+  border-color: rgba(28, 138, 120, 0.5);
+  background: linear-gradient(160deg, rgba(28, 138, 120, 0.1), rgba(255, 255, 255, 0.9) 55%);
+}
+
+.panel-mission .mission-statement {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* About page — "How we build" numbered steps (an <ol> reusing .card-grid) */
+.steps-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+  background: rgba(28, 138, 120, 0.12);
+  color: var(--jade-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
 .benefit {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
@@ -774,10 +875,33 @@ a:hover {
 
 .map-frame {
   width: 100%;
-  min-height: 240px;
+  min-height: 320px;
   border: 0;
   border-radius: 12px;
   background: var(--mist);
+  /* MapLibre container: clip the canvas to the rounded corners */
+  position: relative;
+  overflow: hidden;
+}
+
+/* LandsD acknowledgement pill — keep legible over the basemap */
+.map-frame .maplibregl-ctrl-attrib {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.map-frame .maplibregl-ctrl-attrib a {
+  color: var(--ink-soft);
+}
+
+/* Shown inside .map-frame when tiles/styles cannot be fetched */
+.map-fallback {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
 }
 
 .form-stack {

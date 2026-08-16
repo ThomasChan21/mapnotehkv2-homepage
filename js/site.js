@@ -14,14 +14,16 @@ function getLang() {
 }
 
 /**
- * Looks up a translation string.
+ * Looks up a translation string and expands dynamic tokens.
+ * Supported tokens: {year} → current calendar year (e.g. footer copyright).
  * @param {string} key
  * @param {'en' | 'zh-Hant'} lang
  * @returns {string}
  */
 function t(key, lang) {
   const table = window.MapNoteI18n.strings[lang] || {};
-  return table[key] || window.MapNoteI18n.strings.en[key] || key;
+  const raw = table[key] || window.MapNoteI18n.strings.en[key] || key;
+  return raw.replace('{year}', String(new Date().getFullYear()));
 }
 
 /**
@@ -65,38 +67,28 @@ function applyI18n(lang) {
 
   fillContactPlaceholders(lang);
   renderStoreBadges(lang);
+  /* Keep the contact-page map labels in sync with the site language */
+  if (typeof window.MapNoteMapSetLang === 'function') {
+    window.MapNoteMapSetLang(lang);
+  }
 }
 
 /**
- * Fills contact phone/address from config (Coming soon when null).
+ * Fills contact email/address from config.
  * @param {'en' | 'zh-Hant'} lang
  * @returns {void}
  */
 function fillContactPlaceholders(lang) {
   const cfg = window.MapNoteSiteConfig.contact;
-  const phoneEl = document.getElementById('contact-phone');
   const addressEl = document.getElementById('contact-address');
   const emailEl = document.getElementById('contact-email');
-  const mapFrame = document.getElementById('contact-map');
 
   if (emailEl) {
     emailEl.textContent = cfg.email;
     emailEl.setAttribute('href', `mailto:${cfg.email}`);
   }
-  if (phoneEl) {
-    if (cfg.phone) {
-      phoneEl.textContent = cfg.phone;
-      phoneEl.setAttribute('href', `tel:${cfg.phone.replace(/\s+/g, '')}`);
-    } else {
-      phoneEl.removeAttribute('href');
-      phoneEl.textContent = lang === 'en' ? cfg.phoneDisplayEn : cfg.phoneDisplayZh;
-    }
-  }
   if (addressEl) {
     addressEl.textContent = lang === 'en' ? cfg.addressEn : cfg.addressZh;
-  }
-  if (mapFrame && cfg.mapEmbedUrl) {
-    mapFrame.setAttribute('src', cfg.mapEmbedUrl);
   }
 }
 
