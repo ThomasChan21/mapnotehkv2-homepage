@@ -11,7 +11,7 @@ window.MapNoteI18n = {
     'zh-Hant': {
       'meta.homeTitle': 'MapNoteHK 地圖筆記｜香港地產代理的地圖筆記 App',
       'meta.homeDesc':
-        'MapNoteHK 正式登場：物業、考察、客戶、報價、成交五類筆記標記在香港官方地圖上，配合規劃申請圖層、廣東話語音輸入、AI 整理與 PDF 簡報，代理日常一個 App 搞掂。',
+        'MapNoteHK 即將登場：物業、考察、客戶、報價、成交五類筆記標記在香港官方地圖上，配合規劃申請圖層、廣東話語音輸入、AI 整理與 PDF 簡報，代理日常一個 App 搞掂。',
       'nav.home': '首頁',
       'nav.services': '功能與方案',
       'nav.about': '關於我們',
@@ -24,11 +24,11 @@ window.MapNoteI18n = {
       'footer.tagline': '代理服務，地圖記錄',
       'footer.rights': '© MapNoteHK. 保留所有權利。',
       'footer.deleteAccount': '刪除帳戶',
-      // Homepage = official product home for the released app: announce launch, show features.
+      // Homepage = official product home for the upcoming app: announce the launch, show features.
       'home.heroBadge': '全新推出 · 即將上架',
       'home.heroTitle': '五類筆記，一張地圖。',
       'home.heroLead':
-        'MapNoteHK 地圖筆記正式登場 — 專為香港地產代理而設。物業、考察、客戶、報價、成交，由睇樓到簽約，每個環節都記在官方地圖的相應位置。',
+        'MapNoteHK 地圖筆記即將登場 — 專為香港地產代理而設。物業、考察、客戶、報價、成交，由睇樓到簽約，每個環節都記在官方地圖的相應位置。',
       'home.ctaPrimary': '探索功能',
       'home.ctaSecondary': '聯絡我們',
       // Hero demo video (muted loop in place of a static screenshot).
@@ -94,8 +94,8 @@ window.MapNoteI18n = {
       'home.plansProBody': 'OZP 分區圖則、規劃通知、AI 專家、PDF 簡報、團隊共享，附件配額再升級。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
-      'home.downloadTitle': '而家就裝，下次睇樓開始用。',
-      'home.downloadBody': 'MapNoteHK 地圖筆記已登陸 App Store 與 Google Play。',
+      'home.downloadTitle': '上架即裝，下次睇樓開始用。',
+      'home.downloadBody': 'MapNoteHK 地圖筆記即將登陸 App Store 與 Google Play。',
       'services.title': '功能與方案',
       'services.lead': '由地圖筆記到 AI 工具，全部圍繞香港代理工作流程而設。',
       'services.item1Title': '五類地圖筆記',
@@ -118,7 +118,7 @@ window.MapNoteI18n = {
       'about.lead': '我們相信地產前線值得更好的數碼工具。',
       'about.storyTitle': '我們的故事',
       'about.storyBody':
-        'MapNoteHK 由在香港物業與科技交界工作的團隊打造，把「地圖 + 筆記 + 規劃資訊」整合成代理日常可用的工具，現已正式推出。公司詳細歷史與里程碑即將補充。',
+        'MapNoteHK 由在香港物業與科技交界工作的團隊打造，把「地圖 + 筆記 + 規劃資訊」整合成代理日常可用的工具，即將正式推出。公司詳細歷史與里程碑即將補充。',
       'about.teamTitle': '團隊',
       'about.teamBody': '主要成員介紹與照片即將上線。',
       'about.teamPlaceholder': 'Coming soon',
@@ -178,7 +178,7 @@ window.MapNoteI18n = {
     en: {
       'meta.homeTitle': 'MapNoteHK | Map notes for Hong Kong estate agents',
       'meta.homeDesc':
-        'MapNoteHK is out now: property, visit, client, offer and deal notes pinned to Hong Kong’s official map — with planning layers, Cantonese voice input, AI expert and shareable PDFs.',
+        'MapNoteHK is launching soon: property, visit, client, offer and deal notes pinned to Hong Kong’s official map — with planning layers, Cantonese voice input, AI expert and shareable PDFs.',
       'nav.home': 'Home',
       'nav.services': 'Features',
       'nav.about': 'About',
@@ -195,7 +195,7 @@ window.MapNoteI18n = {
       'home.heroBadge': 'New · Launching soon',
       'home.heroTitle': 'Five note types. One map.',
       'home.heroLead':
-        'MapNoteHK is out now — built for Hong Kong estate agents. Property, visits, clients, offers and deals, from viewing to closing, pinned where they belong on the official map.',
+        'MapNoteHK is launching soon — built for Hong Kong estate agents. Property, visits, clients, offers and deals, from viewing to closing, pinned where they belong on the official map.',
       'home.ctaPrimary': 'Explore features',
       'home.ctaSecondary': 'Contact us',
       // Hero demo video (muted loop in place of a static screenshot).
@@ -261,8 +261,8 @@ window.MapNoteI18n = {
       'home.plansProBody': 'OZP zoning plans, planning alerts, AI expert, PDF brochures, team sharing and bigger attachment quotas.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
-      'home.downloadTitle': 'Install it today. Use it at your next viewing.',
-      'home.downloadBody': 'MapNoteHK is available on the App Store and Google Play.',
+      'home.downloadTitle': 'Get it at launch. Use it at your next viewing.',
+      'home.downloadBody': 'MapNoteHK is launching soon on the App Store and Google Play.',
       'services.title': 'Features & plans',
       'services.lead': 'From map notes to AI tools — everything is shaped around Hong Kong agency workflows.',
       'services.item1Title': 'Five map note types',
@@ -289,7 +289,7 @@ window.MapNoteI18n = {
       'about.lead': 'Property frontline teams deserve better digital tools.',
       'about.storyTitle': 'Our story',
       'about.storyBody':
-        'MapNoteHK is built by a team at the intersection of Hong Kong property and technology, combining map + notes + planning context into a daily tool for agents — now available on the App Store and Google Play. Full company history coming soon.',
+        'MapNoteHK is built by a team at the intersection of Hong Kong property and technology, combining map + notes + planning context into a daily tool for agents — launching soon on the App Store and Google Play. Full company history coming soon.',
       'about.teamTitle': 'Team',
       'about.teamBody': 'Key people and photos coming soon.',
       'about.teamPlaceholder': 'Coming soon',
