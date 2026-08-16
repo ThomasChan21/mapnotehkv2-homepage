@@ -68,9 +68,9 @@ window.MapNoteI18n = {
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
         '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
-      'home.f4Title': '廣東話語音輸入 · AI 潤飾',
+      'home.f4Title': '廣東話語音輸入 · AI 專家',
       'home.f4Body':
-        '現場講完即轉文字；Premium 以 AI 潤飾筆記，你確認後才儲存，對客內容更專業。',
+        '現場講完即轉文字；Premium 的 AI 專家讀埋你五類筆記 — 成交參考、建議開價、用盡策略，即問即答。',
       'home.f5Title': '一鍵生成物業 PDF 簡報',
       'home.f5Body':
         '相片、地址、呎吋、地圖自動排版成 PDF 簡報，即刻分享給客戶，匯報更體面。',
@@ -81,7 +81,8 @@ window.MapNoteI18n = {
       'home.f2bAlt': 'App 截圖：規劃申請個案詳情、申請用途與附件',
       'home.f3Alt': 'App 截圖：可按類型地區篩選、關鍵字搜尋的筆記列表',
       'home.f3bAlt': 'App 截圖：筆記詳情附帶現場相片與 PDF 文件',
-      'home.f4Alt': 'App 截圖：廣東話語音輸入與 AI 潤飾筆記',
+      'home.f4Alt': 'App 截圖：AI 專家回答太古城成交參考，附相關筆記出處',
+      'home.f4bAlt': 'App 截圖：AI 專家比較客戶出價與放盤，建議開價範圍',
       'home.f5AltP1': 'PDF 簡報第 1 頁：放盤封面、物業資料與代理聯絡',
       'home.f5AltP2': 'PDF 簡報第 2 頁：物業相片記錄',
       // Plans band.
@@ -90,7 +91,7 @@ window.MapNoteI18n = {
       'home.plansFreeTitle': 'Free 免費方案',
       'home.plansFreeBody': '五類筆記、規劃個案地圖、地段圖層、每月語音配額 — 落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
-      'home.plansProBody': 'OZP 分區圖則、規劃通知、AI 潤飾、PDF 簡報、團隊共享，附件配額再升級。',
+      'home.plansProBody': 'OZP 分區圖則、規劃通知、AI 專家、PDF 簡報、團隊共享，附件配額再升級。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': '而家就裝，下次睇樓開始用。',
@@ -103,8 +104,8 @@ window.MapNoteI18n = {
       'services.item2Title': '規劃申請地圖',
       'services.item2Body': '城規會規劃個案標記在地圖上；Premium 加 OZP 分區圖則與規劃通知。',
       'services.item2Benefit': '好處：周邊變化早人一步知道，減少手動搜尋。',
-      'services.item3Title': '廣東話語音 · AI 整理',
-      'services.item3Body': '語音轉文字加快現場輸入；Premium 以 AI 潤飾筆記文字。',
+      'services.item3Title': '廣東話語音 · AI 專家',
+      'services.item3Body': '語音轉文字加快現場輸入；Premium 的 AI 專家按你的筆記即問即答。',
       'services.item3Benefit': '好處：少打字、內容更清晰，仍由你確認後才儲存。',
       'services.item4Title': 'PDF 簡報與團隊共享',
       'services.item4Body': 'Premium 一鍵生成物業 PDF 簡報；團隊共享筆記，內部協作更順。',
@@ -177,7 +178,7 @@ window.MapNoteI18n = {
     en: {
       'meta.homeTitle': 'MapNoteHK | Map notes for Hong Kong estate agents',
       'meta.homeDesc':
-        'MapNoteHK is out now: property, visit, client, offer and deal notes pinned to Hong Kong’s official map — with planning layers, Cantonese voice input, AI polish and shareable PDFs.',
+        'MapNoteHK is out now: property, visit, client, offer and deal notes pinned to Hong Kong’s official map — with planning layers, Cantonese voice input, AI expert and shareable PDFs.',
       'nav.home': 'Home',
       'nav.services': 'Features',
       'nav.about': 'About',
@@ -234,9 +235,9 @@ window.MapNoteI18n = {
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
         'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
-      'home.f4Title': 'Cantonese voice input · AI polish',
+      'home.f4Title': 'Cantonese voice input · AI expert',
       'home.f4Body':
-        'Speak on site and get text. Premium polishes your notes with AI — you approve before anything is saved.',
+        'Speak on site and get text. Premium’s AI expert reads your five note types — comparable deals, suggested pricing, negotiation tactics, answered on the spot.',
       'home.f5Title': 'One-tap property PDF brochures',
       'home.f5Body':
         'Photos, address, specs and map auto-layout into a polished PDF you can share with clients on the spot.',
@@ -247,7 +248,8 @@ window.MapNoteI18n = {
       'home.f2bAlt': 'App screenshot: planning application detail with proposed uses and attachments',
       'home.f3Alt': 'App screenshot: searchable notes list with type and district filters',
       'home.f3bAlt': 'App screenshot: note detail with site photos and PDF files attached',
-      'home.f4Alt': 'App screenshot: Cantonese voice input and AI-polished notes',
+      'home.f4Alt': 'App screenshot: AI expert answering Taikoo Shing comparables with note sources',
+      'home.f4bAlt': 'App screenshot: AI expert weighing client offers against listings with a suggested range',
       'home.f5AltP1': 'PDF brochure page 1: listing cover, property details and agent contact',
       'home.f5AltP2': 'PDF brochure page 2: property photo gallery',
       // Plans band.
@@ -256,7 +258,7 @@ window.MapNoteI18n = {
       'home.plansFreeTitle': 'Free',
       'home.plansFreeBody': 'Five note types, planning-case map, lot layers and a monthly voice quota — ready for field work.',
       'home.plansProTitle': 'Premium',
-      'home.plansProBody': 'OZP zoning plans, planning alerts, AI polish, PDF brochures, team sharing and bigger attachment quotas.',
+      'home.plansProBody': 'OZP zoning plans, planning alerts, AI expert, PDF brochures, team sharing and bigger attachment quotas.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': 'Install it today. Use it at your next viewing.',
@@ -271,9 +273,9 @@ window.MapNoteI18n = {
       'services.item2Body':
         'Town Planning Board cases pinned on the map; Premium adds OZP zoning plans and planning alerts.',
       'services.item2Benefit': 'Benefit: know about neighbourhood change first — less manual searching.',
-      'services.item3Title': 'Cantonese voice · AI polish',
+      'services.item3Title': 'Cantonese voice · AI expert',
       'services.item3Body':
-        'Speech-to-text speeds up field entry; Premium polishes note wording with AI.',
+        'Speech-to-text speeds up field entry; Premium’s AI expert answers from your own notes.',
       'services.item3Benefit': 'Benefit: less typing, clearer notes — you approve before save.',
       'services.item4Title': 'PDF brochures & team sharing',
       'services.item4Body':
