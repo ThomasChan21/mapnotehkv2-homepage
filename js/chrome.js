@@ -61,6 +61,10 @@ function renderChrome() {
     </header>
   `;
 
+  // TODO(launch): the Delete account footer link is hidden for now (founder request).
+  // Restore <a href="account-deletion/" data-i18n="footer.deleteAccount"> in footer-links
+  // at store launch — the /account-deletion/ page itself stays live because the stores
+  // require that stable URL.
   footer.innerHTML = `
     <footer class="site-footer">
       <div class="container footer-grid">
@@ -73,7 +77,6 @@ function renderChrome() {
           <a href="${siteHref(base, 'about/')}" data-i18n="nav.about"></a>
           <a href="${siteHref(base, 'contact/')}" data-i18n="nav.contact"></a>
           <a href="${siteHref(base, 'privacy/')}" data-i18n="nav.privacy"></a>
-          <a href="${siteHref(base, 'account-deletion/')}" data-i18n="footer.deleteAccount"></a>
         </div>
         <p class="footer-copy" data-i18n="footer.rights"></p>
       </div>
