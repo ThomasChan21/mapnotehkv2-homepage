@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MapNoteHK 地圖筆記｜香港地產代理的地圖筆記 App</title>
-  <meta name="description" content="MapNoteHK 正式登場：物業、考察、客戶、報價、成交五類筆記標記在香港官方地圖上，配合規劃申請圖層、廣東話語音輸入、AI 整理與 PDF 簡報。" />
+  <meta name="description" content="MapNoteHK 即將登場：唯一建基於香港地政總署官方地圖的代理筆記 App — 物業、考察、客戶、報價、成交 30 秒釘上地圖，配合廣東話語音輸入、問專家 AI、規劃申請圖層與 PDF 簡報。" />
   <meta property="og:title" content="MapNoteHK 地圖筆記" />
   <meta property="og:image" content="./assets/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/site.css?v=20260816p" />
+  <link rel="stylesheet" href="./css/site.css?v=20260818a" />
   <!-- Favicon: pin+map brand mark — ICO fallback + PNG tabs + Apple/PWA icons -->
   <link rel="icon" href="./assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
@@ -35,6 +35,13 @@
             <a class="btn btn-primary" href="#features" data-i18n="home.ctaPrimary"></a>
             <a class="btn btn-secondary" href="./contact/" data-i18n="home.ctaSecondary"></a>
           </div>
+          <!-- PRD proof points under the CTAs: quick capture, five types, FAQ base, trilingual -->
+          <ul class="hero-stats">
+            <li><strong data-i18n="home.stat1Value"></strong><span data-i18n="home.stat1Label"></span></li>
+            <li><strong data-i18n="home.stat2Value"></strong><span data-i18n="home.stat2Label"></span></li>
+            <li><strong data-i18n="home.stat3Value"></strong><span data-i18n="home.stat3Label"></span></li>
+            <li><strong data-i18n="home.stat4Value"></strong><span data-i18n="home.stat4Label"></span></li>
+          </ul>
         </div>
         <!-- App demo loop in place of a static screenshot: muted autoplay is required for mobile -->
         <div class="hero-shot">
@@ -236,10 +243,12 @@
         <div class="plans-grid">
           <article class="plan-card">
             <h3 data-i18n="home.plansFreeTitle"></h3>
+            <p class="plan-price" data-i18n="home.plansFreePrice"></p>
             <p data-i18n="home.plansFreeBody"></p>
           </article>
           <article class="plan-card is-premium">
             <h3 data-i18n="home.plansProTitle"></h3>
+            <p class="plan-price" data-i18n="home.plansProPrice"></p>
             <p data-i18n="home.plansProBody"></p>
           </article>
         </div>
@@ -264,9 +273,9 @@
   <script>
     window.MapNotePage = { base: './', active: 'home' };
   </script>
-  <script src="./js/site-config.js?v=20260816p"></script>
-  <script src="./js/i18n.js?v=20260816p"></script>
-  <script src="./js/chrome.js?v=20260816p"></script>
-  <script src="./js/site.js?v=20260816p"></script>
+  <script src="./js/site-config.js?v=20260818a"></script>
+  <script src="./js/i18n.js?v=20260818a"></script>
+  <script src="./js/chrome.js?v=20260818a"></script>
+  <script src="./js/site.js?v=20260818a"></script>
 </body>
 </html>

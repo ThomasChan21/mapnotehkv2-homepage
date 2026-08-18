@@ -11,7 +11,7 @@ window.MapNoteI18n = {
     'zh-Hant': {
       'meta.homeTitle': 'MapNoteHK 地圖筆記｜香港地產代理的地圖筆記 App',
       'meta.homeDesc':
-        'MapNoteHK 即將登場：物業、考察、客戶、報價、成交五類筆記標記在香港官方地圖上，配合規劃申請圖層、廣東話語音輸入、AI 整理與 PDF 簡報，代理日常一個 App 搞掂。',
+        'MapNoteHK 即將登場：唯一建基於香港地政總署官方地圖的代理筆記 App — 物業、考察、客戶、報價、成交 30 秒釘上地圖，配合廣東話語音輸入、問專家 AI、規劃申請圖層與 PDF 簡報。',
       'nav.home': '首頁',
       'nav.services': '功能與方案',
       'nav.about': '關於我們',
@@ -26,12 +26,22 @@ window.MapNoteI18n = {
       'footer.rights': '© {year} MapNoteHK. 保留所有權利。',
       'footer.deleteAccount': '刪除帳戶',
       // Homepage = official product home for the upcoming app: announce the launch, show features.
+      // Hero copy mirrors PRD §I go-to-market messaging (tagline + official-map uniqueness + 30s capture).
       'home.heroBadge': '全新推出 · 即將上架',
-      'home.heroTitle': '五類筆記，一張地圖。',
+      'home.heroTitle': '代理服務，地圖記錄。',
       'home.heroLead':
-        'MapNoteHK 地圖筆記即將登場 — 專為香港地產代理而設。物業、考察、客戶、報價、成交，由睇樓到簽約，每個環節都記在官方地圖的相應位置。',
+        '唯一建基於香港地政總署官方地圖的代理筆記 App。物業、考察、客戶、報價、成交，30 秒釘上地圖 — 廣東話語音輸入、問專家 AI、PDF 簡報，代理日常一個 App 搞掂。',
       'home.ctaPrimary': '探索功能',
       'home.ctaSecondary': '聯絡我們',
+      // Hero proof stats (PRD headline numbers).
+      'home.stat1Value': '≤30 秒',
+      'home.stat1Label': '快速記錄一則筆記',
+      'home.stat2Value': '5 類筆記',
+      'home.stat2Label': '覆蓋代理全流程',
+      'home.stat3Value': '1,000+',
+      'home.stat3Label': '問專家 AI 知識庫',
+      'home.stat4Value': '繁 · 簡 · 英',
+      'home.stat4Label': '三語介面切換',
       // Hero demo video (muted loop in place of a static screenshot).
       'home.heroVideoAria': 'MapNoteHK App 操作示範短片',
       'home.storeSmall': '下載',
@@ -41,7 +51,7 @@ window.MapNoteI18n = {
       'home.storeAndroidAria': '於 Google Play 下載 MapNoteHK',
       // Five note types — colours match the in-app legend so users learn it once.
       'home.typesTitle': '五類筆記，覆蓋代理全流程',
-      'home.typesLead': '每類筆記對應代理服務一個環節。顏色即類別，一眼認得。',
+      'home.typesLead': '每類筆記對應代理服務一個環節，顏色即類別，一眼認得。快速記錄只需 30 秒，細節之後再補。',
       'home.type1Title': '物業資料',
       'home.type1Body': '大廈資料、管理費、盤源研究。',
       'home.type2Title': '實地考察',
@@ -62,16 +72,16 @@ window.MapNoteI18n = {
       'home.tagFreePremium': '免費 + Premium',
       'home.f1Title': '筆記釘在香港官方地圖上',
       'home.f1Body':
-        '以地政總署地圖為底，附近學校、酒店與配套一開即睇。筆記跟住物業走，永遠唔會搵唔返。',
+        '以地政總署地圖為底，附近學校、酒店與配套一開即睇；離線快取令地庫弱訊號都翻睇到筆記。筆記跟住物業走，永遠唔會搵唔返。',
       'home.f2Title': '城規會申請，地圖即睇',
       'home.f2Body':
         '今年規劃申請個案直接標記在地圖上；Premium 再解鎖 OZP 分區圖則與規劃通知，高度放寬、改變用途，早人一步掌握。',
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
         '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
-      'home.f4Title': '廣東話語音輸入 · AI 專家回答',
+      'home.f4Title': '廣東話語音輸入 · 問專家 AI 即答',
       'home.f4Body':
-        '現場講完即轉文字；知識庫收錄過千條代理常見問題，AI 即時搵到最相關答案。',
+        '現場講完即轉文字；問專家知識庫收錄過千條代理常見問題，AI 即時搵到最相關答案，仲附埋出處。',
       'home.f5Title': '一鍵生成物業 PDF 簡報',
       'home.f5Body':
         '相片、地址、呎吋、地圖自動排版成 PDF 簡報，即刻分享給客戶，匯報更體面。',
@@ -90,9 +100,13 @@ window.MapNoteI18n = {
       'home.plansTitle': '免費開始，按需升級',
       'home.plansLead': '免費方案已涵蓋五類筆記與規劃地圖；Premium 解鎖進階工具。',
       'home.plansFreeTitle': 'Free 免費方案',
-      'home.plansFreeBody': '五類筆記、規劃個案地圖、地段圖層、每月語音配額 — 落區工作即裝即用。',
+      // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
+      'home.plansFreePrice': 'HK$0',
+      'home.plansFreeBody': '五類筆記、規劃個案地圖、地段圖層、廣東話語音輸入 — 每則筆記可附 3 張相片及 5 份 PDF，落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
-      'home.plansProBody': 'OZP 分區圖則、規劃通知、AI 專家、PDF 簡報、團隊共享，附件配額再升級。',
+      // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
+      'home.plansProPrice': 'HK$48 / 月',
+      'home.plansProBody': 'OZP 分區圖則、規劃通知、問專家 AI、PDF 簡報、團隊共享 — 附件配額升級至每則 20 張相片。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': '上架即裝，下次睇樓開始用。',
@@ -105,15 +119,15 @@ window.MapNoteI18n = {
       'services.item2Title': '規劃申請地圖',
       'services.item2Body': '城規會規劃個案標記在地圖上；Premium 加 OZP 分區圖則與規劃通知。',
       'services.item2Benefit': '好處：周邊變化早人一步知道，減少手動搜尋。',
-      'services.item3Title': '廣東話語音 · AI 專家',
-      'services.item3Body': '語音轉文字加快現場輸入；知識庫過千條代理常見問題，AI 即時搵到最相關答案。',
+      'services.item3Title': '廣東話語音 · 問專家 AI',
+      'services.item3Body': '語音轉文字加快現場輸入；問專家知識庫過千條代理常見問題，AI 即時搵到最相關答案，附出處供核對。',
       'services.item3Benefit': '好處：少打字、內容更清晰，仍由你確認後才儲存。',
       'services.item4Title': 'PDF 簡報與團隊共享',
       'services.item4Body': 'Premium 一鍵生成物業 PDF 簡報；團隊共享筆記，內部協作更順。',
       'services.item4Benefit': '好處：同一套資料服務同事與客戶。',
       'services.pricingTitle': '收費說明',
       'services.pricingBody':
-        'Free 方案已可日常使用；Premium 解鎖 OZP 圖則、規劃通知、AI、PDF 簡報與團隊共享。詳細價格即將公佈 — 歡迎聯絡我們索取企業報價。',
+        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖 OZP 圖則、規劃通知、問專家 AI、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
       'services.pricingCta': '索取報價',
       'about.title': '關於我們',
       'about.lead': '我們相信地產前線值得更好的數碼工具。',
@@ -206,7 +220,7 @@ window.MapNoteI18n = {
     en: {
       'meta.homeTitle': 'MapNoteHK | Map notes for Hong Kong estate agents',
       'meta.homeDesc':
-        'MapNoteHK is launching soon: property, visit, client, offer and deal notes pinned to Hong Kong’s official map — with planning layers, Cantonese voice input, AI expert and shareable PDFs.',
+        'MapNoteHK is launching soon: the only notebook built on Hong Kong’s official Lands Department map — pin property, visit, client, offer and transaction notes in 30 seconds, with Cantonese voice input, Ask Expert AI, planning layers and PDF brochures.',
       'nav.home': 'Home',
       'nav.services': 'Features',
       'nav.about': 'About',
@@ -220,13 +234,23 @@ window.MapNoteI18n = {
       // {year} is replaced with the current year by t() in site.js.
       'footer.rights': '© {year} MapNoteHK. All rights reserved.',
       'footer.deleteAccount': 'Delete account',
-      // Homepage = official product home for the released app: announce launch, show features.
+      // Homepage = official product home for the upcoming app: announce launch, show features.
+      // Hero copy mirrors PRD §I go-to-market messaging (tagline + official-map uniqueness + 30s capture).
       'home.heroBadge': 'New · Launching soon',
-      'home.heroTitle': 'Five note types. One map.',
+      'home.heroTitle': 'Your agency workflow, pinned to the map.',
       'home.heroLead':
-        'MapNoteHK is launching soon — built for Hong Kong estate agents. Property, visits, clients, offers and deals, from viewing to closing, pinned where they belong on the official map.',
+        'The only notebook built on Hong Kong’s official Lands Department map. Property, visit, client, offer and transaction notes pinned in under 30 seconds — with Cantonese voice input, Ask Expert AI and client-ready PDF brochures.',
       'home.ctaPrimary': 'Explore features',
       'home.ctaSecondary': 'Contact us',
+      // Hero proof stats (PRD headline numbers).
+      'home.stat1Value': '≤30 s',
+      'home.stat1Label': 'to pin a quick note',
+      'home.stat2Value': '5 types',
+      'home.stat2Label': 'for the whole agency workflow',
+      'home.stat3Value': '1,000+',
+      'home.stat3Label': 'Ask Expert FAQs, with sources',
+      'home.stat4Value': 'TC · SC · EN',
+      'home.stat4Label': 'trilingual interface',
       // Hero demo video (muted loop in place of a static screenshot).
       'home.heroVideoAria': 'Short demo video of the MapNoteHK app in use',
       'home.storeSmall': 'Download on',
@@ -236,7 +260,7 @@ window.MapNoteI18n = {
       'home.storeAndroidAria': 'Get MapNoteHK on Google Play',
       // Five note types — colours match the in-app legend so users learn it once.
       'home.typesTitle': 'Five note types for the whole workflow',
-      'home.typesLead': 'Each type matches a step of agency work. Colour-coded — recognised at a glance.',
+      'home.typesLead': 'Each type matches a step of agency work — colour-coded and recognised at a glance. Quick capture takes under 30 seconds; add details later.',
       'home.type1Title': 'Property',
       'home.type1Body': 'Building specs, fees and listing research.',
       'home.type2Title': 'Site visit',
@@ -257,16 +281,16 @@ window.MapNoteI18n = {
       'home.tagFreePremium': 'Free + Premium',
       'home.f1Title': 'Notes pinned to the official map',
       'home.f1Body':
-        'Lands Department basemap with lot boundaries, nearby schools and amenities. Notes stay with the property — nothing gets lost.',
+        'Lands Department basemap with lot boundaries, nearby schools and amenities — offline cache keeps notes readable in weak-signal spots. Notes stay with the property; nothing gets lost.',
       'home.f2Title': 'Planning applications on the map',
       'home.f2Body':
         'Town Planning Board cases pinned where they happen. Premium adds OZP zoning plans and planning alerts — hear about height relaxations and change of use first.',
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
         'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
-      'home.f4Title': 'Cantonese voice input · AI expert answers',
+      'home.f4Title': 'Cantonese voice input · Ask Expert AI',
       'home.f4Body':
-        'Speak on site and get text. The knowledge base covers 1,000+ agent FAQs — AI finds the most relevant answer instantly.',
+        'Speak on site and get text. Ask Expert’s knowledge base covers 1,000+ agent FAQs — AI finds the most relevant answer instantly, with sources.',
       'home.f5Title': 'One-tap property PDF brochures',
       'home.f5Body':
         'Photos, address, specs and map auto-layout into a polished PDF you can share with clients on the spot.',
@@ -285,9 +309,13 @@ window.MapNoteI18n = {
       'home.plansTitle': 'Start free, upgrade when you need',
       'home.plansLead': 'The free plan covers all five note types and the planning map. Premium unlocks the advanced tools.',
       'home.plansFreeTitle': 'Free',
-      'home.plansFreeBody': 'Five note types, planning-case map, lot layers and a monthly voice quota — ready for field work.',
+      // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
+      'home.plansFreePrice': 'HK$0',
+      'home.plansFreeBody': 'Five note types, planning-case map, lot layers and Cantonese voice input — attach 3 photos and 5 PDFs per note. Ready for field work.',
       'home.plansProTitle': 'Premium',
-      'home.plansProBody': 'OZP zoning plans, planning alerts, AI expert, PDF brochures, team sharing and bigger attachment quotas.',
+      // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
+      'home.plansProPrice': 'HK$48 / month',
+      'home.plansProBody': 'OZP zoning plans, planning alerts, Ask Expert AI, PDF brochures and team sharing — attachments upgraded to 20 photos per note.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': 'Get it at launch. Use it at your next viewing.',
@@ -302,9 +330,9 @@ window.MapNoteI18n = {
       'services.item2Body':
         'Town Planning Board cases pinned on the map; Premium adds OZP zoning plans and planning alerts.',
       'services.item2Benefit': 'Benefit: know about neighbourhood change first — less manual searching.',
-      'services.item3Title': 'Cantonese voice · AI expert',
+      'services.item3Title': 'Cantonese voice · Ask Expert AI',
       'services.item3Body':
-        'Speech-to-text speeds up field entry; AI instantly finds the most relevant answer across 1,000+ agent FAQs.',
+        'Speech-to-text speeds up field entry; Ask Expert instantly finds the most relevant answer across 1,000+ agent FAQs, with sources to verify.',
       'services.item3Benefit': 'Benefit: less typing, clearer notes — you approve before save.',
       'services.item4Title': 'PDF brochures & team sharing',
       'services.item4Body':
@@ -312,7 +340,7 @@ window.MapNoteI18n = {
       'services.item4Benefit': 'Benefit: one source of truth for colleagues and clients.',
       'services.pricingTitle': 'Pricing',
       'services.pricingBody':
-        'The Free plan covers daily work. Premium unlocks OZP plans, planning alerts, AI, PDF brochures and team sharing. Detailed pricing coming soon — contact us for an enterprise quote.',
+        'The Free plan covers daily work. Premium is HK$48/month and unlocks OZP plans, planning alerts, Ask Expert AI, PDF brochures and team sharing. Contact us for an enterprise quote.',
       'services.pricingCta': 'Request a quote',
       'about.title': 'About us',
       'about.lead': 'Property frontline teams deserve better digital tools.',
