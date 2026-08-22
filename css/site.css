@@ -1012,12 +1012,18 @@ a:hover {
   font-weight: 700;
 }
 
-.benefit {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed var(--line);
+/* Payoff line on services cards: soft jade chip so the advantage stands out
+   from the descriptive body text above it. Negative side margins offset the
+   chip padding so the text stays flush with the card's left text edge.
+   The .panel prefix is needed to out-specify `.panel p { margin: 0 }`. */
+.panel .benefit {
+  margin: 0.75rem -0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(28, 138, 120, 0.08);
   font-size: 0.9rem;
-  color: var(--ink);
+  font-weight: 600;
+  color: var(--jade-deep);
 }
 
 .pricing-banner {
@@ -1027,6 +1033,58 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+/* Plan comparison table on the services page — scrolls sideways on narrow screens */
+.compare {
+  margin-top: 1.5rem;
+}
+
+.compare h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.compare-scroll {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.compare-table thead th {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--jade);
+}
+
+.compare-table tbody th[scope="row"] {
+  font-weight: 500;
+}
+
+.compare-group th {
+  padding-top: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--jade-deep);
+  border-bottom: none;
+}
+
+/* Premium column gets a quiet jade tint so the upgrade path reads at a glance */
+.compare-table th:last-child,
+.compare-table td:last-child {
+  background: rgba(28, 138, 120, 0.06);
 }
 
 .placeholder-box {
