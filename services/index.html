@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/site.css?v=20260818b" />
+  <link rel="stylesheet" href="../css/site.css?v=20260822f" />
   <!-- Favicon: pin+map brand mark — ICO fallback + PNG tabs + Apple/PWA icons -->
   <link rel="icon" href="../assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
@@ -50,6 +50,104 @@
         </article>
       </div>
 
+      <!-- Plan comparison: values mirror USER_LIMITS in vctsserver/src/models/note.ts
+           and premium gates in vctsserver/app/api — update both together. -->
+      <section class="panel compare" aria-label="Plan comparison">
+        <h2 data-i18n="services.compareTitle"></h2>
+        <div class="compare-scroll">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="services.compareHeadFeature"></th>
+                <th scope="col" data-i18n="services.compareHeadFree"></th>
+                <th scope="col" data-i18n="services.compareHeadPremium"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="compare-group"><th colspan="3" data-i18n="services.compareGroup1"></th></tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareNotes"></th>
+                <td data-i18n="services.compareNotesF"></td>
+                <td data-i18n="services.compareNotesP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePhotosNote"></th>
+                <td data-i18n="services.comparePhotosNoteF"></td>
+                <td data-i18n="services.comparePhotosNoteP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePhotosTotal"></th>
+                <td data-i18n="services.comparePhotosTotalF"></td>
+                <td data-i18n="services.comparePhotosTotalP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePdfsNote"></th>
+                <td data-i18n="services.comparePdfsNoteF"></td>
+                <td data-i18n="services.comparePdfsNoteP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePdfsTotal"></th>
+                <td data-i18n="services.comparePdfsTotalF"></td>
+                <td data-i18n="services.comparePdfsTotalP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareVideo"></th>
+                <td data-i18n="services.compareVideoF"></td>
+                <td data-i18n="services.compareVideoP"></td>
+              </tr>
+              <tr class="compare-group"><th colspan="3" data-i18n="services.compareGroup2"></th></tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareVoice"></th>
+                <td data-i18n="services.compareVoiceF"></td>
+                <td data-i18n="services.compareVoiceP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareAsk"></th>
+                <td data-i18n="services.compareAskF"></td>
+                <td data-i18n="services.compareAskP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePolish"></th>
+                <td data-i18n="services.comparePolishF"></td>
+                <td data-i18n="services.comparePolishP"></td>
+              </tr>
+              <tr class="compare-group"><th colspan="3" data-i18n="services.compareGroup3"></th></tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePlanMap"></th>
+                <td data-i18n="services.comparePlanMapF"></td>
+                <td data-i18n="services.comparePlanMapP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareNearby"></th>
+                <td data-i18n="services.compareNearbyF"></td>
+                <td data-i18n="services.compareNearbyP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareOzp"></th>
+                <td data-i18n="services.compareOzpF"></td>
+                <td data-i18n="services.compareOzpP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareAlerts"></th>
+                <td data-i18n="services.compareAlertsF"></td>
+                <td data-i18n="services.compareAlertsP"></td>
+              </tr>
+              <tr class="compare-group"><th colspan="3" data-i18n="services.compareGroup4"></th></tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareTeams"></th>
+                <td data-i18n="services.compareTeamsF"></td>
+                <td data-i18n="services.compareTeamsP"></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePdf"></th>
+                <td data-i18n="services.comparePdfF"></td>
+                <td data-i18n="services.comparePdfP"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <div class="panel pricing-banner">
         <div>
           <h3 data-i18n="services.pricingTitle"></h3>
@@ -65,9 +163,9 @@
   <script>
     window.MapNotePage = { base: '../', active: 'services' };
   </script>
-  <script src="../js/site-config.js?v=20260818b"></script>
-  <script src="../js/i18n.js?v=20260818b"></script>
-  <script src="../js/chrome.js?v=20260818b"></script>
-  <script src="../js/site.js?v=20260818b"></script>
+  <script src="../js/site-config.js?v=20260822f"></script>
+  <script src="../js/i18n.js?v=20260822f"></script>
+  <script src="../js/chrome.js?v=20260822f"></script>
+  <script src="../js/site.js?v=20260822f"></script>
 </body>
 </html>

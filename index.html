@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/site.css?v=20260818b" />
+  <link rel="stylesheet" href="./css/site.css?v=20260822f" />
   <!-- Favicon: pin+map brand mark — ICO fallback + PNG tabs + Apple/PWA icons -->
   <link rel="icon" href="./assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
@@ -28,12 +28,15 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-i18n="home.heroBadge"></span></p>
+          <!-- Pain hook from the poster: a question line above the brand H1 -->
+          <p class="hero-pain" data-i18n="home.heroPain"></p>
           <h1 data-i18n="home.heroTitle"></h1>
           <p class="hero-lead" data-i18n="home.heroLead"></p>
-          <!-- site.js swaps these text CTAs for store badges when storeLinks are configured -->
+          <!-- site.js swaps these text CTAs for store badges when storeLinks are configured.
+               Pre-launch, the secondary CTA scrolls to the launch-notify band. -->
           <div class="hero-actions" id="hero-actions">
             <a class="btn btn-primary" href="#features" data-i18n="home.ctaPrimary"></a>
-            <a class="btn btn-secondary" href="./contact/" data-i18n="home.ctaSecondary"></a>
+            <a class="btn btn-secondary" href="#notify-section" data-i18n="home.ctaSecondary"></a>
           </div>
           <!-- PRD proof points under the CTAs: quick capture, five types, FAQ base, trilingual -->
           <ul class="hero-stats">
@@ -61,6 +64,43 @@
             <source src="./assets/video-sample-1-square.webm" type="video/webm" />
             <source src="./assets/video-sample-1-square.mp4" type="video/mp4" />
           </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain points: the poster's PAS framing — name the three daily pains
+         (PRD §E persona), each card resolving to the feature that removes it -->
+    <section class="section pains" aria-label="Pain points">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="home.painsTitle"></h2>
+          <p data-i18n="home.painsLead"></p>
+        </div>
+        <div class="pains-grid">
+          <article class="pain-card">
+            <span class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-9 9H7V9h4v2zm6 0h-4V9h4v2z" /></svg>
+            </span>
+            <h3 data-i18n="home.pain1Title"></h3>
+            <p data-i18n="home.pain1Body"></p>
+            <p class="pain-solution" data-i18n="home.pain1Solution"></p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
+            </span>
+            <h3 data-i18n="home.pain2Title"></h3>
+            <p data-i18n="home.pain2Body"></p>
+            <p class="pain-solution" data-i18n="home.pain2Solution"></p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" /></svg>
+            </span>
+            <h3 data-i18n="home.pain3Title"></h3>
+            <p data-i18n="home.pain3Body"></p>
+            <p class="pain-solution" data-i18n="home.pain3Solution"></p>
+          </article>
         </div>
       </div>
     </section>
@@ -125,19 +165,21 @@
              swaps the screenshot — nothing is cropped away. -->
         <div class="showcase" id="feature-showcase">
           <div class="showcase-list" role="tablist" data-i18n-aria-label="home.showcaseLabel" aria-label="App features">
-            <button type="button" class="showcase-item is-active" role="tab" id="tab-f1" aria-controls="panel-f1" aria-selected="true">
-              <span class="showcase-item-head">
-                <span class="tag tag-free" data-i18n="home.tagFree"></span>
-                <span class="showcase-item-title" data-i18n="home.f1Title"></span>
-              </span>
-              <span class="showcase-item-body" data-i18n="home.f1Body"></span>
-            </button>
-            <button type="button" class="showcase-item" role="tab" id="tab-f2" aria-controls="panel-f2" aria-selected="false" tabindex="-1">
+            <!-- Planning intelligence leads: the 90% survey-scoring feature
+                 (progress report Slide 11) opens the showcase, not map notes -->
+            <button type="button" class="showcase-item is-active" role="tab" id="tab-f2" aria-controls="panel-f2" aria-selected="true">
               <span class="showcase-item-head">
                 <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
                 <span class="showcase-item-title" data-i18n="home.f2Title"></span>
               </span>
               <span class="showcase-item-body" data-i18n="home.f2Body"></span>
+            </button>
+            <button type="button" class="showcase-item" role="tab" id="tab-f1" aria-controls="panel-f1" aria-selected="false" tabindex="-1">
+              <span class="showcase-item-head">
+                <span class="tag tag-free" data-i18n="home.tagFree"></span>
+                <span class="showcase-item-title" data-i18n="home.f1Title"></span>
+              </span>
+              <span class="showcase-item-body" data-i18n="home.f1Body"></span>
             </button>
             <button type="button" class="showcase-item" role="tab" id="tab-f3" aria-controls="panel-f3" aria-selected="false" tabindex="-1">
               <span class="showcase-item-head">
@@ -163,29 +205,30 @@
           </div>
 
           <div class="showcase-stage">
-            <div class="showcase-panel is-active" role="tabpanel" id="panel-f1" aria-labelledby="tab-f1">
-              <!-- Map note + layer overlays: two phone captures side by side -->
-              <div class="showcase-duo">
-                <picture class="phone-frame">
-                  <source type="image/webp" srcset="./assets/feature-map-280.webp 280w, ./assets/feature-map-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-map-460.png" srcset="./assets/feature-map-280.png 280w, ./assets/feature-map-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1Alt" alt="" decoding="async" />
-                </picture>
-                <picture class="phone-frame">
-                  <source type="image/webp" srcset="./assets/feature-overlay-280.webp 280w, ./assets/feature-overlay-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-overlay-460.png" srcset="./assets/feature-overlay-280.png 280w, ./assets/feature-overlay-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1bAlt" alt="" loading="lazy" decoding="async" />
-                </picture>
-              </div>
-            </div>
-            <div class="showcase-panel" role="tabpanel" id="panel-f2" aria-labelledby="tab-f2" hidden>
-              <!-- Planning applications: district pin map + case detail pair -->
+            <div class="showcase-panel is-active" role="tabpanel" id="panel-f2" aria-labelledby="tab-f2">
+              <!-- Planning applications: district pin map + case detail pair.
+                   First panel = no lazy loading on the lead screenshot. -->
               <div class="showcase-duo">
                 <picture class="phone-frame">
                   <source type="image/webp" srcset="./assets/feature-planning-pins-280.webp 280w, ./assets/feature-planning-pins-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-planning-pins-460.png" srcset="./assets/feature-planning-pins-280.png 280w, ./assets/feature-planning-pins-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2Alt" alt="" loading="lazy" decoding="async" />
+                  <img src="./assets/feature-planning-pins-460.png" srcset="./assets/feature-planning-pins-280.png 280w, ./assets/feature-planning-pins-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2Alt" alt="" decoding="async" />
                 </picture>
                 <picture class="phone-frame">
                   <source type="image/webp" srcset="./assets/feature-planning-detail-280.webp 280w, ./assets/feature-planning-detail-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
                   <img src="./assets/feature-planning-detail-460.png" srcset="./assets/feature-planning-detail-280.png 280w, ./assets/feature-planning-detail-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2bAlt" alt="" loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            </div>
+            <div class="showcase-panel" role="tabpanel" id="panel-f1" aria-labelledby="tab-f1" hidden>
+              <!-- Map note + layer overlays: two phone captures side by side -->
+              <div class="showcase-duo">
+                <picture class="phone-frame">
+                  <source type="image/webp" srcset="./assets/feature-map-280.webp 280w, ./assets/feature-map-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
+                  <img src="./assets/feature-map-460.png" srcset="./assets/feature-map-280.png 280w, ./assets/feature-map-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1Alt" alt="" loading="lazy" decoding="async" />
+                </picture>
+                <picture class="phone-frame">
+                  <source type="image/webp" srcset="./assets/feature-overlay-280.webp 280w, ./assets/feature-overlay-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
+                  <img src="./assets/feature-overlay-460.png" srcset="./assets/feature-overlay-280.png 280w, ./assets/feature-overlay-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1bAlt" alt="" loading="lazy" decoding="async" />
                 </picture>
               </div>
             </div>
@@ -258,6 +301,23 @@
       </div>
     </section>
 
+    <!-- Launch notify band: pre-launch conversion capture. Shown by site.js
+         only while storeLinks are empty; the download band replaces it once
+         the App Store / Google Play badges go live. -->
+    <section class="notify" id="notify-section" aria-label="Launch notification" hidden>
+      <div class="container notify-inner">
+        <h2 data-i18n="home.notifyTitle"></h2>
+        <p data-i18n="home.notifyBody"></p>
+        <form class="notify-form" id="notify-form" novalidate>
+          <label class="sr-only" for="notify-email" data-i18n="home.notifyEmailLabel"></label>
+          <input id="notify-email" name="email" type="email" autocomplete="email" data-i18n-placeholder="home.notifyEmailPh" />
+          <button class="btn btn-primary" type="submit" data-i18n="home.notifySubmit"></button>
+        </form>
+        <p class="form-status" id="notify-form-status" hidden></p>
+        <p class="notify-note" data-i18n="home.notifyNote"></p>
+      </div>
+    </section>
+
     <!-- Download band: only shown by site.js when storeLinks are configured -->
     <section class="download" id="download-section" hidden>
       <div class="container download-inner">
@@ -273,9 +333,11 @@
   <script>
     window.MapNotePage = { base: './', active: 'home' };
   </script>
-  <script src="./js/site-config.js?v=20260818b"></script>
-  <script src="./js/i18n.js?v=20260818b"></script>
-  <script src="./js/chrome.js?v=20260818b"></script>
-  <script src="./js/site.js?v=20260818b"></script>
+  <script src="./js/site-config.js?v=20260822f"></script>
+  <script src="./js/i18n.js?v=20260822f"></script>
+  <script src="./js/chrome.js?v=20260822f"></script>
+  <!-- forms.js wires the launch-notify band; site.js calls MapNoteFormsInit when present -->
+  <script src="./js/forms.js?v=20260822f"></script>
+  <script src="./js/site.js?v=20260822f"></script>
 </body>
 </html>

@@ -28,11 +28,14 @@ window.MapNoteI18n = {
       // Homepage = official product home for the upcoming app: announce the launch, show features.
       // Hero copy mirrors PRD §I go-to-market messaging (tagline + official-map uniqueness + 30s capture).
       'home.heroBadge': '全新推出 · 即將上架',
+      // Pain hook from the marketing poster: a question line above the brand H1.
+      'home.heroPain': '資料散落，客戶流失？',
       'home.heroTitle': '代理服務，地圖記錄。',
       'home.heroLead':
         '唯一建基於香港地政總署官方地圖的代理筆記 App。物業、考察、客戶、報價、成交，30 秒釘上地圖 — 廣東話語音輸入、問專家 AI、PDF 簡報，代理日常一個 App 搞掂。',
       'home.ctaPrimary': '探索功能',
-      'home.ctaSecondary': '聯絡我們',
+      // Pre-launch: scrolls to the notify band; swapped for store badges once links go live.
+      'home.ctaSecondary': '上架通知我',
       // Hero proof stats (PRD headline numbers).
       'home.stat1Value': '≤30 秒',
       'home.stat1Label': '快速記錄一則筆記',
@@ -49,6 +52,20 @@ window.MapNoteI18n = {
       'home.storeAndroid': 'Google Play',
       'home.storeIosAria': '於 App Store 下載 MapNoteHK',
       'home.storeAndroidAria': '於 Google Play 下載 MapNoteHK',
+      // Pain points — poster's PAS framing: name the three daily pains (PRD §E
+      // persona), each resolving to the feature that removes it. Solution lines
+      // keep the free/Premium split honest (planning alerts are Premium).
+      'home.painsTitle': '呢三個痛，代理每日都遇到',
+      'home.painsLead': '盤源、規劃、報價 — 每個環節都不應靠記憶和 WhatsApp 硬撐。',
+      'home.pain1Title': '資料散落 WhatsApp',
+      'home.pain1Body': '盤源、相片、對話記錄四散，翻查費時。',
+      'home.pain1Solution': '筆記釘上官方地圖，跟住物業走 — 一搵就到。',
+      'home.pain2Title': '規劃變化後知後覺',
+      'home.pain2Body': '城規會申請、OZP 改劃，錯失先機。',
+      'home.pain2Solution': '規劃個案地圖即睇；Premium 規劃通知早人一步。',
+      'home.pain3Title': '報價成交無記錄',
+      'home.pain3Body': '議價過程靠記憶，跟進斷層。',
+      'home.pain3Solution': '報價、成交專屬欄位，每步有跡可尋。',
       // Five note types — colours match the in-app legend so users learn it once.
       'home.typesTitle': '五類筆記，覆蓋代理全流程',
       'home.typesLead': '每類筆記對應代理服務一個環節，顏色即類別，一眼認得。快速記錄只需 30 秒，細節之後再補。',
@@ -75,7 +92,7 @@ window.MapNoteI18n = {
         '以地政總署地圖為底，附近學校、酒店與配套一開即睇；離線快取令地庫弱訊號都翻睇到筆記。筆記跟住物業走，永遠唔會搵唔返。',
       'home.f2Title': '城規會申請，地圖即睇',
       'home.f2Body':
-        '今年規劃申請個案直接標記在地圖上；Premium 再解鎖 OZP 分區圖則與規劃通知，高度放寬、改變用途，早人一步掌握。',
+        '今年規劃申請個案與 OZP 分區圖則直接標記在地圖上；Premium 再解鎖規劃通知，高度放寬、改變用途，早人一步掌握。',
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
         '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
@@ -100,24 +117,35 @@ window.MapNoteI18n = {
       'home.plansTitle': '免費開始，按需升級',
       'home.plansLead': '免費方案已涵蓋五類筆記與規劃地圖；Premium 解鎖進階工具。',
       'home.plansFreeTitle': 'Free 免費方案',
-      // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
+      // Quotas mirror USER_LIMITS (30 notes, 3 photos + 3 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': '五類筆記、規劃個案地圖、地段圖層、廣東話語音輸入 — 每則筆記可附 3 張相片及 5 份 PDF，落區工作即裝即用。',
+      'home.plansFreeBody': '五類筆記（最多 30 則）、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 3 份 PDF，落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
       'home.plansProPrice': 'HK$48 / 月',
-      'home.plansProBody': 'OZP 分區圖則、規劃通知、問專家 AI、PDF 簡報、團隊共享 — 附件配額升級至每則 20 張相片。',
+      'home.plansProBody': '規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、PDF 每則 20 份、語音輸入無限、可加影片附件。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': '上架即裝，下次睇樓開始用。',
       'home.downloadBody': 'MapNoteHK 地圖筆記即將登陸 App Store 與 Google Play。',
+      // Launch notify band — pre-launch conversion capture; hidden by site.js
+      // once store links are configured (the download band takes over).
+      'home.notifyTitle': '上架第一時間通知你',
+      'home.notifyBody': '留低電郵，App Store／Google Play 一上架即刻通知你。',
+      'home.notifyEmailLabel': '電郵地址',
+      'home.notifyEmailPh': '你的工作電郵',
+      'home.notifySubmit': '通知我',
+      'home.notifyInvalid': '請輸入有效電郵地址。',
+      'home.notifySuccess': '已記低！上架當日會第一時間電郵通知你。',
+      'home.notifyError': '提交失敗，請稍後再試或電郵 support@mapnotehk.com。',
+      'home.notifyNote': '只用作上架通知，絕不濫發。',
       'services.title': '功能與方案',
       'services.lead': '由地圖筆記到 AI 工具，全部圍繞香港代理工作流程而設。',
       'services.item1Title': '五類地圖筆記',
       'services.item1Body': '物業、考察、客戶、報價、成交，全部釘在官方地圖上，附相片、PDF 與位置。',
       'services.item1Benefit': '好處：筆記跟物業走，現場記錄更快，資料不再散落。',
       'services.item2Title': '規劃申請地圖',
-      'services.item2Body': '城規會規劃個案標記在地圖上；Premium 加 OZP 分區圖則與規劃通知。',
+      'services.item2Body': '城規會規劃個案與 OZP 分區圖則標記在地圖上；Premium 加規劃通知。',
       'services.item2Benefit': '好處：周邊變化早人一步知道，減少手動搜尋。',
       'services.item3Title': '廣東話語音 · 問專家 AI',
       'services.item3Body': '語音轉文字加快現場輸入；問專家知識庫過千條代理常見問題，AI 即時搵到最相關答案，附出處供核對。',
@@ -127,8 +155,63 @@ window.MapNoteI18n = {
       'services.item4Benefit': '好處：同一套資料服務同事與客戶。',
       'services.pricingTitle': '收費說明',
       'services.pricingBody':
-        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖 OZP 圖則、規劃通知、問專家 AI、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
+        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
       'services.pricingCta': '索取報價',
+      // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
+      // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
+      'services.compareTitle': '方案比較',
+      'services.compareHeadFeature': '功能',
+      'services.compareHeadFree': 'Free 免費',
+      'services.compareHeadPremium': 'Premium（HK$48／月）',
+      'services.compareGroup1': '筆記與附件',
+      'services.compareNotes': '筆記數量',
+      'services.compareNotesF': '30 則',
+      'services.compareNotesP': '無限',
+      'services.comparePhotosNote': '每則筆記相片',
+      'services.comparePhotosNoteF': '3 張',
+      'services.comparePhotosNoteP': '20 張',
+      'services.comparePhotosTotal': '相片總量上限',
+      'services.comparePhotosTotalF': '30 張',
+      'services.comparePhotosTotalP': '無限',
+      'services.comparePdfsNote': '每則筆記 PDF',
+      'services.comparePdfsNoteF': '3 份',
+      'services.comparePdfsNoteP': '20 份',
+      'services.comparePdfsTotal': 'PDF 總量上限',
+      'services.comparePdfsTotalF': '30 份',
+      'services.comparePdfsTotalP': '無限',
+      'services.compareVideo': '影片附件',
+      'services.compareVideoF': '—',
+      'services.compareVideoP': '每則 1 段（最長 3 分鐘）',
+      'services.compareGroup2': 'AI 與語音',
+      'services.compareVoice': '廣東話語音輸入',
+      'services.compareVoiceF': '每月 5 次',
+      'services.compareVoiceP': '無限',
+      'services.compareAsk': '問專家 AI',
+      'services.compareAskF': '✓',
+      'services.compareAskP': '✓（含專屬內容）',
+      'services.comparePolish': 'AI 筆記潤飾',
+      'services.comparePolishF': '—',
+      'services.comparePolishP': '✓',
+      'services.compareGroup3': '規劃與地圖',
+      'services.comparePlanMap': '規劃個案地圖',
+      'services.comparePlanMapF': '✓',
+      'services.comparePlanMapP': '✓',
+      'services.compareNearby': '周邊配套（學校、酒店、地段）',
+      'services.compareNearbyF': '✓',
+      'services.compareNearbyP': '✓',
+      'services.compareOzp': 'OZP 分區圖則',
+      'services.compareOzpF': '✓',
+      'services.compareOzpP': '✓',
+      'services.compareAlerts': '規劃通知',
+      'services.compareAlertsF': '—',
+      'services.compareAlertsP': '✓',
+      'services.compareGroup4': '協作與輸出',
+      'services.compareTeams': '團隊共享筆記',
+      'services.compareTeamsF': '—',
+      'services.compareTeamsP': '✓',
+      'services.comparePdf': 'PDF 物業簡報',
+      'services.comparePdfF': '—',
+      'services.comparePdfP': '✓',
       'about.title': '關於我們',
       'about.lead': '我們相信地產前線值得更好的數碼工具。',
       'about.storyTitle': '我們的故事',
@@ -180,7 +263,7 @@ window.MapNoteI18n = {
       'contact.success': '已收到你的訊息，我們會盡快回覆。',
       'contact.error': '送出失敗，請稍後再試或直接電郵我們。',
       'privacy.title': '私隱政策',
-      'privacy.updated': '最後更新日期：2026年8月9日',
+      'privacy.updated': '最後更新日期：2026年8月22日',
       'privacy.intro':
         'MapNoteHK 是香港地產物業專業人士使用的地圖筆記應用程式。我們按《個人資料（私隱）條例》（PDPO）及 Google Play / Apple App Store 要求處理個人資料。',
       'privacy.collectTitle': '我們收集什麼',
@@ -195,6 +278,58 @@ window.MapNoteI18n = {
       'privacy.deleteLink': '前往帳戶刪除申請',
       'privacy.contactTitle': '聯絡',
       'privacy.fullNote': '完整政策草案亦存放於產品文件庫；如有查閱或更正要求，請電郵 support@mapnotehk.com。',
+      /* FAQ accordion — condensed from docs/privacy-comment-for-review.pdf,
+         corrected to match server privacy-config.ts and the full policy draft */
+      'privacy.faqTitle': '常見問題',
+      'privacy.faqGroup1': '你的資料與筆記',
+      'privacy.faqGroup2': 'AI、語音與保安',
+      'privacy.faqGroup3': '分享與客戶資料',
+      'privacy.faqGroup4': '保留、刪除與你的權利',
+      'privacy.faq1Q': '呢個常見問題頁係咩？',
+      'privacy.faq1A':
+        '以簡明方式講解 MapNoteHK 點樣收集、使用、儲存、保護同刪除個人資料，請同《私隱政策》一併閱讀。服務對象為香港用戶，按《個人資料（私隱）條例》（第486章）處理資料。',
+      'privacy.faq2Q': 'MapNoteHK 會收集咩資料？',
+      'privacy.faq2A':
+        '帳戶資料（電郵、姓名）、你建立嘅筆記同附件、地圖定位、語音輸入、你主動提交嘅 AI 內容、團隊共享設定、裝置同使用資料、訂閱狀態。我哋唔會索取身份證號碼、銀行戶口或信用卡資料。',
+      'privacy.faq3Q': '提供資料係咪必須？',
+      'privacy.faq3A':
+        '電郵同登入憑證係開戶必需；筆記、相片、語音、團隊同 AI 功能全部可選，由你決定提交咩內容。',
+      'privacy.faq4Q': '邊個睇到我嘅筆記？',
+      'privacy.faq4A':
+        '筆記預設私人，只有你睇到；設定為「團隊」嘅筆記先至會向你揀選嘅團隊成員公開。筆記唔會公開、唔會被搜尋引擎索引、唔會賣畀廣告商。',
+      'privacy.faq5Q': 'MapNoteHK 管理員可唔可以睇資料庫？',
+      'privacy.faq5A':
+        '我哋唔會例行閱覽筆記內容。獲授權人員只會喺處理你提出嘅支援要求、保安事故或法律要求時，查閱最少必要嘅資料。',
+      'privacy.faq6Q': '我嘅資料有冇加密同保護？',
+      'privacy.faq6A':
+        'App 同伺服器之間用 HTTPS/TLS 加密，配合存取控制同安全雲端寄存。互聯網服務唔能夠保證絕對安全，請保管好你嘅密碼。',
+      'privacy.faq7Q': '係咪端對端加密？',
+      'privacy.faq7A':
+        '唔係。筆記儲存喺伺服器先可以做到跨裝置同步、地圖搜尋、PDF 同 AI 功能；我哋用存取控制同加密傳輸保護資料。',
+      'privacy.faq8Q': '會唔會用我嘅筆記訓練 AI？',
+      'privacy.faq8A':
+        '唔會。只有你主動用 AI 功能嗰陣，你提交嘅內容先會傳送畀 Google（語音轉文字／Vertex AI）完成該功能，唔會用嚟訓練模型或者做廣告。',
+      'privacy.faq9Q': '會同邊個分享我嘅資料？',
+      'privacy.faq9A':
+        '唔會出售個人資料。只會喺必要時分享畀：雲端寄存同技術供應商、你用 AI／語音功能時嘅 Google、Apple／Google／付款商做訂閱核實、你揀嘅團隊成員（只限團隊筆記），同埋法律要求嘅情況。',
+      'privacy.faq10Q': '輸入客戶資料前要留意咩？',
+      'privacy.faq10A':
+        '你要確保有合法依據：只輸入工作必需嘅資料、跟足公司私隱政策、按需要取得客戶同意，同埋預設用私人筆記。',
+      'privacy.faq11Q': '資料會保留幾耐？',
+      'privacy.faq11A':
+        '帳戶有效期間會保留。確認刪除後 30 日內自主要系統清除，備份最多再保留 30 日；帳戶連續 24 個月無活動會被清除。',
+      'privacy.faq12Q': '點樣刪除帳戶同資料？',
+      'privacy.faq12A':
+        'App 內「帳戶 → 刪除帳戶」會直接開啟本網站嘅刪除申請頁，或者用上面嘅連結。提交即完成申請，1–2 個工作天內處理；刪除係永久嘅。商店訂閱要另外喺 Apple ID／Google Play 取消。',
+      'privacy.faq13Q': '可唔可以查閱或者更正我嘅資料？',
+      'privacy.faq13A':
+        '可以。電郵 support@mapnotehk.com，主旨註明「PDPO 資料查閱／更正要求」；處理前可能需要核實身份。',
+      'privacy.faq14Q': '會唔會用我嘅資料做直接促銷？',
+      'privacy.faq14A':
+        '未經你同意唔會。產品更新或上架通知等可選訊息，可以隨時用訊息內嘅退訂方法取消。',
+      'privacy.faq15Q': '私隱問題點樣聯絡？',
+      'privacy.faq15A':
+        '電郵 support@mapnotehk.com。如認為私隱權益受影響，亦可聯絡香港個人資料私隱專員公署。',
       'delete.title': '帳號刪除請求',
       'delete.lead':
         '請提供你的帳號資訊和刪除原因。我們的團隊將手動處理你的請求；提交後即視為正式申請，無需再經 FAQ。',
@@ -237,11 +372,14 @@ window.MapNoteI18n = {
       // Homepage = official product home for the upcoming app: announce launch, show features.
       // Hero copy mirrors PRD §I go-to-market messaging (tagline + official-map uniqueness + 30s capture).
       'home.heroBadge': 'New · Launching soon',
+      // Pain hook from the marketing poster: a question line above the brand H1.
+      'home.heroPain': 'Scattered data, lost clients?',
       'home.heroTitle': 'Your agency workflow, pinned to the map.',
       'home.heroLead':
         'The only notebook built on Hong Kong’s official Lands Department map. Property, visit, client, offer and transaction notes pinned in under 30 seconds — with Cantonese voice input, Ask Expert AI and client-ready PDF brochures.',
       'home.ctaPrimary': 'Explore features',
-      'home.ctaSecondary': 'Contact us',
+      // Pre-launch: scrolls to the notify band; swapped for store badges once links go live.
+      'home.ctaSecondary': 'Notify me at launch',
       // Hero proof stats (PRD headline numbers).
       'home.stat1Value': '≤30 s',
       'home.stat1Label': 'to pin a quick note',
@@ -258,6 +396,20 @@ window.MapNoteI18n = {
       'home.storeAndroid': 'Google Play',
       'home.storeIosAria': 'Download MapNoteHK on the App Store',
       'home.storeAndroidAria': 'Get MapNoteHK on Google Play',
+      // Pain points — poster's PAS framing: name the three daily pains (PRD §E
+      // persona), each resolving to the feature that removes it. Solution lines
+      // keep the free/Premium split honest (planning alerts are Premium).
+      'home.painsTitle': 'Three pains every agent knows',
+      'home.painsLead': 'Listings, planning, offers — none of it should run on memory and WhatsApp.',
+      'home.pain1Title': 'Scattered across WhatsApp',
+      'home.pain1Body': 'Listings, photos and chat history spread everywhere — slow to retrieve.',
+      'home.pain1Solution': 'Notes pinned to the official map stay with the property — one search away.',
+      'home.pain2Title': 'Planning changes heard too late',
+      'home.pain2Body': 'Town Planning Board applications and OZP rezoning — miss them, miss the edge.',
+      'home.pain2Solution': 'Planning cases live on the map; Premium alerts keep you ahead.',
+      'home.pain3Title': 'No record of offers and deals',
+      'home.pain3Body': 'Negotiations run on memory; follow-ups fall through.',
+      'home.pain3Solution': 'Structured offer and transaction fields — every step traceable.',
       // Five note types — colours match the in-app legend so users learn it once.
       'home.typesTitle': 'Five note types for the whole workflow',
       'home.typesLead': 'Each type matches a step of agency work — colour-coded and recognised at a glance. Quick capture takes under 30 seconds; add details later.',
@@ -284,7 +436,7 @@ window.MapNoteI18n = {
         'Lands Department basemap with lot boundaries, nearby schools and amenities — offline cache keeps notes readable in weak-signal spots. Notes stay with the property; nothing gets lost.',
       'home.f2Title': 'Planning applications on the map',
       'home.f2Body':
-        'Town Planning Board cases pinned where they happen. Premium adds OZP zoning plans and planning alerts — hear about height relaxations and change of use first.',
+        'Town Planning Board cases and OZP zoning plans pinned where they happen. Premium adds planning alerts — hear about height relaxations and change of use first.',
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
         'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
@@ -309,17 +461,28 @@ window.MapNoteI18n = {
       'home.plansTitle': 'Start free, upgrade when you need',
       'home.plansLead': 'The free plan covers all five note types and the planning map. Premium unlocks the advanced tools.',
       'home.plansFreeTitle': 'Free',
-      // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
+      // Quotas mirror USER_LIMITS (30 notes, 3 photos + 3 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': 'Five note types, planning-case map, lot layers and Cantonese voice input — attach 3 photos and 5 PDFs per note. Ready for field work.',
+      'home.plansFreeBody': 'Five note types (30 notes max), planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 3 PDFs per note. Ready for field work.',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
       'home.plansProPrice': 'HK$48 / month',
-      'home.plansProBody': 'OZP zoning plans, planning alerts, Ask Expert AI, PDF brochures and team sharing — attachments upgraded to 20 photos per note.',
+      'home.plansProBody': 'Planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos and 20 PDFs per note, unlimited voice input and video attachments.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': 'Get it at launch. Use it at your next viewing.',
       'home.downloadBody': 'MapNoteHK is launching soon on the App Store and Google Play.',
+      // Launch notify band — pre-launch conversion capture; hidden by site.js
+      // once store links are configured (the download band takes over).
+      'home.notifyTitle': 'Be first to know at launch',
+      'home.notifyBody': 'Leave your email — we will tell you the day MapNoteHK hits the App Store and Google Play.',
+      'home.notifyEmailLabel': 'Email address',
+      'home.notifyEmailPh': 'Your work email',
+      'home.notifySubmit': 'Notify me',
+      'home.notifyInvalid': 'Please enter a valid email address.',
+      'home.notifySuccess': 'Noted! We will email you on launch day.',
+      'home.notifyError': 'Could not submit. Try again later or email support@mapnotehk.com.',
+      'home.notifyNote': 'Launch notification only — no spam.',
       'services.title': 'Features & plans',
       'services.lead': 'From map notes to AI tools — everything is shaped around Hong Kong agency workflows.',
       'services.item1Title': 'Five map note types',
@@ -328,7 +491,7 @@ window.MapNoteI18n = {
       'services.item1Benefit': 'Benefit: notes stay with the property — faster capture, nothing scattered.',
       'services.item2Title': 'Planning application map',
       'services.item2Body':
-        'Town Planning Board cases pinned on the map; Premium adds OZP zoning plans and planning alerts.',
+        'Town Planning Board cases and OZP zoning plans pinned on the map; Premium adds planning alerts.',
       'services.item2Benefit': 'Benefit: know about neighbourhood change first — less manual searching.',
       'services.item3Title': 'Cantonese voice · Ask Expert AI',
       'services.item3Body':
@@ -340,8 +503,63 @@ window.MapNoteI18n = {
       'services.item4Benefit': 'Benefit: one source of truth for colleagues and clients.',
       'services.pricingTitle': 'Pricing',
       'services.pricingBody':
-        'The Free plan covers daily work. Premium is HK$48/month and unlocks OZP plans, planning alerts, Ask Expert AI, PDF brochures and team sharing. Contact us for an enterprise quote.',
+        'The Free plan covers daily work. Premium is HK$48/month and unlocks planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
       'services.pricingCta': 'Request a quote',
+      // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
+      // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
+      'services.compareTitle': 'Compare plans',
+      'services.compareHeadFeature': 'Feature',
+      'services.compareHeadFree': 'Free',
+      'services.compareHeadPremium': 'Premium (HK$48/month)',
+      'services.compareGroup1': 'Notes & attachments',
+      'services.compareNotes': 'Number of notes',
+      'services.compareNotesF': '30',
+      'services.compareNotesP': 'Unlimited',
+      'services.comparePhotosNote': 'Photos per note',
+      'services.comparePhotosNoteF': '3',
+      'services.comparePhotosNoteP': '20',
+      'services.comparePhotosTotal': 'Total photos cap',
+      'services.comparePhotosTotalF': '30',
+      'services.comparePhotosTotalP': 'Unlimited',
+      'services.comparePdfsNote': 'PDFs per note',
+      'services.comparePdfsNoteF': '3',
+      'services.comparePdfsNoteP': '20',
+      'services.comparePdfsTotal': 'Total PDFs cap',
+      'services.comparePdfsTotalF': '30',
+      'services.comparePdfsTotalP': 'Unlimited',
+      'services.compareVideo': 'Video attachments',
+      'services.compareVideoF': '—',
+      'services.compareVideoP': '1 per note (up to 3 min)',
+      'services.compareGroup2': 'AI & voice',
+      'services.compareVoice': 'Cantonese voice input',
+      'services.compareVoiceF': '5 per month',
+      'services.compareVoiceP': 'Unlimited',
+      'services.compareAsk': 'Ask Expert AI',
+      'services.compareAskF': '✓',
+      'services.compareAskP': '✓ (incl. exclusive content)',
+      'services.comparePolish': 'AI note polishing',
+      'services.comparePolishF': '—',
+      'services.comparePolishP': '✓',
+      'services.compareGroup3': 'Planning & map',
+      'services.comparePlanMap': 'Planning-case map',
+      'services.comparePlanMapF': '✓',
+      'services.comparePlanMapP': '✓',
+      'services.compareNearby': 'Nearby amenities (schools, hotels, lots)',
+      'services.compareNearbyF': '✓',
+      'services.compareNearbyP': '✓',
+      'services.compareOzp': 'OZP zoning plans',
+      'services.compareOzpF': '✓',
+      'services.compareOzpP': '✓',
+      'services.compareAlerts': 'Planning alerts',
+      'services.compareAlertsF': '—',
+      'services.compareAlertsP': '✓',
+      'services.compareGroup4': 'Collaboration & output',
+      'services.compareTeams': 'Team note sharing',
+      'services.compareTeamsF': '—',
+      'services.compareTeamsP': '✓',
+      'services.comparePdf': 'PDF property brochures',
+      'services.comparePdfF': '—',
+      'services.comparePdfP': '✓',
       'about.title': 'About us',
       'about.lead': 'Property frontline teams deserve better digital tools.',
       'about.storyTitle': 'Our story',
@@ -393,7 +611,7 @@ window.MapNoteI18n = {
       'contact.success': 'Thanks — we received your message and will reply soon.',
       'contact.error': 'Could not send. Try again later or email us directly.',
       'privacy.title': 'Privacy Policy',
-      'privacy.updated': 'Last updated: 9 August 2026',
+      'privacy.updated': 'Last updated: 22 August 2026',
       'privacy.intro':
         'MapNoteHK is a map-based note app for Hong Kong property professionals. We handle personal data under the PDPO and Google Play / Apple App Store requirements.',
       'privacy.collectTitle': 'What we collect',
@@ -409,6 +627,58 @@ window.MapNoteI18n = {
       'privacy.contactTitle': 'Contact',
       'privacy.fullNote':
         'The full draft policy also lives in our product docs. For access or correction requests, email support@mapnotehk.com.',
+      /* FAQ accordion — condensed from docs/privacy-comment-for-review.pdf,
+         corrected to match server privacy-config.ts and the full policy draft */
+      'privacy.faqTitle': 'Frequently asked questions',
+      'privacy.faqGroup1': 'Your data and notes',
+      'privacy.faqGroup2': 'AI, voice and security',
+      'privacy.faqGroup3': 'Sharing and client data',
+      'privacy.faqGroup4': 'Retention, deletion and your rights',
+      'privacy.faq1Q': 'What is this FAQ?',
+      'privacy.faq1A':
+        'A plain-language summary of how MapNoteHK collects, uses, stores, protects and deletes personal data — read it together with our Privacy Policy. MapNoteHK serves Hong Kong users and handles data under the PDPO (Cap. 486).',
+      'privacy.faq2Q': 'What information does MapNoteHK collect?',
+      'privacy.faq2A':
+        'Account data (email, name), notes and attachments you create, map locations, voice input, content you submit to AI features, team-sharing settings, device and usage data, and subscription status. We never ask for HKID numbers, bank accounts or credit-card numbers.',
+      'privacy.faq3Q': 'Is providing my information compulsory?',
+      'privacy.faq3A':
+        'Only email and login credentials are required for an account. Notes, photos, voice input, teams and AI features are all optional — you choose what to submit.',
+      'privacy.faq4Q': 'Who can see my notes?',
+      'privacy.faq4A':
+        'Notes are private by default — only you. Notes you mark as Team are visible to the team members you choose. Notes are never public, not indexed by search engines, and never sold to advertisers.',
+      'privacy.faq5Q': 'Can MapNoteHK administrators access the database?',
+      'privacy.faq5A':
+        'We do not routinely read note content. Authorised staff may access the minimum necessary data only to handle support you request, security incidents, or legal obligations.',
+      'privacy.faq6Q': 'Is my data encrypted and protected?',
+      'privacy.faq6A':
+        'Connections use HTTPS/TLS, with access controls and secure cloud hosting. No internet service can guarantee absolute security — keep your password confidential.',
+      'privacy.faq7Q': 'Is MapNoteHK end-to-end encrypted?',
+      'privacy.faq7A':
+        'No. Server-side storage enables sync, map search, PDF and AI features; we protect data with access controls and encrypted transport instead.',
+      'privacy.faq8Q': 'Do you use my notes to train AI models?',
+      'privacy.faq8A':
+        'No. Only when you deliberately use an AI feature is the content you submit sent to Google (Speech-to-Text / Vertex AI) to perform that feature — never for model training or advertising.',
+      'privacy.faq9Q': 'Who do you share my data with?',
+      'privacy.faq9A':
+        'We never sell personal data. We share only when necessary with: cloud and technical providers, Google when you use AI/voice features, Apple, Google or payment providers for subscriptions, your chosen team members (Team notes only), and where the law requires.',
+      'privacy.faq10Q': 'What should agents consider before entering client data?',
+      'privacy.faq10A':
+        'You are responsible for a lawful basis: enter only what your work needs, follow your employer’s privacy policy, obtain consent where required, and keep notes private by default.',
+      'privacy.faq11Q': 'How long is my data retained?',
+      'privacy.faq11A':
+        'While your account is active. After confirmed deletion, data is erased from primary systems within 30 days; backups up to 30 days more. Accounts inactive for 24 months are purged.',
+      'privacy.faq12Q': 'How do I delete my account and data?',
+      'privacy.faq12A':
+        'In the app, Account → Delete account opens the deletion form on this site directly — or use the link above. Submitting completes the request; we process within 1–2 business days. Deletion is permanent. Cancel any App Store / Google Play subscription separately.',
+      'privacy.faq13Q': 'Can I access or correct my personal data?',
+      'privacy.faq13A':
+        'Yes — email support@mapnotehk.com with the subject “PDPO Data Access / Correction Request”. We may verify your identity first.',
+      'privacy.faq14Q': 'Do you use my data for direct marketing?',
+      'privacy.faq14A':
+        'Not without your consent. Optional messages such as launch announcements can be unsubscribed at any time.',
+      'privacy.faq15Q': 'How do I contact MapNoteHK about privacy?',
+      'privacy.faq15A':
+        'Email support@mapnotehk.com. You may also contact the Office of the Privacy Commissioner for Personal Data, Hong Kong.',
       'delete.title': 'Account deletion request',
       'delete.lead':
         'Provide your account details and reason. Our team processes requests manually. Submitting this form completes your request — you do not need to find a FAQ first.',
