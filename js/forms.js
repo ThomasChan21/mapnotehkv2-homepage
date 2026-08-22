@@ -1,5 +1,5 @@
 /**
- * Contact + account-deletion form submit helpers.
+ * Contact + account-deletion + launch-notify form submit helpers.
  * Approach: POST JSON to Formspree when configured; otherwise stub success for local preview.
  */
 
@@ -83,6 +83,37 @@ function MapNoteFormsInit() {
       } catch (err) {
         console.warn('[MapNoteHK contact]', err);
         setStatus(status, window.MapNoteSite.t('contact.error', langOf()), 'err');
+      }
+    });
+  }
+
+  /* Launch-notify capture (homepage): single email field, same validation and
+     status pattern as the contact form. Payload is tagged form:'launch-notify'
+     so the shared Formspree inbox can filter it. */
+  const notifyForm = document.getElementById('notify-form');
+  if (notifyForm) {
+    notifyForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const status = document.getElementById('notify-form-status');
+      const fd = new FormData(notifyForm);
+      const email = String(fd.get('email') || '').trim();
+
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!emailOk) {
+        setStatus(status, window.MapNoteSite.t('home.notifyInvalid', langOf()), 'err');
+        const emailInput = notifyForm.elements.email;
+        if (emailInput && typeof emailInput.focus === 'function') emailInput.focus();
+        return;
+      }
+
+      const payload = { form: 'launch-notify', email, submittedAt: new Date().toISOString() };
+      try {
+        await postForm(cfg.notifyEndpoint, payload);
+        setStatus(status, window.MapNoteSite.t('home.notifySuccess', langOf()), 'ok');
+        notifyForm.reset();
+      } catch (err) {
+        console.warn('[MapNoteHK launch-notify]', err);
+        setStatus(status, window.MapNoteSite.t('home.notifyError', langOf()), 'err');
       }
     });
   }

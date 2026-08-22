@@ -73,6 +73,19 @@ a:hover {
   top: 1rem;
 }
 
+/* Visually hidden but announced by screen readers (e.g. notify form label) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Header */
 .site-header {
   position: sticky;
@@ -279,6 +292,17 @@ a:hover {
   box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.25);
 }
 
+/* Pain hook — poster's question line between the launch badge and the H1.
+   Mint accent matches the badge dot so it reads as one hero cluster. */
+.hero-pain {
+  margin: -0.35rem 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #5eead4;
+}
+
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 3.4rem);
@@ -446,6 +470,67 @@ a:hover {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.92rem;
+}
+
+/* Pain points — poster's PAS cards: danger-tinted icon for the problem,
+   jade solution line for the fix. Cards mirror .type-card rhythm. */
+.pains-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.pain-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem 1.25rem;
+  box-shadow: var(--shadow);
+  animation: rise 0.6s ease both;
+}
+
+.pain-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.pain-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.pain-card h3 {
+  font-family: var(--font-display);
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.pain-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+/* Resolution line: dashed divider (same rhythm as .benefit) + jade arrow.
+   Needs the .pain-card prefix to out-specify .pain-card p above. */
+.pain-card .pain-solution {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--line);
+  color: var(--jade-deep);
+  font-weight: 600;
+}
+
+.pain-card .pain-solution::before {
+  content: "→";
+  margin-right: 0.35rem;
 }
 
 /* Feature showcase — tab switcher: compact list left, full-size screenshot
@@ -678,6 +763,7 @@ a:hover {
 }
 
 /* Homepage bands use tighter padding than the shared .section default */
+.pains,
 .types,
 #features,
 .plans {
@@ -758,6 +844,77 @@ a:hover {
 
 .download .store-btn {
   border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Launch notify band — pre-launch sibling of .download (never shown together:
+   site.js hides this once store badges go live). Jade→ink gradient marks it
+   as the action band; form status colours are re-toned for the dark surface. */
+.notify {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, var(--jade-deep), var(--ink) 70%);
+  color: white;
+  padding: 3.5rem 0;
+}
+
+.notify-inner {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.notify-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.notify-inner > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Single-field capture: email + submit in one row, stacking on small screens */
+.notify-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 0.5rem;
+}
+
+.notify-form input {
+  flex: 1 1 240px;
+}
+
+.notify-form .btn {
+  flex: none;
+}
+
+.notify .form-status {
+  margin: 0;
+}
+
+.notify .form-status.is-ok {
+  color: #5eead4;
+}
+
+.notify .form-status.is-err {
+  color: #fca5a5;
+}
+
+.notify-note {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 480px) {
+  .notify-form .btn {
+    width: 100%;
+  }
 }
 
 .section {
@@ -1250,6 +1407,7 @@ textarea {
   .hero-copy,
   .hero-shot,
   .type-card,
+  .pain-card,
   .panel {
     animation: none;
   }

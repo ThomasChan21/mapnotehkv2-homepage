@@ -45,6 +45,8 @@ window.MapNoteSiteConfig = {
     contactEndpoint: 'https://formspree.io/f/xykrjqlk',
     /** Prefer a dedicated Formspree form for account deletion when available */
     accountDeletionEndpoint: 'https://formspree.io/f/xykrjqlk',
+    /** Launch-notify capture on the homepage; shares the contact inbox until a dedicated form exists */
+    notifyEndpoint: 'https://formspree.io/f/xykrjqlk',
   },
 
   /** Absolute path used in App Store / privacy policy (must stay stable). */
