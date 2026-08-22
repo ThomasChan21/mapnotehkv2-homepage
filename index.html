@@ -28,6 +28,8 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-i18n="home.heroBadge"></span></p>
+          <!-- Pain hook from the poster: a question line above the brand H1 -->
+          <p class="hero-pain" data-i18n="home.heroPain"></p>
           <h1 data-i18n="home.heroTitle"></h1>
           <p class="hero-lead" data-i18n="home.heroLead"></p>
           <!-- site.js swaps these text CTAs for store badges when storeLinks are configured -->
@@ -61,6 +63,43 @@
             <source src="./assets/video-sample-1-square.webm" type="video/webm" />
             <source src="./assets/video-sample-1-square.mp4" type="video/mp4" />
           </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain points: the poster's PAS framing — name the three daily pains
+         (PRD §E persona), each card resolving to the feature that removes it -->
+    <section class="section pains" aria-label="Pain points">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="home.painsTitle"></h2>
+          <p data-i18n="home.painsLead"></p>
+        </div>
+        <div class="pains-grid">
+          <article class="pain-card">
+            <span class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-9 9H7V9h4v2zm6 0h-4V9h4v2z" /></svg>
+            </span>
+            <h3 data-i18n="home.pain1Title"></h3>
+            <p data-i18n="home.pain1Body"></p>
+            <p class="pain-solution" data-i18n="home.pain1Solution"></p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
+            </span>
+            <h3 data-i18n="home.pain2Title"></h3>
+            <p data-i18n="home.pain2Body"></p>
+            <p class="pain-solution" data-i18n="home.pain2Solution"></p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" /></svg>
+            </span>
+            <h3 data-i18n="home.pain3Title"></h3>
+            <p data-i18n="home.pain3Body"></p>
+            <p class="pain-solution" data-i18n="home.pain3Solution"></p>
+          </article>
         </div>
       </div>
     </section>
