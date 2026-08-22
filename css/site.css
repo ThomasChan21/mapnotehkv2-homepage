@@ -1013,9 +1013,11 @@ a:hover {
 }
 
 /* Payoff line on services cards: soft jade chip so the advantage stands out
-   from the descriptive body text above it. */
-.benefit {
-  margin-top: 0.75rem;
+   from the descriptive body text above it. Negative side margins offset the
+   chip padding so the text stays flush with the card's left text edge.
+   The .panel prefix is needed to out-specify `.panel p { margin: 0 }`. */
+.panel .benefit {
+  margin: 0.75rem -0.75rem 0;
   padding: 0.5rem 0.75rem;
   border-radius: 10px;
   background: rgba(28, 138, 120, 0.08);
