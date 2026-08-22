@@ -1012,12 +1012,16 @@ a:hover {
   font-weight: 700;
 }
 
+/* Payoff line on services cards: soft jade chip so the advantage stands out
+   from the descriptive body text above it. */
 .benefit {
   margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed var(--line);
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(28, 138, 120, 0.08);
   font-size: 0.9rem;
-  color: var(--ink);
+  font-weight: 600;
+  color: var(--jade-deep);
 }
 
 .pricing-banner {
