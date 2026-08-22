@@ -117,13 +117,13 @@ window.MapNoteI18n = {
       'home.plansTitle': '免費開始，按需升級',
       'home.plansLead': '免費方案已涵蓋五類筆記與規劃地圖；Premium 解鎖進階工具。',
       'home.plansFreeTitle': 'Free 免費方案',
-      // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
+      // Quotas mirror USER_LIMITS (30 notes, 3 photos + 3 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': '五類筆記、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 5 份 PDF，落區工作即裝即用。',
+      'home.plansFreeBody': '五類筆記（最多 30 則）、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 3 份 PDF，落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
       'home.plansProPrice': 'HK$48 / 月',
-      'home.plansProBody': '規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、語音輸入無限、可加影片附件。',
+      'home.plansProBody': '規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、PDF 每則 20 份、語音輸入無限、可加影片附件。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': '上架即裝，下次睇樓開始用。',
@@ -165,7 +165,7 @@ window.MapNoteI18n = {
       'services.compareHeadPremium': 'Premium（HK$48／月）',
       'services.compareGroup1': '筆記與附件',
       'services.compareNotes': '筆記數量',
-      'services.compareNotesF': '無限',
+      'services.compareNotesF': '30 則',
       'services.compareNotesP': '無限',
       'services.comparePhotosNote': '每則筆記相片',
       'services.comparePhotosNoteF': '3 張',
@@ -174,8 +174,8 @@ window.MapNoteI18n = {
       'services.comparePhotosTotalF': '30 張',
       'services.comparePhotosTotalP': '無限',
       'services.comparePdfsNote': '每則筆記 PDF',
-      'services.comparePdfsNoteF': '5 份',
-      'services.comparePdfsNoteP': '5 份',
+      'services.comparePdfsNoteF': '3 份',
+      'services.comparePdfsNoteP': '20 份',
       'services.comparePdfsTotal': 'PDF 總量上限',
       'services.comparePdfsTotalF': '30 份',
       'services.comparePdfsTotalP': '無限',
@@ -461,13 +461,13 @@ window.MapNoteI18n = {
       'home.plansTitle': 'Start free, upgrade when you need',
       'home.plansLead': 'The free plan covers all five note types and the planning map. Premium unlocks the advanced tools.',
       'home.plansFreeTitle': 'Free',
-      // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
+      // Quotas mirror USER_LIMITS (30 notes, 3 photos + 3 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': 'Five note types, planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 5 PDFs per note. Ready for field work.',
+      'home.plansFreeBody': 'Five note types (30 notes max), planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 3 PDFs per note. Ready for field work.',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
       'home.plansProPrice': 'HK$48 / month',
-      'home.plansProBody': 'Planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos per note, unlimited voice input and video attachments.',
+      'home.plansProBody': 'Planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos and 20 PDFs per note, unlimited voice input and video attachments.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': 'Get it at launch. Use it at your next viewing.',
@@ -513,7 +513,7 @@ window.MapNoteI18n = {
       'services.compareHeadPremium': 'Premium (HK$48/month)',
       'services.compareGroup1': 'Notes & attachments',
       'services.compareNotes': 'Number of notes',
-      'services.compareNotesF': 'Unlimited',
+      'services.compareNotesF': '30',
       'services.compareNotesP': 'Unlimited',
       'services.comparePhotosNote': 'Photos per note',
       'services.comparePhotosNoteF': '3',
@@ -522,8 +522,8 @@ window.MapNoteI18n = {
       'services.comparePhotosTotalF': '30',
       'services.comparePhotosTotalP': 'Unlimited',
       'services.comparePdfsNote': 'PDFs per note',
-      'services.comparePdfsNoteF': '5',
-      'services.comparePdfsNoteP': '5',
+      'services.comparePdfsNoteF': '3',
+      'services.comparePdfsNoteP': '20',
       'services.comparePdfsTotal': 'Total PDFs cap',
       'services.comparePdfsTotalF': '30',
       'services.comparePdfsTotalP': 'Unlimited',
