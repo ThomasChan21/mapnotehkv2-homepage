@@ -92,7 +92,7 @@ window.MapNoteI18n = {
         '以地政總署地圖為底，附近學校、酒店與配套一開即睇；離線快取令地庫弱訊號都翻睇到筆記。筆記跟住物業走，永遠唔會搵唔返。',
       'home.f2Title': '城規會申請，地圖即睇',
       'home.f2Body':
-        '今年規劃申請個案直接標記在地圖上；Premium 再解鎖 OZP 分區圖則與規劃通知，高度放寬、改變用途，早人一步掌握。',
+        '今年規劃申請個案與 OZP 分區圖則直接標記在地圖上；Premium 再解鎖規劃通知，高度放寬、改變用途，早人一步掌握。',
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
         '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
@@ -119,11 +119,11 @@ window.MapNoteI18n = {
       'home.plansFreeTitle': 'Free 免費方案',
       // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': '五類筆記、規劃個案地圖、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 5 份 PDF，落區工作即裝即用。',
+      'home.plansFreeBody': '五類筆記、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 5 份 PDF，落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
       'home.plansProPrice': 'HK$48 / 月',
-      'home.plansProBody': 'OZP 分區圖則、規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、語音輸入無限、可加影片附件。',
+      'home.plansProBody': '規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、語音輸入無限、可加影片附件。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': '上架即裝，下次睇樓開始用。',
@@ -145,7 +145,7 @@ window.MapNoteI18n = {
       'services.item1Body': '物業、考察、客戶、報價、成交，全部釘在官方地圖上，附相片、PDF 與位置。',
       'services.item1Benefit': '好處：筆記跟物業走，現場記錄更快，資料不再散落。',
       'services.item2Title': '規劃申請地圖',
-      'services.item2Body': '城規會規劃個案標記在地圖上；Premium 加 OZP 分區圖則與規劃通知。',
+      'services.item2Body': '城規會規劃個案與 OZP 分區圖則標記在地圖上；Premium 加規劃通知。',
       'services.item2Benefit': '好處：周邊變化早人一步知道，減少手動搜尋。',
       'services.item3Title': '廣東話語音 · 問專家 AI',
       'services.item3Body': '語音轉文字加快現場輸入；問專家知識庫過千條代理常見問題，AI 即時搵到最相關答案，附出處供核對。',
@@ -155,7 +155,7 @@ window.MapNoteI18n = {
       'services.item4Benefit': '好處：同一套資料服務同事與客戶。',
       'services.pricingTitle': '收費說明',
       'services.pricingBody':
-        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖 OZP 圖則、規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
+        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
       'services.pricingCta': '索取報價',
       // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
       // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
@@ -203,7 +203,7 @@ window.MapNoteI18n = {
       'services.compareNearbyF': '✓',
       'services.compareNearbyP': '✓',
       'services.compareOzp': 'OZP 分區圖則',
-      'services.compareOzpF': '—',
+      'services.compareOzpF': '✓',
       'services.compareOzpP': '✓',
       'services.compareAlerts': '規劃通知',
       'services.compareAlertsF': '—',
@@ -439,7 +439,7 @@ window.MapNoteI18n = {
         'Lands Department basemap with lot boundaries, nearby schools and amenities — offline cache keeps notes readable in weak-signal spots. Notes stay with the property; nothing gets lost.',
       'home.f2Title': 'Planning applications on the map',
       'home.f2Body':
-        'Town Planning Board cases pinned where they happen. Premium adds OZP zoning plans and planning alerts — hear about height relaxations and change of use first.',
+        'Town Planning Board cases and OZP zoning plans pinned where they happen. Premium adds planning alerts — hear about height relaxations and change of use first.',
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
         'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
@@ -466,11 +466,11 @@ window.MapNoteI18n = {
       'home.plansFreeTitle': 'Free',
       // Quotas mirror the PRD free tier (3 photos + 5 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': 'Five note types, planning-case map, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 5 PDFs per note. Ready for field work.',
+      'home.plansFreeBody': 'Five note types, planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 5 PDFs per note. Ready for field work.',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
       'home.plansProPrice': 'HK$48 / month',
-      'home.plansProBody': 'OZP zoning plans, planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos per note, unlimited voice input and video attachments.',
+      'home.plansProBody': 'Planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos per note, unlimited voice input and video attachments.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': 'Get it at launch. Use it at your next viewing.',
@@ -494,7 +494,7 @@ window.MapNoteI18n = {
       'services.item1Benefit': 'Benefit: notes stay with the property — faster capture, nothing scattered.',
       'services.item2Title': 'Planning application map',
       'services.item2Body':
-        'Town Planning Board cases pinned on the map; Premium adds OZP zoning plans and planning alerts.',
+        'Town Planning Board cases and OZP zoning plans pinned on the map; Premium adds planning alerts.',
       'services.item2Benefit': 'Benefit: know about neighbourhood change first — less manual searching.',
       'services.item3Title': 'Cantonese voice · Ask Expert AI',
       'services.item3Body':
@@ -506,7 +506,7 @@ window.MapNoteI18n = {
       'services.item4Benefit': 'Benefit: one source of truth for colleagues and clients.',
       'services.pricingTitle': 'Pricing',
       'services.pricingBody':
-        'The Free plan covers daily work. Premium is HK$48/month and unlocks OZP plans, planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
+        'The Free plan covers daily work. Premium is HK$48/month and unlocks planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
       'services.pricingCta': 'Request a quote',
       // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
       // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
@@ -554,7 +554,7 @@ window.MapNoteI18n = {
       'services.compareNearbyF': '✓',
       'services.compareNearbyP': '✓',
       'services.compareOzp': 'OZP zoning plans',
-      'services.compareOzpF': '—',
+      'services.compareOzpF': '✓',
       'services.compareOzpP': '✓',
       'services.compareAlerts': 'Planning alerts',
       'services.compareAlertsF': '—',
