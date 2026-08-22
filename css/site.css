@@ -73,6 +73,19 @@ a:hover {
   top: 1rem;
 }
 
+/* Visually hidden but announced by screen readers (e.g. notify form label) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Header */
 .site-header {
   position: sticky;
@@ -831,6 +844,77 @@ a:hover {
 
 .download .store-btn {
   border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Launch notify band — pre-launch sibling of .download (never shown together:
+   site.js hides this once store badges go live). Jade→ink gradient marks it
+   as the action band; form status colours are re-toned for the dark surface. */
+.notify {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, var(--jade-deep), var(--ink) 70%);
+  color: white;
+  padding: 3.5rem 0;
+}
+
+.notify-inner {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.notify-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.notify-inner > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Single-field capture: email + submit in one row, stacking on small screens */
+.notify-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 0.5rem;
+}
+
+.notify-form input {
+  flex: 1 1 240px;
+}
+
+.notify-form .btn {
+  flex: none;
+}
+
+.notify .form-status {
+  margin: 0;
+}
+
+.notify .form-status.is-ok {
+  color: #5eead4;
+}
+
+.notify .form-status.is-err {
+  color: #fca5a5;
+}
+
+.notify-note {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 480px) {
+  .notify-form .btn {
+    width: 100%;
+  }
 }
 
 .section {

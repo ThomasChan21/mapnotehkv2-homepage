@@ -134,7 +134,8 @@ function buildStoreBadge(store, url, lang) {
 /**
  * Renders store badges wherever store links are configured.
  * Hero: replaces the text CTAs with badges; download band: unhidden and filled.
- * When no links are set, the static text CTAs stay and the band stays hidden.
+ * When no links are set, the static text CTAs stay, the download band stays
+ * hidden, and the launch-notify band shows instead (pre-launch capture).
  * @param {'en' | 'zh-Hant'} lang
  * @returns {void}
  */
@@ -148,6 +149,7 @@ function renderStoreBadges(lang) {
   const heroActions = document.getElementById('hero-actions');
   const downloadSection = document.getElementById('download-section');
   const downloadBadges = document.getElementById('download-badges');
+  const notifySection = document.getElementById('notify-section');
 
   if (heroActions && configured.length > 0) {
     heroActions.innerHTML = '';
@@ -163,6 +165,12 @@ function renderStoreBadges(lang) {
     } else {
       downloadSection.hidden = true;
     }
+  }
+
+  /* Notify band is the pre-launch stand-in for the download band: once store
+     badges exist there is nothing left to capture, so it hides for good. */
+  if (notifySection) {
+    notifySection.hidden = configured.length > 0;
   }
 }
 
