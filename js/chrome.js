@@ -33,12 +33,10 @@ function renderChrome() {
         <a class="brand" href="${siteHref(base, '')}" aria-label="MapNoteHK">
           <img
             class="brand-logo"
-            src="${siteHref(base, 'assets/logo-180.png')}"
-            srcset="${siteHref(base, 'assets/logo-140.png')} 140w, ${siteHref(base, 'assets/logo-180.png')} 180w, ${siteHref(base, 'assets/logo-220.png')} 220w"
-            sizes="160px"
-            width="160"
-            height="80"
-            alt="MapNoteHK"
+            src="${siteHref(base, 'assets/FullLogo_Transparent_NoBuffer.png')}"
+            width="79"
+            height="64"
+            alt="地圖筆記 MapNoteHK"
             decoding="async"
           />
         </a>

@@ -94,13 +94,16 @@ a:hover {
   backdrop-filter: blur(12px);
   background: rgba(243, 247, 249, 0.88);
   border-bottom: 1px solid var(--line);
+  /* 16px clear space above the no-buffer logo; grow for iOS notch. */
+  padding-top: max(1rem, env(safe-area-inset-top, 0px));
+  padding-bottom: 0.5rem;
 }
 
 .header-row {
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-height: 4.5rem;
+  min-height: 5rem;
 }
 
 .brand {
@@ -110,9 +113,10 @@ a:hover {
 }
 
 .brand-logo {
-  width: 140px;
-  height: auto;
+  width: auto;
+  height: 64px;
   display: block;
+  object-fit: contain;
 }
 
 .site-nav {
