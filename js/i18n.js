@@ -17,6 +17,7 @@ window.MapNoteI18n = {
       'nav.about': '關於我們',
       'nav.contact': '聯絡我們',
       'nav.privacy': '私隱政策',
+      'nav.terms': '條款及細則',
       'nav.langEn': 'EN',
       'nav.langZh': '繁',
       'nav.menu': '選單',
@@ -262,22 +263,11 @@ window.MapNoteI18n = {
       'contact.invalid': '請填妥姓名、有效電郵及訊息後再送出。',
       'contact.success': '已收到你的訊息，我們會盡快回覆。',
       'contact.error': '送出失敗，請稍後再試或直接電郵我們。',
-      'privacy.title': '私隱政策',
-      'privacy.updated': '最後更新日期：2026年8月22日',
-      'privacy.intro':
-        'MapNoteHK 是香港地產物業專業人士使用的地圖筆記應用程式。我們按《個人資料（私隱）條例》（PDPO）及 Google Play / Apple App Store 要求處理個人資料。',
-      'privacy.collectTitle': '我們收集什麼',
-      'privacy.collectBody':
-        '帳戶資料（姓名、電郵）、位置（地圖與筆記定位）、你建立的筆記與附件（可能包含第三方個人資料）、使用分析，以及你主動使用的 AI／語音功能所提交的內容。',
-      'privacy.useTitle': '用途',
-      'privacy.useBody':
-        '僅用於提供 App 功能、帳戶同步、保安與符合法律義務。我們不會將你的資料售予第三方作廣告追蹤。',
-      'privacy.deleteTitle': '刪除帳戶',
-      'privacy.deleteBody':
-        '你可透過應用程式內「刪除帳戶」或本網站帳戶刪除申請頁提交請求。提交即為正式申請；我們目標於 1–2 個工作天內處理，並刪除帳戶及相關個人資料（筆記、媒體等），主要系統目標於 30 日內完成。',
-      'privacy.deleteLink': '前往帳戶刪除申請',
-      'privacy.contactTitle': '聯絡',
-      'privacy.fullNote': '完整政策草案亦存放於產品文件庫；如有查閱或更正要求，請電郵 support@mapnotehk.com。',
+      /* Legal pages chrome — full document body copy lives in js/legal-content.js */
+      'legal.updatedLabel': '最後更新',
+      'legal.tocTitle': '本頁目錄',
+      'legal.contactTitle': '聯絡我們',
+      'legal.contactBody': '如你對本文件有任何疑問，歡迎與我們聯絡。',
       /* FAQ accordion — condensed from docs/privacy-comment-for-review.pdf,
          corrected to match server privacy-config.ts and the full policy draft */
       'privacy.faqTitle': '常見問題',
@@ -361,6 +351,7 @@ window.MapNoteI18n = {
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'nav.privacy': 'Privacy',
+      'nav.terms': 'Terms',
       'nav.langEn': 'EN',
       'nav.langZh': '繁',
       'nav.menu': 'Menu',
@@ -610,23 +601,11 @@ window.MapNoteI18n = {
       'contact.invalid': 'Please fill in your name, a valid email and your message before sending.',
       'contact.success': 'Thanks — we received your message and will reply soon.',
       'contact.error': 'Could not send. Try again later or email us directly.',
-      'privacy.title': 'Privacy Policy',
-      'privacy.updated': 'Last updated: 22 August 2026',
-      'privacy.intro':
-        'MapNoteHK is a map-based note app for Hong Kong property professionals. We handle personal data under the PDPO and Google Play / Apple App Store requirements.',
-      'privacy.collectTitle': 'What we collect',
-      'privacy.collectBody':
-        'Account data (name, email), location for map/notes, notes and attachments you create (which may include third-party personal data), analytics, and content you submit to AI / voice features you choose to use.',
-      'privacy.useTitle': 'How we use data',
-      'privacy.useBody':
-        'Only to provide the App, sync your account, security, and legal compliance. We do not sell your data for cross-app advertising.',
-      'privacy.deleteTitle': 'Account deletion',
-      'privacy.deleteBody':
-        'You can delete via in-app Delete account or this website’s account-deletion form. Submitting the form is a completed request. We aim to process within 1–2 business days and erase the account and associated personal data (notes, media, etc.), targeting primary systems within 30 days.',
-      'privacy.deleteLink': 'Open account deletion request',
-      'privacy.contactTitle': 'Contact',
-      'privacy.fullNote':
-        'The full draft policy also lives in our product docs. For access or correction requests, email support@mapnotehk.com.',
+      /* Legal pages chrome — full document body copy lives in js/legal-content.js */
+      'legal.updatedLabel': 'Last updated',
+      'legal.tocTitle': 'On this page',
+      'legal.contactTitle': 'Contact us',
+      'legal.contactBody': 'If you have any questions about this document, feel free to reach out.',
       /* FAQ accordion — condensed from docs/privacy-comment-for-review.pdf,
          corrected to match server privacy-config.ts and the full policy draft */
       'privacy.faqTitle': 'Frequently asked questions',

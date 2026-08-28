@@ -1278,6 +1278,99 @@ textarea {
   margin: 0 0 0.75rem;
 }
 
+/* Full legal documents (terms / privacy) rendered by js/legal.js */
+.legal-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  margin: 0 0 0.5rem;
+}
+
+.legal-updated {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--jade-deep);
+  background: rgba(28, 138, 120, 0.12);
+  border: 1px solid rgba(28, 138, 120, 0.25);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  margin: 0 0 0.75rem;
+}
+
+.legal-intro {
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+}
+
+.legal-toc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.legal-toc-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--jade-deep);
+  margin: 0 0 0.5rem;
+}
+
+.legal-toc-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.legal-toc-list li {
+  break-inside: avoid;
+  margin: 0.15rem 0;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+  .legal-toc-list {
+    columns: 1;
+  }
+}
+
+/* Anchor offset so the sticky header never covers section headings. */
+.legal-section {
+  scroll-margin-top: 96px;
+}
+
+.privacy-prose ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.4rem;
+  color: var(--ink-soft);
+}
+
+.privacy-prose li {
+  margin: 0.3rem 0;
+}
+
+.legal-contact {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.legal-contact h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+
+.legal-contact p {
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+
 /* Privacy FAQ accordion — one <details> per question; short answers in i18n */
 .privacy-faq {
   margin-top: 1.5rem;
