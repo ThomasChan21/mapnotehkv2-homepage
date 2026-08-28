@@ -1320,9 +1320,12 @@ textarea {
   margin: 0 0 0.5rem;
 }
 
+/* Link text already carries the section number ("1. 簡介"), so suppress the
+   <ol>'s native markers to avoid "1. 1. …" duplicates. */
 .legal-toc-list {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 0;
+  list-style: none;
   columns: 2;
   column-gap: 2rem;
 }
@@ -1331,6 +1334,15 @@ textarea {
   break-inside: avoid;
   margin: 0.15rem 0;
   font-size: 0.92rem;
+}
+
+/* TOC links read as a navigation list, not prose — no underline until hover. */
+.legal-toc-list a {
+  text-decoration: none;
+}
+
+.legal-toc-list a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {
