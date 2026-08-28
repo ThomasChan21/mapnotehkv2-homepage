@@ -333,7 +333,7 @@ a:hover {
   gap: 0.75rem;
 }
 
-/* Hero proof stats — PRD headline numbers (30s capture, 5 types, 1,000+ FAQs, trilingual) */
+/* Hero proof stats — PRD headline numbers (30s capture, 5 types, 1,000+ FAQs) */
 .hero-stats {
   display: flex;
   flex-wrap: wrap;
