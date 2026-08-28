@@ -75,6 +75,7 @@ function renderChrome() {
           <a href="${siteHref(base, 'about/')}" data-i18n="nav.about"></a>
           <a href="${siteHref(base, 'contact/')}" data-i18n="nav.contact"></a>
           <a href="${siteHref(base, 'privacy/')}" data-i18n="nav.privacy"></a>
+          <a href="${siteHref(base, 'terms/')}" data-i18n="nav.terms"></a>
         </div>
         <p class="footer-copy" data-i18n="footer.rights"></p>
       </div>

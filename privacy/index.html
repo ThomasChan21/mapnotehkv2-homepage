@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MapNoteHK — Privacy</title>
-  <meta name="description" content="MapNoteHK privacy policy summary." />
+  <title>MapNoteHK — Privacy Policy</title>
+  <meta name="description" content="MapNoteHK Privacy Policy — how we collect, use, and protect your personal data." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/site.css?v=20260823c" />
+  <link rel="stylesheet" href="../css/site.css?v=20260828a" />
   <!-- Favicon: IconOnly_Transparent scene (tab + Apple/PWA). Query busts hard favicon cache. -->
   <link rel="icon" href="../assets/favicon.ico?v=20260823e" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=20260823e" />
@@ -21,30 +21,10 @@
   <div id="site-header"></div>
 
   <main id="main" class="section">
-    <div class="container privacy-prose">
-      <div class="section-head">
-        <h1 data-i18n="privacy.title"></h1>
-        <p data-i18n="privacy.updated"></p>
-      </div>
-
+    <div class="container">
       <article class="panel">
-        <p data-i18n="privacy.intro"></p>
-
-        <h2 data-i18n="privacy.collectTitle"></h2>
-        <p data-i18n="privacy.collectBody"></p>
-
-        <h2 data-i18n="privacy.useTitle"></h2>
-        <p data-i18n="privacy.useBody"></p>
-
-        <h2 data-i18n="privacy.deleteTitle"></h2>
-        <p data-i18n="privacy.deleteBody"></p>
-        <p>
-          <a href="../account-deletion/" data-i18n="privacy.deleteLink"></a>
-        </p>
-
-        <h2 data-i18n="privacy.contactTitle"></h2>
-        <p data-i18n="privacy.fullNote"></p>
-        <p><a href="mailto:support@mapnotehk.com">support@mapnotehk.com</a></p>
+        <!-- Full policy rendered by js/legal.js from js/legal-content.js (matches the in-app policy) -->
+        <div id="legal-root" data-legal-kind="privacy"></div>
       </article>
 
       <!-- FAQ accordion: short answers, one per <details>; copy lives in js/i18n.js (privacy.faq*) -->
@@ -128,8 +108,10 @@
     window.MapNotePage = { base: '../', active: 'privacy' };
   </script>
   <script src="../js/site-config.js?v=20260823a"></script>
-  <script src="../js/i18n.js?v=20260823a"></script>
-  <script src="../js/chrome.js?v=20260823a"></script>
+  <script src="../js/i18n.js?v=20260828a"></script>
+  <script src="../js/chrome.js?v=20260828a"></script>
+  <script src="../js/legal-content.js?v=20260828a"></script>
+  <script src="../js/legal.js?v=20260828a"></script>
   <script src="../js/site.js?v=20260823a"></script>
 </body>
 </html>
