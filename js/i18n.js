@@ -268,58 +268,6 @@ window.MapNoteI18n = {
       'legal.tocTitle': '本頁目錄',
       'legal.contactTitle': '聯絡我們',
       'legal.contactBody': '如你對本文件有任何疑問，歡迎與我們聯絡。',
-      /* FAQ accordion — condensed from docs/privacy-comment-for-review.pdf,
-         corrected to match server privacy-config.ts and the full policy draft */
-      'privacy.faqTitle': '常見問題',
-      'privacy.faqGroup1': '你的資料與筆記',
-      'privacy.faqGroup2': 'AI、語音與保安',
-      'privacy.faqGroup3': '分享與客戶資料',
-      'privacy.faqGroup4': '保留、刪除與你的權利',
-      'privacy.faq1Q': '呢個常見問題頁係咩？',
-      'privacy.faq1A':
-        '以簡明方式講解 MapNoteHK 點樣收集、使用、儲存、保護同刪除個人資料，請同《私隱政策》一併閱讀。服務對象為香港用戶，按《個人資料（私隱）條例》（第486章）處理資料。',
-      'privacy.faq2Q': 'MapNoteHK 會收集咩資料？',
-      'privacy.faq2A':
-        '帳戶資料（電郵、姓名）、你建立嘅筆記同附件、地圖定位、語音輸入、你主動提交嘅 AI 內容、團隊共享設定、裝置同使用資料、訂閱狀態。我哋唔會索取身份證號碼、銀行戶口或信用卡資料。',
-      'privacy.faq3Q': '提供資料係咪必須？',
-      'privacy.faq3A':
-        '電郵同登入憑證係開戶必需；筆記、相片、語音、團隊同 AI 功能全部可選，由你決定提交咩內容。',
-      'privacy.faq4Q': '邊個睇到我嘅筆記？',
-      'privacy.faq4A':
-        '筆記預設私人，只有你睇到；設定為「團隊」嘅筆記先至會向你揀選嘅團隊成員公開。筆記唔會公開、唔會被搜尋引擎索引、唔會賣畀廣告商。',
-      'privacy.faq5Q': 'MapNoteHK 管理員可唔可以睇資料庫？',
-      'privacy.faq5A':
-        '我哋唔會例行閱覽筆記內容。獲授權人員只會喺處理你提出嘅支援要求、保安事故或法律要求時，查閱最少必要嘅資料。',
-      'privacy.faq6Q': '我嘅資料有冇加密同保護？',
-      'privacy.faq6A':
-        'App 同伺服器之間用 HTTPS/TLS 加密，配合存取控制同安全雲端寄存。互聯網服務唔能夠保證絕對安全，請保管好你嘅密碼。',
-      'privacy.faq7Q': '係咪端對端加密？',
-      'privacy.faq7A':
-        '唔係。筆記儲存喺伺服器先可以做到跨裝置同步、地圖搜尋、PDF 同 AI 功能；我哋用存取控制同加密傳輸保護資料。',
-      'privacy.faq8Q': '會唔會用我嘅筆記訓練 AI？',
-      'privacy.faq8A':
-        '唔會。只有你主動用 AI 功能嗰陣，你提交嘅內容先會傳送畀 Google（語音轉文字／Vertex AI）完成該功能，唔會用嚟訓練模型或者做廣告。',
-      'privacy.faq9Q': '會同邊個分享我嘅資料？',
-      'privacy.faq9A':
-        '唔會出售個人資料。只會喺必要時分享畀：雲端寄存同技術供應商、你用 AI／語音功能時嘅 Google、Apple／Google／付款商做訂閱核實、你揀嘅團隊成員（只限團隊筆記），同埋法律要求嘅情況。',
-      'privacy.faq10Q': '輸入客戶資料前要留意咩？',
-      'privacy.faq10A':
-        '你要確保有合法依據：只輸入工作必需嘅資料、跟足公司私隱政策、按需要取得客戶同意，同埋預設用私人筆記。',
-      'privacy.faq11Q': '資料會保留幾耐？',
-      'privacy.faq11A':
-        '帳戶有效期間會保留。確認刪除後 30 日內自主要系統清除，備份最多再保留 30 日；帳戶連續 24 個月無活動會被清除。',
-      'privacy.faq12Q': '點樣刪除帳戶同資料？',
-      'privacy.faq12A':
-        'App 內「帳戶 → 刪除帳戶」會直接開啟本網站嘅刪除申請頁，或者用上面嘅連結。提交即完成申請，1–2 個工作天內處理；刪除係永久嘅。商店訂閱要另外喺 Apple ID／Google Play 取消。',
-      'privacy.faq13Q': '可唔可以查閱或者更正我嘅資料？',
-      'privacy.faq13A':
-        '可以。電郵 support@mapnotehk.com，主旨註明「PDPO 資料查閱／更正要求」；處理前可能需要核實身份。',
-      'privacy.faq14Q': '會唔會用我嘅資料做直接促銷？',
-      'privacy.faq14A':
-        '未經你同意唔會。產品更新或上架通知等可選訊息，可以隨時用訊息內嘅退訂方法取消。',
-      'privacy.faq15Q': '私隱問題點樣聯絡？',
-      'privacy.faq15A':
-        '電郵 support@mapnotehk.com。如認為私隱權益受影響，亦可聯絡香港個人資料私隱專員公署。',
       'delete.title': '帳號刪除請求',
       'delete.lead':
         '請提供你的帳號資訊和刪除原因。我們的團隊將手動處理你的請求；提交後即視為正式申請，無需再經 FAQ。',
@@ -606,58 +554,6 @@ window.MapNoteI18n = {
       'legal.tocTitle': 'On this page',
       'legal.contactTitle': 'Contact us',
       'legal.contactBody': 'If you have any questions about this document, feel free to reach out.',
-      /* FAQ accordion — condensed from docs/privacy-comment-for-review.pdf,
-         corrected to match server privacy-config.ts and the full policy draft */
-      'privacy.faqTitle': 'Frequently asked questions',
-      'privacy.faqGroup1': 'Your data and notes',
-      'privacy.faqGroup2': 'AI, voice and security',
-      'privacy.faqGroup3': 'Sharing and client data',
-      'privacy.faqGroup4': 'Retention, deletion and your rights',
-      'privacy.faq1Q': 'What is this FAQ?',
-      'privacy.faq1A':
-        'A plain-language summary of how MapNoteHK collects, uses, stores, protects and deletes personal data — read it together with our Privacy Policy. MapNoteHK serves Hong Kong users and handles data under the PDPO (Cap. 486).',
-      'privacy.faq2Q': 'What information does MapNoteHK collect?',
-      'privacy.faq2A':
-        'Account data (email, name), notes and attachments you create, map locations, voice input, content you submit to AI features, team-sharing settings, device and usage data, and subscription status. We never ask for HKID numbers, bank accounts or credit-card numbers.',
-      'privacy.faq3Q': 'Is providing my information compulsory?',
-      'privacy.faq3A':
-        'Only email and login credentials are required for an account. Notes, photos, voice input, teams and AI features are all optional — you choose what to submit.',
-      'privacy.faq4Q': 'Who can see my notes?',
-      'privacy.faq4A':
-        'Notes are private by default — only you. Notes you mark as Team are visible to the team members you choose. Notes are never public, not indexed by search engines, and never sold to advertisers.',
-      'privacy.faq5Q': 'Can MapNoteHK administrators access the database?',
-      'privacy.faq5A':
-        'We do not routinely read note content. Authorised staff may access the minimum necessary data only to handle support you request, security incidents, or legal obligations.',
-      'privacy.faq6Q': 'Is my data encrypted and protected?',
-      'privacy.faq6A':
-        'Connections use HTTPS/TLS, with access controls and secure cloud hosting. No internet service can guarantee absolute security — keep your password confidential.',
-      'privacy.faq7Q': 'Is MapNoteHK end-to-end encrypted?',
-      'privacy.faq7A':
-        'No. Server-side storage enables sync, map search, PDF and AI features; we protect data with access controls and encrypted transport instead.',
-      'privacy.faq8Q': 'Do you use my notes to train AI models?',
-      'privacy.faq8A':
-        'No. Only when you deliberately use an AI feature is the content you submit sent to Google (Speech-to-Text / Vertex AI) to perform that feature — never for model training or advertising.',
-      'privacy.faq9Q': 'Who do you share my data with?',
-      'privacy.faq9A':
-        'We never sell personal data. We share only when necessary with: cloud and technical providers, Google when you use AI/voice features, Apple, Google or payment providers for subscriptions, your chosen team members (Team notes only), and where the law requires.',
-      'privacy.faq10Q': 'What should agents consider before entering client data?',
-      'privacy.faq10A':
-        'You are responsible for a lawful basis: enter only what your work needs, follow your employer’s privacy policy, obtain consent where required, and keep notes private by default.',
-      'privacy.faq11Q': 'How long is my data retained?',
-      'privacy.faq11A':
-        'While your account is active. After confirmed deletion, data is erased from primary systems within 30 days; backups up to 30 days more. Accounts inactive for 24 months are purged.',
-      'privacy.faq12Q': 'How do I delete my account and data?',
-      'privacy.faq12A':
-        'In the app, Account → Delete account opens the deletion form on this site directly — or use the link above. Submitting completes the request; we process within 1–2 business days. Deletion is permanent. Cancel any App Store / Google Play subscription separately.',
-      'privacy.faq13Q': 'Can I access or correct my personal data?',
-      'privacy.faq13A':
-        'Yes — email support@mapnotehk.com with the subject “PDPO Data Access / Correction Request”. We may verify your identity first.',
-      'privacy.faq14Q': 'Do you use my data for direct marketing?',
-      'privacy.faq14A':
-        'Not without your consent. Optional messages such as launch announcements can be unsubscribed at any time.',
-      'privacy.faq15Q': 'How do I contact MapNoteHK about privacy?',
-      'privacy.faq15A':
-        'Email support@mapnotehk.com. You may also contact the Office of the Privacy Commissioner for Personal Data, Hong Kong.',
       'delete.title': 'Account deletion request',
       'delete.lead':
         'Provide your account details and reason. Our team processes requests manually. Submitting this form completes your request — you do not need to find a FAQ first.',
