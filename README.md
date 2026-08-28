@@ -10,8 +10,18 @@ Static bilingual website (繁體中文 / English) for **mapnotehk.com** — the 
 | `/services/` | Feature details / benefits / pricing note |
 | `/about/` | Story, mission, values, how we build, contact CTA |
 | `/contact/` | Phone/email/address, map embed, message form |
-| `/privacy/` | Privacy summary + link to deletion form |
+| `/privacy/` | Full Privacy Policy (rendered from `js/legal-content.js`) |
+| `/terms/` | Full Terms & Conditions (rendered from `js/legal-content.js`) |
 | `/account-deletion/` | Self-serve account deletion request form |
+
+## Legal content (single source of truth)
+
+`js/legal-content.js` is a **generated file — do not edit by hand**. The
+Terms & Conditions and Privacy Policy copy lives in the mobile repo at
+`vctsmobile/tool/legal/legal_content.json`; regenerate with
+`python3 vctsmobile/tool/legal/sync_legal_content.py` (run from the
+`vctsmobile` root) and commit the result here. See
+`vctsmobile/tool/legal/README.md` for the full workflow.
 
 ## Local preview
 
