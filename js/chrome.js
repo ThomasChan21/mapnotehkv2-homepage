@@ -47,6 +47,7 @@ function renderChrome() {
           <a href="${siteHref(base, 'about/')}" data-nav="about" data-i18n="nav.about">About</a>
           <a href="${siteHref(base, 'contact/')}" data-nav="contact" data-i18n="nav.contact">Contact</a>
           <a href="${siteHref(base, 'privacy/')}" data-nav="privacy" data-i18n="nav.privacy">Privacy</a>
+          <a href="${siteHref(base, 'terms/')}" data-nav="terms" data-i18n="nav.terms">Terms</a>
         </nav>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language">
