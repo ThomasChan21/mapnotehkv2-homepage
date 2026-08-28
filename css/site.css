@@ -333,7 +333,7 @@ a:hover {
   gap: 0.75rem;
 }
 
-/* Hero proof stats — PRD headline numbers (30s capture, 5 types, 1,000+ FAQs, trilingual) */
+/* Hero proof stats — PRD headline numbers (30s capture, 5 types, 1,000+ FAQs) */
 .hero-stats {
   display: flex;
   flex-wrap: wrap;
@@ -910,11 +910,6 @@ a:hover {
   color: #fca5a5;
 }
 
-.notify-note {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-
 @media (max-width: 480px) {
   .notify-form .btn {
     width: 100%;
@@ -1278,52 +1273,109 @@ textarea {
   margin: 0 0 0.75rem;
 }
 
-/* Privacy FAQ accordion — one <details> per question; short answers in i18n */
-.privacy-faq {
-  margin-top: 1.5rem;
+/* Full legal documents (terms / privacy) rendered by js/legal.js */
+.legal-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  margin: 0 0 0.5rem;
 }
 
-.privacy-faq h3 {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
+.legal-updated {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
   color: var(--jade-deep);
-  margin: 1.5rem 0 0.25rem;
+  background: rgba(28, 138, 120, 0.12);
+  border: 1px solid rgba(28, 138, 120, 0.25);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  margin: 0 0 0.75rem;
 }
 
-.faq-item {
-  border-bottom: 1px solid var(--line);
+.legal-intro {
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
 }
 
-.faq-item summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 0;
-  font-weight: 600;
+.legal-toc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
 }
 
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::after {
-  content: "+";
+.legal-toc-title {
   font-family: var(--font-display);
-  color: var(--jade);
-  font-size: 1.1rem;
-  flex-shrink: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--jade-deep);
+  margin: 0 0 0.5rem;
 }
 
-.faq-item[open] summary::after {
-  content: "–";
-}
-
-.faq-item p {
+/* Link text already carries the section number ("1. 簡介"), so suppress the
+   <ol>'s native markers to avoid "1. 1. …" duplicates. */
+.legal-toc-list {
   margin: 0;
-  padding: 0 0 0.85rem;
+  padding-left: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.legal-toc-list li {
+  break-inside: avoid;
+  margin: 0.15rem 0;
+  font-size: 0.92rem;
+}
+
+/* TOC links read as a navigation list, not prose — no underline until hover. */
+.legal-toc-list a {
+  text-decoration: none;
+}
+
+.legal-toc-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .legal-toc-list {
+    columns: 1;
+  }
+}
+
+/* Anchor offset so the sticky header never covers section headings. */
+.legal-section {
+  scroll-margin-top: 96px;
+}
+
+.privacy-prose ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.4rem;
+  color: var(--ink-soft);
+}
+
+.privacy-prose li {
+  margin: 0.3rem 0;
+}
+
+.legal-contact {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.legal-contact h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+
+.legal-contact p {
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
 }
 
 .site-footer {
