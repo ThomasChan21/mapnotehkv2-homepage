@@ -110,8 +110,8 @@ window.MapNoteI18n = {
       'home.f3bAlt': 'App 截圖：筆記詳情附帶現場相片與 PDF 文件',
       'home.f4Alt': 'App 截圖：AI 專家回答太古城成交參考，附相關筆記出處',
       'home.f4bAlt': 'App 截圖：AI 專家比較客戶出價與放盤，建議開價範圍',
-      'home.f5AltP1': 'PDF 簡報第 1 頁：放盤封面、物業資料與代理聯絡',
-      'home.f5AltP2': 'PDF 簡報第 2 頁：物業相片記錄',
+      'home.f5AltP1': 'PDF 簡報第 1 頁：放盤封面、位置地圖與附近設施',
+      'home.f5AltP2': 'PDF 簡報第 2 頁：放售資料、備註與物業相片記錄',
       // Plans band.
       'home.plansTitle': '免費開始，按需升級',
       'home.plansLead': '免費方案已涵蓋五類筆記與規劃地圖；Premium 解鎖進階工具。',
@@ -389,8 +389,8 @@ window.MapNoteI18n = {
       'home.f3bAlt': 'App screenshot: note detail with site photos and PDF files attached',
       'home.f4Alt': 'App screenshot: AI expert answering Taikoo Shing comparables with note sources',
       'home.f4bAlt': 'App screenshot: AI expert weighing client offers against listings with a suggested range',
-      'home.f5AltP1': 'PDF brochure page 1: listing cover, property details and agent contact',
-      'home.f5AltP2': 'PDF brochure page 2: property photo gallery',
+      'home.f5AltP1': 'PDF brochure page 1: listing cover with location and amenities maps',
+      'home.f5AltP2': 'PDF brochure page 2: sale details, remarks and property photo record',
       // Plans band.
       'home.plansTitle': 'Start free, upgrade when you need',
       'home.plansLead': 'The free plan covers all five note types and the planning map. Premium unlocks the advanced tools.',
