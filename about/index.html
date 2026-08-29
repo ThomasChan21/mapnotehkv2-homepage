@@ -9,12 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/site.css?v=20260829c" />
-  <!-- Favicon: IconOnly_Transparent scene (tab + Apple/PWA). Query busts hard favicon cache. -->
-  <link rel="icon" href="../assets/favicon.ico?v=20260823e" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=20260823e" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png?v=20260823e" />
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=20260823e" />
-  <link rel="manifest" href="../assets/site.webmanifest?v=20260823e" />
+  <!-- Favicon: IconOnly brand. Absolute /favicon.ico first so tab + omnibox share one URL;
+       48×48 PNG for Google Search; ?v= busts hard browser/CDN caches. -->
+  <link rel="icon" href="/favicon.ico?v=20260829a" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png?v=20260829a" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20260829a" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20260829a" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260829a" />
+  <link rel="manifest" href="/assets/site.webmanifest?v=20260829a" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip</a>
