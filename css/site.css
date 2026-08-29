@@ -1121,35 +1121,70 @@ a:hover {
   font-weight: 600;
 }
 
-.map-frame {
-  width: 100%;
-  min-height: 320px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--mist);
-  /* MapLibre container: clip the canvas to the rounded corners */
-  position: relative;
-  overflow: hidden;
+/*
+ * Partnership card (contact page left column).
+ * Approach: sample-style centered block — icon, title, email, pill CTA —
+ * using MapNoteHK jade tokens (not a second brand palette).
+ */
+.coop-card {
+  margin-top: 0.35rem;
+  padding: 1.5rem 1.25rem 1.35rem;
+  text-align: center;
+  border: 1px solid rgba(28, 138, 120, 0.28);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 28px rgba(7, 24, 32, 0.07);
 }
 
-/* LandsD acknowledgement pill — keep legible over the basemap */
-.map-frame .maplibregl-ctrl-attrib {
-  font-size: 11px;
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.map-frame .maplibregl-ctrl-attrib a {
-  color: var(--ink-soft);
-}
-
-/* Shown inside .map-frame when tiles/styles cannot be fetched */
-.map-fallback {
+.coop-icon {
   display: grid;
   place-items: center;
-  padding: 1.5rem;
-  text-align: center;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
+  margin: 0 auto 0.75rem;
+  color: var(--jade-deep);
+}
+
+.coop-card h3 {
+  margin: 0 0 0.45rem;
+  color: var(--jade-deep);
+  font-size: 1.15rem;
+}
+
+.coop-email {
+  display: block;
+  margin: 0 0 1.1rem;
+  color: var(--jade-deep);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.coop-email:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.coop-cta {
+  width: auto;
+  min-width: min(100%, 220px);
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.coop-cta:hover {
+  transform: translateY(-1px);
+}
+
+.coop-cta:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coop-cta,
+  .coop-cta:hover,
+  .coop-cta:active {
+    transition: none;
+    transform: none;
+  }
 }
 
 .form-stack {
