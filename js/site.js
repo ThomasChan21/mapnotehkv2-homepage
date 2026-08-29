@@ -67,28 +67,37 @@ function applyI18n(lang) {
 
   fillContactPlaceholders(lang);
   renderStoreBadges(lang);
-  /* Keep the contact-page map labels in sync with the site language */
-  if (typeof window.MapNoteMapSetLang === 'function') {
-    window.MapNoteMapSetLang(lang);
-  }
 }
 
 /**
- * Fills contact email/address from config.
+ * Fills contact email + partnership mailto links from config.
+ * Input: active language (for CTA subject line).
+ * Output: updated href/text on #contact-email, #contact-coop-email, #contact-coop-cta.
  * @param {'en' | 'zh-Hant'} lang
  * @returns {void}
  */
 function fillContactPlaceholders(lang) {
   const cfg = window.MapNoteSiteConfig.contact;
-  const addressEl = document.getElementById('contact-address');
+  const email = cfg.email;
   const emailEl = document.getElementById('contact-email');
+  const coopEmailEl = document.getElementById('contact-coop-email');
+  const coopCtaEl = document.getElementById('contact-coop-cta');
 
   if (emailEl) {
-    emailEl.textContent = cfg.email;
-    emailEl.setAttribute('href', `mailto:${cfg.email}`);
+    emailEl.textContent = email;
+    emailEl.setAttribute('href', `mailto:${email}`);
   }
-  if (addressEl) {
-    addressEl.textContent = lang === 'en' ? cfg.addressEn : cfg.addressZh;
+  if (coopEmailEl) {
+    coopEmailEl.textContent = email;
+    coopEmailEl.setAttribute('href', `mailto:${email}`);
+  }
+  if (coopCtaEl) {
+    /* Localized subject so mail clients open with a clear partnership intent */
+    const subject = t('contact.coopMailSubject', lang);
+    coopCtaEl.setAttribute(
+      'href',
+      `mailto:${email}?subject=${encodeURIComponent(subject)}`
+    );
   }
 }
 
