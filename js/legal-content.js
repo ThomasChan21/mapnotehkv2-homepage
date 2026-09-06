@@ -370,8 +370,8 @@ window.MapNoteLegalContent = {
   },
   "privacy": {
     "updated": {
-      "en": "2026-08-28",
-      "zh-Hant": "2026年8月28日"
+      "en": "2026-09-06",
+      "zh-Hant": "2026年9月6日"
     },
     "en": {
       "title": "Privacy Policy",
@@ -404,7 +404,7 @@ window.MapNoteLegalContent = {
           "b": [
             "Provide core features: create, sync, and display your notes, media, and map data across your devices.",
             "Operate team features: share notes with members of teams you join or create.",
-            "Power AI features: answer Ask Expert questions and improve note content on your request.",
+            "Power AI features: answer Ask Expert questions, improve note content, and pre-fill note fields from a particulars image on your request.",
             "Process subscriptions and verify premium entitlements.",
             "Send service communications: OTP codes, account and security notices.",
             "Analyze aggregated usage to maintain, secure, and improve the App.",
@@ -422,8 +422,8 @@ window.MapNoteLegalContent = {
         {
           "h": "5. Voice & AI Features",
           "p": [
-            "When you use speech-to-text, your voice recording is sent to our server (and our speech-recognition provider) solely to produce a transcript. When you use Ask Expert or note-improvement, the relevant question or note text is processed by our AI provider to generate an answer.",
-            "We do not use your voice recordings or note content to train third-party foundation models. AI processing is subject to usage limits and abuse monitoring."
+            "When you use speech-to-text, your voice recording is sent to our server (and our speech-recognition provider) solely to produce a transcript. When you use Ask Expert or note-improvement, the relevant question or note text is processed by our AI provider to generate an answer. When you use Pre-fill from image, the image or screenshot you upload is sent to our AI provider to suggest structured note fields; the image is processed for that request only and is not stored as a permanent media file on our servers. Suggested fields are shown for your review and are not saved into a note until you explicitly apply and save.",
+            "We do not use your voice recordings, particulars images, or note content to train third-party foundation models. AI processing is subject to usage limits and abuse monitoring."
           ],
           "b": []
         },
@@ -535,7 +535,7 @@ window.MapNoteLegalContent = {
           "b": [
             "提供核心功能：在你的裝置之間建立、同步及顯示筆記、媒體及地圖資料。",
             "支援團隊功能：與你加入或建立的團隊成員分享筆記。",
-            "支援 AI 功能：按你的要求回答「Ask Expert」問題及改進筆記內容。",
+            "驅動 AI 功能：應你的要求回答 Ask Expert 問題、優化筆記內容，以及從物業資料圖片預填筆記欄位。",
             "處理訂閱及驗證高級功能權限。",
             "發送服務通訊：一次性驗證碼、帳戶及保安通知。",
             "分析匯總用量，以維護、保護及改進本應用程式。",
@@ -553,8 +553,8 @@ window.MapNoteLegalContent = {
         {
           "h": "5. 語音及 AI 功能",
           "p": [
-            "當你使用語音轉文字時，錄音會傳送至我們的伺服器（及語音識別服務商），僅用於產生文字記錄。當你使用「Ask Expert」或筆記改進功能時，相關問題或筆記文字會由我們的 AI 服務商處理，以產生回答。",
-            "我們不會使用你的錄音或筆記內容訓練第三方基礎模型。AI 處理設有用量上限及濫用監察。"
+            "當你使用語音轉文字時，錄音會傳送至我們的伺服器（及語音識別服務商），僅用於產生文字記錄。當你使用「Ask Expert」或筆記改進功能時，相關問題或筆記文字會由我們的 AI 服務商處理，以產生回答。當你使用「從圖片預填」時，上載的圖片／截圖會送至我們的 AI 服務商建議結構化欄位；圖片僅為該次請求處理，不會作為永久媒體檔案儲存於我們的伺服器。建議欄位須經你預覽確認，並在你明確套用及儲存後才寫入筆記。",
+            "我們不會使用你的錄音、物業資料圖片或筆記內容訓練第三方基礎模型。AI 處理設有用量上限及濫用監察。"
           ],
           "b": []
         },
