@@ -71,7 +71,7 @@ window.MapNoteI18n = {
       // five note types. Cards mirror the v6 model: property pin, timeline
       // events with auto-derived stage, and privacy-first linked clients.
       'home.unifiedTitle': '一個物業，一條時間線',
-      'home.unifiedLead': '唔再五張表格分開填 — 物業只有一個檔案，考察同議價自動排上時間線。',
+      'home.unifiedLead': '每個物業一個檔案；考察同議價自動排上時間線，由研究到成交一目了然。',
       'home.unified1Title': '物業釘，一個就够',
       'home.unified1Body': '地址、呎吋、叫價、相片集中一處 — 唔使重複輸入，資料永遠跟住物業走。',
       'home.unified2Title': '考察議價，排上時間線',
@@ -349,7 +349,7 @@ window.MapNoteI18n = {
       // five note types. Cards mirror the v6 model: property pin, timeline
       // events with auto-derived stage, and privacy-first linked clients.
       'home.unifiedTitle': 'One property, one timeline',
-      'home.unifiedLead': 'No more five separate forms — each property is a single record, and inspections and negotiations line up on its timeline automatically.',
+      'home.unifiedLead': 'One record per property — inspections and negotiations line up on its timeline, from research to closing at a glance.',
       'home.unified1Title': 'One pin per property',
       'home.unified1Body': 'Address, area, asking price and photos in one place — no duplicate entry; information stays with the property.',
       'home.unified2Title': 'Events on a timeline',
