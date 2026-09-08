@@ -120,8 +120,8 @@ window.MapNoteI18n = {
       'home.plansFreePrice': 'HK$0',
       'home.plansFreeBody': '物業時間線筆記（最多 30 則）、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 3 份 PDF，落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
-      // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
-      'home.plansProPrice': 'HK$48 / 月',
+      // Pricing decision: HK$98/month.
+      'home.plansProPrice': 'HK$98 / 月',
       'home.plansProBody': '規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、PDF 每則 20 份、語音輸入無限、可加影片附件。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
@@ -153,14 +153,14 @@ window.MapNoteI18n = {
       'services.item4Benefit': '好處：同一套資料服務同事與客戶。',
       'services.pricingTitle': '收費說明',
       'services.pricingBody':
-        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
+        'Free 方案已可日常使用；Premium 每月 HK$98，解鎖規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
       'services.pricingCta': '索取報價',
       // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
       // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
       'services.compareTitle': '方案比較',
       'services.compareHeadFeature': '功能',
       'services.compareHeadFree': 'Free 免費',
-      'services.compareHeadPremium': 'Premium（HK$48／月）',
+      'services.compareHeadPremium': 'Premium（HK$98／月）',
       'services.compareGroup1': '筆記與附件',
       'services.compareNotes': '筆記數量',
       'services.compareNotesF': '30 則',
@@ -398,8 +398,8 @@ window.MapNoteI18n = {
       'home.plansFreePrice': 'HK$0',
       'home.plansFreeBody': 'Property timeline notes (30 max), planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 3 PDFs per note. Ready for field work.',
       'home.plansProTitle': 'Premium',
-      // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
-      'home.plansProPrice': 'HK$48 / month',
+      // Pricing decision: HK$98/month.
+      'home.plansProPrice': 'HK$98 / month',
       'home.plansProBody': 'Planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos and 20 PDFs per note, unlimited voice input and video attachments.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
@@ -435,14 +435,14 @@ window.MapNoteI18n = {
       'services.item4Benefit': 'Benefit: one source of truth for colleagues and clients.',
       'services.pricingTitle': 'Pricing',
       'services.pricingBody':
-        'The Free plan covers daily work. Premium is HK$48/month and unlocks planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
+        'The Free plan covers daily work. Premium is HK$98/month and unlocks planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
       'services.pricingCta': 'Request a quote',
       // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
       // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
       'services.compareTitle': 'Compare plans',
       'services.compareHeadFeature': 'Feature',
       'services.compareHeadFree': 'Free',
-      'services.compareHeadPremium': 'Premium (HK$48/month)',
+      'services.compareHeadPremium': 'Premium (HK$98/month)',
       'services.compareGroup1': 'Notes & attachments',
       'services.compareNotes': 'Number of notes',
       'services.compareNotesF': '30',
