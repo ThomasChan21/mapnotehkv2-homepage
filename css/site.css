@@ -431,14 +431,16 @@ a:hover {
   font-weight: 600;
 }
 
-/* Five note types — --tc carries the in-app legend colour per card */
-.types-grid {
+/* Info cards — shared rhythm for the audience (為誰而設) and unified-timeline
+   sections. --tc carries the per-card accent colour; .info-solution is the
+   jade "how MapNoteHK fixes it" line (audience cards only). */
+.cards-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.type-card {
+.info-card {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -447,7 +449,7 @@ a:hover {
   animation: rise 0.6s ease both;
 }
 
-.type-icon {
+.info-icon {
   display: grid;
   place-items: center;
   width: 44px;
@@ -458,73 +460,27 @@ a:hover {
   color: var(--tc);
 }
 
-.type-icon svg {
+.info-icon svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
 }
 
-.type-card h3 {
+.info-card h3 {
   font-family: var(--font-display);
   margin: 0 0 0.35rem;
   font-size: 1.05rem;
 }
 
-.type-card p {
+.info-card p {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.92rem;
 }
 
-/* Pain points — poster's PAS cards: danger-tinted icon for the problem,
-   jade solution line for the fix. Cards mirror .type-card rhythm. */
-.pains-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.pain-card {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.15rem 1.2rem 1.25rem;
-  box-shadow: var(--shadow);
-  animation: rise 0.6s ease both;
-}
-
-.pain-icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  margin-bottom: 0.75rem;
-  background: var(--danger-soft);
-  color: var(--danger);
-}
-
-.pain-icon svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-.pain-card h3 {
-  font-family: var(--font-display);
-  margin: 0 0 0.35rem;
-  font-size: 1.05rem;
-}
-
-.pain-card p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-}
-
-/* Resolution line: dashed divider (same rhythm as .benefit) + jade arrow.
-   Needs the .pain-card prefix to out-specify .pain-card p above. */
-.pain-card .pain-solution {
+/* Resolution line: dashed divider + jade arrow.
+   Needs the .info-card prefix to out-specify .info-card p above. */
+.info-card .info-solution {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px dashed var(--line);
@@ -532,7 +488,7 @@ a:hover {
   font-weight: 600;
 }
 
-.pain-card .pain-solution::before {
+.info-card .info-solution::before {
   content: "→";
   margin-right: 0.35rem;
 }
@@ -767,8 +723,8 @@ a:hover {
 }
 
 /* Homepage bands use tighter padding than the shared .section default */
-.pains,
-.types,
+.audience,
+.unified,
 #features,
 .plans {
   padding: 2.5rem 0;
@@ -1566,21 +1522,21 @@ textarea {
     max-height: 320px;
   }
 
-  .types-grid {
+  .cards-grid {
     grid-template-columns: unset;
     grid-auto-flow: column;
-    grid-auto-columns: 200px;
+    grid-auto-columns: 240px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 0.5rem;
     scrollbar-width: none;
   }
 
-  .types-grid::-webkit-scrollbar {
+  .cards-grid::-webkit-scrollbar {
     display: none;
   }
 
-  .type-card {
+  .info-card {
     scroll-snap-align: start;
   }
 
@@ -1603,8 +1559,7 @@ textarea {
 
   .hero-copy,
   .hero-shot,
-  .type-card,
-  .pain-card,
+  .info-card,
   .panel {
     animation: none;
   }
