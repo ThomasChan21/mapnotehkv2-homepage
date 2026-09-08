@@ -22,7 +22,7 @@ window.MapNoteI18n = {
       'nav.langZh': '中',
       'nav.menu': '選單',
       'nav.cta': '聯絡我們',
-      'footer.tagline': '代理服務，地圖記錄',
+      'footer.tagline': '每個物業，一條時間線',
       // {year} is replaced with the current year by t() in site.js.
       'footer.rights': '© {year} MapNoteHK. 保留所有權利。',
       'footer.deleteAccount': '刪除帳戶',
@@ -80,7 +80,7 @@ window.MapNoteI18n = {
       'home.unified3Body': '客戶獨立管理、預設私密，需要時先連上物業 — 你嘅客戶永遠屬於你。',
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': '為現場工作而設的功能',
-      'home.featuresLead': '由落區睇樓到向客戶匯報，每個功能都圍繞代理日常而設。',
+      'home.featuresLead': '由落區睇樓到匯報分享，每個功能都圍繞你嘅物業記錄而設。',
       // Feature switcher tablist label (screen readers).
       'home.showcaseLabel': 'App 功能預覽',
       'home.tagFree': '免費',
@@ -300,7 +300,7 @@ window.MapNoteI18n = {
       'nav.langZh': '中',
       'nav.menu': 'Menu',
       'nav.cta': 'Contact Us',
-      'footer.tagline': 'Your agency workflow, pinned to the map',
+      'footer.tagline': 'Every property, one timeline — pinned to the map',
       // {year} is replaced with the current year by t() in site.js.
       'footer.rights': '© {year} MapNoteHK. All rights reserved.',
       'footer.deleteAccount': 'Delete account',
@@ -358,7 +358,7 @@ window.MapNoteI18n = {
       'home.unified3Body': 'Clients are managed separately and private by default — link them to a property only when needed. Your clients stay yours.',
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': 'Features built for the field',
-      'home.featuresLead': 'From viewings to client reporting, every feature is shaped around an agent’s day.',
+      'home.featuresLead': 'From viewings to reporting and sharing, every feature is shaped around your property records.',
       // Feature switcher tablist label (screen readers).
       'home.showcaseLabel': 'App feature preview',
       'home.tagFree': 'Free',
