@@ -9,9 +9,9 @@ window.MapNoteI18n = {
   /** @type {Record<'en' | 'zh-Hant', Record<string, string>>} */
   strings: {
     'zh-Hant': {
-      'meta.homeTitle': 'MapNoteHK 地圖筆記｜香港地產代理的地圖筆記 App',
+      'meta.homeTitle': 'MapNoteHK 地圖筆記｜一個物業，一條時間線',
       'meta.homeDesc':
-        'MapNoteHK 即將登場：唯一建基於香港地政總署官方地圖的代理筆記 App — 物業、考察、客戶、報價、成交 30 秒釘上地圖，配合廣東話語音輸入、問專家 AI、規劃申請圖層與 PDF 簡報。',
+        'MapNoteHK 即將登場：建基於香港地政總署官方地圖的物業筆記 App — 一個物業，一條時間線，考察、議價、客戶記錄 30 秒釘上地圖。代理、投資者、資產管理人、買家租客都適用，配合廣東話語音輸入、問專家 AI、規劃申請圖層與 PDF 簡報。',
       'nav.home': '首頁',
       'nav.services': '功能與方案',
       'nav.about': '關於我們',
@@ -22,7 +22,7 @@ window.MapNoteI18n = {
       'nav.langZh': '中',
       'nav.menu': '選單',
       'nav.cta': '聯絡我們',
-      'footer.tagline': '代理服務，地圖記錄',
+      'footer.tagline': '每個物業，一條時間線',
       // {year} is replaced with the current year by t() in site.js.
       'footer.rights': '© {year} MapNoteHK. 保留所有權利。',
       'footer.deleteAccount': '刪除帳戶',
@@ -30,18 +30,18 @@ window.MapNoteI18n = {
       // Hero copy mirrors PRD §I go-to-market messaging (tagline + official-map uniqueness + 30s capture).
       'home.heroBadge': '全新推出 · 即將上架',
       // Pain hook from the marketing poster: a question line above the brand H1.
-      'home.heroPain': '資料散落，客戶流失？',
-      'home.heroTitle': '代理服務，地圖記錄。',
+      'home.heroPain': '資料散落，機會流失？',
+      'home.heroTitle': '一個物業，一條時間線。',
       'home.heroLead':
-        '唯一建基於香港地政總署官方地圖的代理筆記 App。物業、考察、客戶、報價、成交，30 秒釘上地圖 — 廣東話語音輸入、問專家 AI、PDF 簡報，代理日常一個 App 搞掂。',
+        '唯一建基於香港地政總署官方地圖的物業筆記 App。考察、議價、客戶記錄 30 秒釘上地圖，自動串成物業時間線 — 代理、投資者、資產管理人、買家租客，一個 App 各自用得著。',
       'home.ctaPrimary': '探索功能',
       // Pre-launch: scrolls to the notify band; swapped for store badges once links go live.
       'home.ctaSecondary': '上架通知我',
       // Hero proof stats (PRD headline numbers).
       'home.stat1Value': '≤30 秒',
       'home.stat1Label': '快速記錄一則筆記',
-      'home.stat2Value': '5 類筆記',
-      'home.stat2Label': '覆蓋代理全流程',
+      'home.stat2Value': '1 條時間線',
+      'home.stat2Label': '每個物業由考察到成交',
       'home.stat3Value': '1,000+',
       'home.stat3Label': '問專家 AI 知識庫',
       // Hero demo video (muted loop in place of a static screenshot).
@@ -51,36 +51,36 @@ window.MapNoteI18n = {
       'home.storeAndroid': 'Google Play',
       'home.storeIosAria': '於 App Store 下載 MapNoteHK',
       'home.storeAndroidAria': '於 Google Play 下載 MapNoteHK',
-      // Pain points — poster's PAS framing: name the three daily pains (PRD §E
-      // persona), each resolving to the feature that removes it. Solution lines
-      // keep the free/Premium split honest (planning alerts are Premium).
-      'home.painsTitle': '呢三個痛，代理每日都遇到',
-      'home.painsLead': '盤源、規劃、報價 — 每個環節都不應靠記憶和 WhatsApp 硬撐。',
-      'home.pain1Title': '資料散落 WhatsApp',
-      'home.pain1Body': '盤源、相片、對話記錄四散，翻查費時。',
-      'home.pain1Solution': '筆記釘上官方地圖，跟住物業走 — 一搵就到。',
-      'home.pain2Title': '規劃變化後知後覺',
-      'home.pain2Body': '城規會申請、OZP 改劃，錯失先機。',
-      'home.pain2Solution': '規劃個案地圖即睇；Premium 規劃通知早人一步。',
-      'home.pain3Title': '報價成交無記錄',
-      'home.pain3Body': '議價過程靠記憶，跟進斷層。',
-      'home.pain3Solution': '報價、成交專屬欄位，每步有跡可尋。',
-      // Five note types — colours match the in-app legend so users learn it once.
-      'home.typesTitle': '五類筆記，覆蓋代理全流程',
-      'home.typesLead': '每類筆記對應代理服務一個環節，顏色即類別，一眼認得。快速記錄只需 30 秒，細節之後再補。',
-      'home.type1Title': '物業資料',
-      'home.type1Body': '大廈資料、管理費、盤源研究。',
-      'home.type2Title': '實地考察',
-      'home.type2Body': '睇樓印象、現場相片、即場記錄。',
-      'home.type3Title': '客戶需求',
-      'home.type3Body': '買家、租客、投資者的需求及預算。',
-      'home.type4Title': '報價記錄',
-      'home.type4Body': '出價、還價、議價過程，有跡可尋。',
-      'home.type5Title': '成交記錄',
-      'home.type5Body': '買賣或租賃成交 — 你的成交檔案。',
+      // Who it's for — v6 broadens beyond agents: four roles, each card names
+      // the role's daily pain and the unified-timeline feature that removes it.
+      'home.audienceTitle': '為誰而設',
+      'home.audienceLead': '代理、投資者、資產管理人、買家租客 — 同一條物業時間線，解決唔同角色嘅痛點。',
+      'home.aud1Title': '地產代理',
+      'home.aud1Body': '盤源、相片、對話散落 WhatsApp；議價靠記憶，跟進斷層。',
+      'home.aud1Solution': '筆記釘上官方地圖，議價鏈逐步有跡可尋；客戶資料預設私密，永遠屬於你。',
+      'home.aud2Title': '投資者',
+      'home.aud2Body': '候選物業遍佈各區，睇過邊間、出過幾多錢，好快就亂。',
+      'home.aud2Solution': '階段篩選即係投資管道：研究、已考察、議價中、已成交，一目了然。',
+      'home.aud3Title': '資產管理人',
+      'home.aud3Body': '組合物業嘅狀況、勘察記錄同相片散落唔同檔案，匯報費時。',
+      'home.aud3Solution': '每個物業一條時間線，勘察連相片自動歸檔；PDF 簡報直接向業主匯報。',
+      'home.aud4Title': '買家・租客',
+      'home.aud4Body': '睇十幾個盤，相片溝晒喺相簿，邊間有咩問題唔記得。',
+      'home.aud4Solution': '每個睇過嘅單位一個釘，相片筆記跟住物業；地圖並排比較，出價自己掌握。',
+      // Unified property note (v6) — one property, one timeline; replaces the
+      // five note types. Cards mirror the v6 model: property pin, timeline
+      // events with auto-derived stage, and privacy-first linked clients.
+      'home.unifiedTitle': '一個物業，一條時間線',
+      'home.unifiedLead': '每個物業一個檔案；考察同議價自動排上時間線，由研究到成交一目了然。',
+      'home.unified1Title': '物業釘，一個就够',
+      'home.unified1Body': '地址、呎吋、叫價、相片集中一處 — 唔使重複輸入，資料永遠跟住物業走。',
+      'home.unified2Title': '考察議價，排上時間線',
+      'home.unified2Body': '每次考察、每口報價都係時間線事件；階段由「已考察」到「已成交」自動推進，列表即係你嘅管道。',
+      'home.unified3Title': '客戶連結，私隱優先',
+      'home.unified3Body': '客戶獨立管理、預設私密，需要時先連上物業 — 你嘅客戶永遠屬於你。',
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': '為現場工作而設的功能',
-      'home.featuresLead': '由落區睇樓到向客戶匯報，每個功能都圍繞代理日常而設。',
+      'home.featuresLead': '由落區睇樓到匯報分享，每個功能都圍繞你嘅物業記錄而設。',
       // Feature switcher tablist label (screen readers).
       'home.showcaseLabel': 'App 功能預覽',
       'home.tagFree': '免費',
@@ -94,7 +94,7 @@ window.MapNoteI18n = {
         '今年規劃申請個案與 OZP 分區圖則直接標記在地圖上；Premium 再解鎖規劃通知，高度放寬、改變用途，早人一步掌握。',
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
-        '筆記列表按類型、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在筆記內，不再散落 WhatsApp 與其他 App。',
+        '物業列表按階段、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在物業時間線內，不再散落 WhatsApp 與其他 App。',
       'home.f4Title': '廣東話語音輸入 · 問專家 AI 即答',
       'home.f4Body':
         '現場講完即轉文字；問專家知識庫收錄過千條代理常見問題，AI 即時搵到最相關答案，仲附埋出處。',
@@ -114,14 +114,14 @@ window.MapNoteI18n = {
       'home.f5AltP2': 'PDF 簡報第 2 頁：放售資料、備註與物業相片記錄',
       // Plans band.
       'home.plansTitle': '免費開始，按需升級',
-      'home.plansLead': '免費方案已涵蓋五類筆記與規劃地圖；Premium 解鎖進階工具。',
+      'home.plansLead': '免費方案已涵蓋物業時間線筆記與規劃地圖；Premium 解鎖進階工具。',
       'home.plansFreeTitle': 'Free 免費方案',
       // Quotas mirror USER_LIMITS (30 notes, 3 photos + 3 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': '五類筆記（最多 30 則）、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 3 份 PDF，落區工作即裝即用。',
+      'home.plansFreeBody': '物業時間線筆記（最多 30 則）、規劃個案地圖、OZP 圖則、地段圖層、廣東話語音輸入（每月 5 次）— 每則筆記可附 3 張相片及 3 份 PDF，落區工作即裝即用。',
       'home.plansProTitle': 'Premium',
-      // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
-      'home.plansProPrice': 'HK$48 / 月',
+      // Pricing decision: HK$98/month.
+      'home.plansProPrice': 'HK$98 / 月',
       'home.plansProBody': '規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報、團隊共享 — 相片升級至每則 20 張、PDF 每則 20 份、語音輸入無限、可加影片附件。',
       'home.plansCta': '查看功能與方案',
       // Download band (badges rendered when store links are set in site-config.js).
@@ -138,9 +138,9 @@ window.MapNoteI18n = {
       'home.notifySuccess': '已記低！上架當日會第一時間電郵通知你。',
       'home.notifyError': '提交失敗，請稍後再試或電郵 support@mapnotehk.com。',
       'services.title': '功能與方案',
-      'services.lead': '由地圖筆記到 AI 工具，全部圍繞香港代理工作流程而設。',
-      'services.item1Title': '五類地圖筆記',
-      'services.item1Body': '物業、考察、客戶、報價、成交，全部釘在官方地圖上，附相片、PDF 與位置。',
+      'services.lead': '由地圖筆記到 AI 工具，全部圍繞香港物業日常而設。',
+      'services.item1Title': '物業時間線筆記',
+      'services.item1Body': '一個物業一條時間線：考察、議價、客戶記錄全部釘在官方地圖上，附相片、PDF 與位置。',
       'services.item1Benefit': '好處：筆記跟物業走，現場記錄更快，資料不再散落。',
       'services.item2Title': '規劃申請地圖',
       'services.item2Body': '城規會規劃個案與 OZP 分區圖則標記在地圖上；Premium 加規劃通知。',
@@ -153,14 +153,14 @@ window.MapNoteI18n = {
       'services.item4Benefit': '好處：同一套資料服務同事與客戶。',
       'services.pricingTitle': '收費說明',
       'services.pricingBody':
-        'Free 方案已可日常使用；Premium 每月 HK$48，解鎖規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
+        'Free 方案已可日常使用；Premium 每月 HK$98，解鎖規劃通知、問專家專屬內容、AI 筆記潤飾、PDF 簡報與團隊共享。企業方案歡迎聯絡我們索取報價。',
       'services.pricingCta': '索取報價',
       // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
       // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
       'services.compareTitle': '方案比較',
       'services.compareHeadFeature': '功能',
       'services.compareHeadFree': 'Free 免費',
-      'services.compareHeadPremium': 'Premium（HK$48／月）',
+      'services.compareHeadPremium': 'Premium（HK$98／月）',
       'services.compareGroup1': '筆記與附件',
       'services.compareNotes': '筆記數量',
       'services.compareNotesF': '30 則',
@@ -287,9 +287,9 @@ window.MapNoteI18n = {
         '刪除帳戶時，我們會一併移除與你帳號相關的資料（例如電郵、電話、筆記與相片／影片等），不會只刪帳號而留下這些資料。',
     },
     en: {
-      'meta.homeTitle': 'MapNoteHK | Map notes for Hong Kong estate agents',
+      'meta.homeTitle': 'MapNoteHK | One property, one timeline — Hong Kong map notes',
       'meta.homeDesc':
-        'MapNoteHK is launching soon: the only notebook built on Hong Kong’s official Lands Department map — pin property, visit, client, offer and transaction notes in 30 seconds, with Cantonese voice input, Ask Expert AI, planning layers and PDF brochures.',
+        'MapNoteHK is launching soon: a property notebook built on Hong Kong’s official Lands Department map — one property, one timeline, with inspections, negotiations and client records pinned in 30 seconds. For agents, investors, asset managers, buyers and renters — with Cantonese voice input, Ask Expert AI, planning layers and PDF brochures.',
       'nav.home': 'Home',
       'nav.services': 'Features',
       'nav.about': 'About',
@@ -300,7 +300,7 @@ window.MapNoteI18n = {
       'nav.langZh': '中',
       'nav.menu': 'Menu',
       'nav.cta': 'Contact Us',
-      'footer.tagline': 'Your agency workflow, pinned to the map',
+      'footer.tagline': 'Every property, one timeline — pinned to the map',
       // {year} is replaced with the current year by t() in site.js.
       'footer.rights': '© {year} MapNoteHK. All rights reserved.',
       'footer.deleteAccount': 'Delete account',
@@ -308,18 +308,18 @@ window.MapNoteI18n = {
       // Hero copy mirrors PRD §I go-to-market messaging (tagline + official-map uniqueness + 30s capture).
       'home.heroBadge': 'New · Launching soon',
       // Pain hook from the marketing poster: a question line above the brand H1.
-      'home.heroPain': 'Scattered data, lost clients?',
-      'home.heroTitle': 'Your agency workflow, pinned to the map.',
+      'home.heroPain': 'Scattered data, missed opportunities?',
+      'home.heroTitle': 'One property, one timeline.',
       'home.heroLead':
-        'The only notebook built on Hong Kong’s official Lands Department map. Property, visit, client, offer and transaction notes pinned in under 30 seconds — with Cantonese voice input, Ask Expert AI and client-ready PDF brochures.',
+        'The only property notebook built on Hong Kong’s official Lands Department map. Pin inspections, negotiations and client records in under 30 seconds — they weave into one timeline per property, for agents, investors, asset managers, buyers and renters alike.',
       'home.ctaPrimary': 'Explore features',
       // Pre-launch: scrolls to the notify band; swapped for store badges once links go live.
       'home.ctaSecondary': 'Notify me at launch',
       // Hero proof stats (PRD headline numbers).
       'home.stat1Value': '≤30 s',
       'home.stat1Label': 'to pin a quick note',
-      'home.stat2Value': '5 types',
-      'home.stat2Label': 'for the whole agency workflow',
+      'home.stat2Value': '1 timeline',
+      'home.stat2Label': 'per property, viewing to closing',
       'home.stat3Value': '1,000+',
       'home.stat3Label': 'Ask Expert FAQs, with sources',
       // Hero demo video (muted loop in place of a static screenshot).
@@ -329,36 +329,36 @@ window.MapNoteI18n = {
       'home.storeAndroid': 'Google Play',
       'home.storeIosAria': 'Download MapNoteHK on the App Store',
       'home.storeAndroidAria': 'Get MapNoteHK on Google Play',
-      // Pain points — poster's PAS framing: name the three daily pains (PRD §E
-      // persona), each resolving to the feature that removes it. Solution lines
-      // keep the free/Premium split honest (planning alerts are Premium).
-      'home.painsTitle': 'Three pains every agent knows',
-      'home.painsLead': 'Listings, planning, offers — none of it should run on memory and WhatsApp.',
-      'home.pain1Title': 'Scattered across WhatsApp',
-      'home.pain1Body': 'Listings, photos and chat history spread everywhere — slow to retrieve.',
-      'home.pain1Solution': 'Notes pinned to the official map stay with the property — one search away.',
-      'home.pain2Title': 'Planning changes heard too late',
-      'home.pain2Body': 'Town Planning Board applications and OZP rezoning — miss them, miss the edge.',
-      'home.pain2Solution': 'Planning cases live on the map; Premium alerts keep you ahead.',
-      'home.pain3Title': 'No record of offers and deals',
-      'home.pain3Body': 'Negotiations run on memory; follow-ups fall through.',
-      'home.pain3Solution': 'Structured offer and transaction fields — every step traceable.',
-      // Five note types — colours match the in-app legend so users learn it once.
-      'home.typesTitle': 'Five note types for the whole workflow',
-      'home.typesLead': 'Each type matches a step of agency work — colour-coded and recognised at a glance. Quick capture takes under 30 seconds; add details later.',
-      'home.type1Title': 'Property',
-      'home.type1Body': 'Building specs, fees and listing research.',
-      'home.type2Title': 'Site visit',
-      'home.type2Body': 'Viewing impressions, photos and on-site notes.',
-      'home.type3Title': 'Client',
-      'home.type3Body': 'Buyer, tenant and investor needs and budgets.',
-      'home.type4Title': 'Offer',
-      'home.type4Body': 'Offers, counter-offers and the negotiation trail.',
-      'home.type5Title': 'Transaction',
-      'home.type5Body': 'Closed sale or lease — your deal record.',
+      // Who it's for — v6 broadens beyond agents: four roles, each card names
+      // the role's daily pain and the unified-timeline feature that removes it.
+      'home.audienceTitle': 'Who it’s for',
+      'home.audienceLead': 'Agents, investors, asset managers, buyers and renters — one property timeline that answers each role’s pain.',
+      'home.aud1Title': 'Estate agents',
+      'home.aud1Body': 'Listings, photos and chats scattered across WhatsApp; negotiations run on memory.',
+      'home.aud1Solution': 'Notes pinned to the official map with a traceable offer chain; client data is private by default and always yours.',
+      'home.aud2Title': 'Investors',
+      'home.aud2Body': 'Candidates across districts — which units you saw and what you offered blurs fast.',
+      'home.aud2Solution': 'Stage filters become your deal pipeline: research, inspected, negotiating, closed — at a glance.',
+      'home.aud3Title': 'Asset managers',
+      'home.aud3Body': 'Condition records, inspection logs and photos scattered across files; reporting takes hours.',
+      'home.aud3Solution': 'One timeline per property archives inspections with photos automatically; PDF brochures report straight to owners.',
+      'home.aud4Title': 'Buyers & renters',
+      'home.aud4Body': 'A dozen viewings later, photos mix in the camera roll and defects blur together.',
+      'home.aud4Solution': 'One pin per viewed unit keeps photos and notes with the property; compare on the map and track your own offers.',
+      // Unified property note (v6) — one property, one timeline; replaces the
+      // five note types. Cards mirror the v6 model: property pin, timeline
+      // events with auto-derived stage, and privacy-first linked clients.
+      'home.unifiedTitle': 'One property, one timeline',
+      'home.unifiedLead': 'One record per property — inspections and negotiations line up on its timeline, from research to closing at a glance.',
+      'home.unified1Title': 'One pin per property',
+      'home.unified1Body': 'Address, area, asking price and photos in one place — no duplicate entry; information stays with the property.',
+      'home.unified2Title': 'Events on a timeline',
+      'home.unified2Body': 'Every inspection and every offer is a timeline event; the stage advances from inspected to closed automatically — your list becomes your pipeline.',
+      'home.unified3Title': 'Linked clients, privacy first',
+      'home.unified3Body': 'Clients are managed separately and private by default — link them to a property only when needed. Your clients stay yours.',
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': 'Features built for the field',
-      'home.featuresLead': 'From viewings to client reporting, every feature is shaped around an agent’s day.',
+      'home.featuresLead': 'From viewings to reporting and sharing, every feature is shaped around your property records.',
       // Feature switcher tablist label (screen readers).
       'home.showcaseLabel': 'App feature preview',
       'home.tagFree': 'Free',
@@ -372,7 +372,7 @@ window.MapNoteI18n = {
         'Town Planning Board cases and OZP zoning plans pinned where they happen. Premium adds planning alerts — hear about height relaxations and change of use first.',
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
-        'Filter the notes list by type and district, or search by keyword. Site photos and PDFs attach straight to the note — no more scattering across WhatsApp and other apps.',
+        'Filter properties by stage and district, or search by keyword. Site photos and PDFs attach straight to the property timeline — no more scattering across WhatsApp and other apps.',
       'home.f4Title': 'Cantonese voice input · Ask Expert AI',
       'home.f4Body':
         'Speak on site and get text. Ask Expert’s knowledge base covers 1,000+ agent FAQs — AI finds the most relevant answer instantly, with sources.',
@@ -392,14 +392,14 @@ window.MapNoteI18n = {
       'home.f5AltP2': 'PDF brochure page 2: sale details, remarks and property photo record',
       // Plans band.
       'home.plansTitle': 'Start free, upgrade when you need',
-      'home.plansLead': 'The free plan covers all five note types and the planning map. Premium unlocks the advanced tools.',
+      'home.plansLead': 'The free plan covers property timeline notes and the planning map. Premium unlocks the advanced tools.',
       'home.plansFreeTitle': 'Free',
       // Quotas mirror USER_LIMITS (30 notes, 3 photos + 3 PDFs per note).
       'home.plansFreePrice': 'HK$0',
-      'home.plansFreeBody': 'Five note types (30 notes max), planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 3 PDFs per note. Ready for field work.',
+      'home.plansFreeBody': 'Property timeline notes (30 max), planning-case map, OZP zoning plans, lot layers and Cantonese voice input (5 per month) — attach 3 photos and 3 PDFs per note. Ready for field work.',
       'home.plansProTitle': 'Premium',
-      // Pricing decision: HK$48/month (see progress report Slide 12 refinement).
-      'home.plansProPrice': 'HK$48 / month',
+      // Pricing decision: HK$98/month.
+      'home.plansProPrice': 'HK$98 / month',
       'home.plansProBody': 'Planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing — 20 photos and 20 PDFs per note, unlimited voice input and video attachments.',
       'home.plansCta': 'See features & plans',
       // Download band (badges rendered when store links are set in site-config.js).
@@ -416,10 +416,10 @@ window.MapNoteI18n = {
       'home.notifySuccess': 'Noted! We will email you on launch day.',
       'home.notifyError': 'Could not submit. Try again later or email support@mapnotehk.com.',
       'services.title': 'Features & plans',
-      'services.lead': 'From map notes to AI tools — everything is shaped around Hong Kong agency workflows.',
-      'services.item1Title': 'Five map note types',
+      'services.lead': 'From map notes to AI tools — everything is shaped around Hong Kong property work.',
+      'services.item1Title': 'Property timeline notes',
       'services.item1Body':
-        'Property, visit, client, offer and transaction notes pinned to the official map, with photos, PDFs and location.',
+        'One property, one timeline: inspections, negotiations and client records pinned to the official map, with photos, PDFs and location.',
       'services.item1Benefit': 'Benefit: notes stay with the property — faster capture, nothing scattered.',
       'services.item2Title': 'Planning application map',
       'services.item2Body':
@@ -435,14 +435,14 @@ window.MapNoteI18n = {
       'services.item4Benefit': 'Benefit: one source of truth for colleagues and clients.',
       'services.pricingTitle': 'Pricing',
       'services.pricingBody':
-        'The Free plan covers daily work. Premium is HK$48/month and unlocks planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
+        'The Free plan covers daily work. Premium is HK$98/month and unlocks planning alerts, Ask Expert exclusive content, AI note polishing, PDF brochures and team sharing. Contact us for an enterprise quote.',
       'services.pricingCta': 'Request a quote',
       // Plan comparison table — values mirror USER_LIMITS in vctsserver/src/models/note.ts
       // and premium gates in vctsserver/app/api (teams, planning-alerts, improve-content).
       'services.compareTitle': 'Compare plans',
       'services.compareHeadFeature': 'Feature',
       'services.compareHeadFree': 'Free',
-      'services.compareHeadPremium': 'Premium (HK$48/month)',
+      'services.compareHeadPremium': 'Premium (HK$98/month)',
       'services.compareGroup1': 'Notes & attachments',
       'services.compareNotes': 'Number of notes',
       'services.compareNotesF': '30',

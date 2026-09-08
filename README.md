@@ -1,12 +1,12 @@
 # MapNoteHK official website
 
-Static bilingual website (繁體中文 / English) for **mapnotehk.com** — the official home of the released MapNoteHK app. The homepage announces the launch and showcases the features (five note types, planning map, media, AI/voice, PDF brochures, plans). Also hosts the Apple / Google account-deletion form at `/account-deletion/`.
+Static bilingual website (繁體中文 / English) for **mapnotehk.com** — the official home of the released MapNoteHK app. The homepage announces the launch and showcases the features (unified property timeline, planning map, media, AI/voice, PDF brochures, plans). Also hosts the Apple / Google account-deletion form at `/account-deletion/`.
 
 ## Pages
 
 | Path | Purpose |
 |------|---------|
-| `/` | Official homepage — launch announcement, five note types, feature showcase, Free/Premium, download CTAs |
+| `/` | Official homepage — launch announcement, who it's for (four roles), unified property timeline, feature showcase, Free/Premium, download CTAs |
 | `/services/` | Feature details / benefits / pricing note |
 | `/about/` | Story, mission, values, how we build, contact CTA |
 | `/contact/` | Email, response time, partnership card, message form |
