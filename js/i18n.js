@@ -51,20 +51,6 @@ window.MapNoteI18n = {
       'home.storeAndroid': 'Google Play',
       'home.storeIosAria': '於 App Store 下載 MapNoteHK',
       'home.storeAndroidAria': '於 Google Play 下載 MapNoteHK',
-      // Pain points — poster's PAS framing: name the three daily pains (PRD §E
-      // persona), each resolving to the feature that removes it. Solution lines
-      // keep the free/Premium split honest (planning alerts are Premium).
-      'home.painsTitle': '呢三個痛，代理每日都遇到',
-      'home.painsLead': '盤源、規劃、報價 — 每個環節都不應靠記憶和 WhatsApp 硬撐。',
-      'home.pain1Title': '資料散落 WhatsApp',
-      'home.pain1Body': '盤源、相片、對話記錄四散，翻查費時。',
-      'home.pain1Solution': '筆記釘上官方地圖，跟住物業走 — 一搵就到。',
-      'home.pain2Title': '規劃變化後知後覺',
-      'home.pain2Body': '城規會申請、OZP 改劃，錯失先機。',
-      'home.pain2Solution': '規劃個案地圖即睇；Premium 規劃通知早人一步。',
-      'home.pain3Title': '報價成交無記錄',
-      'home.pain3Body': '議價過程靠記憶，跟進斷層。',
-      'home.pain3Solution': '報價、成交專屬欄位，每步有跡可尋。',
       // Who it's for — v6 broadens beyond agents: four roles, each card names
       // the role's daily pain and the unified-timeline feature that removes it.
       'home.audienceTitle': '為誰而設',
@@ -81,19 +67,6 @@ window.MapNoteI18n = {
       'home.aud4Title': '買家・租客',
       'home.aud4Body': '睇十幾個盤，相片溝晒喺相簿，邊間有咩問題唔記得。',
       'home.aud4Solution': '每個睇過嘅單位一個釘，相片筆記跟住物業；地圖並排比較，出價自己掌握。',
-      // Five note types — colours match the in-app legend so users learn it once.
-      'home.typesTitle': '五類筆記，覆蓋代理全流程',
-      'home.typesLead': '每類筆記對應代理服務一個環節，顏色即類別，一眼認得。快速記錄只需 30 秒，細節之後再補。',
-      'home.type1Title': '物業資料',
-      'home.type1Body': '大廈資料、管理費、盤源研究。',
-      'home.type2Title': '實地考察',
-      'home.type2Body': '睇樓印象、現場相片、即場記錄。',
-      'home.type3Title': '客戶需求',
-      'home.type3Body': '買家、租客、投資者的需求及預算。',
-      'home.type4Title': '報價記錄',
-      'home.type4Body': '出價、還價、議價過程，有跡可尋。',
-      'home.type5Title': '成交記錄',
-      'home.type5Body': '買賣或租賃成交 — 你的成交檔案。',
       // Unified property note (v6) — one property, one timeline; replaces the
       // five note types. Cards mirror the v6 model: property pin, timeline
       // events with auto-derived stage, and privacy-first linked clients.
@@ -356,20 +329,6 @@ window.MapNoteI18n = {
       'home.storeAndroid': 'Google Play',
       'home.storeIosAria': 'Download MapNoteHK on the App Store',
       'home.storeAndroidAria': 'Get MapNoteHK on Google Play',
-      // Pain points — poster's PAS framing: name the three daily pains (PRD §E
-      // persona), each resolving to the feature that removes it. Solution lines
-      // keep the free/Premium split honest (planning alerts are Premium).
-      'home.painsTitle': 'Three pains every agent knows',
-      'home.painsLead': 'Listings, planning, offers — none of it should run on memory and WhatsApp.',
-      'home.pain1Title': 'Scattered across WhatsApp',
-      'home.pain1Body': 'Listings, photos and chat history spread everywhere — slow to retrieve.',
-      'home.pain1Solution': 'Notes pinned to the official map stay with the property — one search away.',
-      'home.pain2Title': 'Planning changes heard too late',
-      'home.pain2Body': 'Town Planning Board applications and OZP rezoning — miss them, miss the edge.',
-      'home.pain2Solution': 'Planning cases live on the map; Premium alerts keep you ahead.',
-      'home.pain3Title': 'No record of offers and deals',
-      'home.pain3Body': 'Negotiations run on memory; follow-ups fall through.',
-      'home.pain3Solution': 'Structured offer and transaction fields — every step traceable.',
       // Who it's for — v6 broadens beyond agents: four roles, each card names
       // the role's daily pain and the unified-timeline feature that removes it.
       'home.audienceTitle': 'Who it’s for',
@@ -386,19 +345,6 @@ window.MapNoteI18n = {
       'home.aud4Title': 'Buyers & renters',
       'home.aud4Body': 'A dozen viewings later, photos mix in the camera roll and defects blur together.',
       'home.aud4Solution': 'One pin per viewed unit keeps photos and notes with the property; compare on the map and track your own offers.',
-      // Five note types — colours match the in-app legend so users learn it once.
-      'home.typesTitle': 'Five note types for the whole workflow',
-      'home.typesLead': 'Each type matches a step of agency work — colour-coded and recognised at a glance. Quick capture takes under 30 seconds; add details later.',
-      'home.type1Title': 'Property',
-      'home.type1Body': 'Building specs, fees and listing research.',
-      'home.type2Title': 'Site visit',
-      'home.type2Body': 'Viewing impressions, photos and on-site notes.',
-      'home.type3Title': 'Client',
-      'home.type3Body': 'Buyer, tenant and investor needs and budgets.',
-      'home.type4Title': 'Offer',
-      'home.type4Body': 'Offers, counter-offers and the negotiation trail.',
-      'home.type5Title': 'Transaction',
-      'home.type5Body': 'Closed sale or lease — your deal record.',
       // Unified property note (v6) — one property, one timeline; replaces the
       // five note types. Cards mirror the v6 model: property pin, timeline
       // events with auto-derived stage, and privacy-first linked clients.
