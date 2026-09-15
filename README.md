@@ -6,7 +6,7 @@ Static bilingual website (繁體中文 / English) for **mapnotehk.com** — the 
 
 | Path | Purpose |
 |------|---------|
-| `/` | Official homepage — launch announcement, who it's for (four roles), unified property timeline, feature showcase, Free/Premium, download CTAs |
+| `/` | Official homepage — launch announcement, who it's for (four roles), unified property timeline, trust/privacy band, feature showcase, Free/Premium, FAQ, download CTAs |
 | `/services/` | Feature details / benefits / pricing note |
 | `/about/` | Story, mission, values, how we build, contact CTA |
 | `/contact/` | Email, response time, partnership card, message form |

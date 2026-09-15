@@ -199,6 +199,20 @@ a:hover {
   transform: translateY(-1px);
 }
 
+.btn:focus-visible,
+.store-btn:focus-visible,
+.lang-btn:focus-visible {
+  outline: 2px solid var(--jade-deep);
+  outline-offset: 2px;
+}
+
+.btn[disabled],
+.btn.is-loading {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
 .btn-primary {
   background: var(--jade);
   color: white;
@@ -725,8 +739,10 @@ a:hover {
 /* Homepage bands use tighter padding than the shared .section default */
 .audience,
 .unified,
+.trust,
 #features,
-.plans {
+.plans,
+.home-faq {
   padding: 2.5rem 0;
 }
 
@@ -766,9 +782,133 @@ a:hover {
   color: var(--ink-soft);
 }
 
+.plan-list {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.plan-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.plan-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--jade);
+}
+
+.plan-card .btn {
+  width: 100%;
+}
+
 .plan-card.is-premium {
   border-color: rgba(28, 138, 120, 0.5);
   background: linear-gradient(160deg, rgba(28, 138, 120, 0.1), rgba(255, 255, 255, 0.9) 55%);
+}
+
+/* Compact "what's new" strip under the hero. */
+.news {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.news-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+}
+
+.news-label {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--jade-deep);
+}
+
+.news-inner > p:last-child {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* Ownership / privacy promise — three bullets, no quotes. */
+.trust-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.trust-list li {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow);
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+/* Homepage FAQ uses native <details> so it works without JS. */
+.faq-list {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 720px;
+}
+
+.faq-list details {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.15rem 0.25rem;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary:focus-visible {
+  outline: 2px solid var(--jade-deep);
+  outline-offset: 2px;
+}
+
+.faq-list details p {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.cards-hint {
+  display: none;
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
 }
 
 .plans-actions {
@@ -1540,6 +1680,10 @@ textarea {
     scroll-snap-align: start;
   }
 
+  .cards-hint {
+    display: block;
+  }
+
   .header-row {
     flex-wrap: wrap;
   }
@@ -1551,7 +1695,7 @@ textarea {
   }
 }
 
-/* Respect reduced-motion: disable entrance animations */
+/* Respect reduced-motion: disable entrance animations, 3D phone tilt, and fades. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1560,12 +1704,21 @@ textarea {
   .hero-copy,
   .hero-shot,
   .info-card,
-  .panel {
+  .panel,
+  .showcase-panel.is-active {
     animation: none;
   }
 
   .btn,
-  .store-btn {
+  .store-btn,
+  .showcase-duo picture.phone-frame {
     transition: none;
+  }
+
+  .showcase-duo picture.phone-frame,
+  .showcase-duo picture.phone-frame:first-child,
+  .showcase-duo picture.phone-frame:nth-child(2),
+  .showcase-duo picture.phone-frame:hover {
+    transform: none;
   }
 }

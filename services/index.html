@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MapNoteHK — Services</title>
-  <meta name="description" content="MapNoteHK services and products." />
+  <title>功能與方案｜MapNoteHK</title>
+  <meta name="description" content="比較 MapNoteHK 免費與 Premium：物業時間線、規劃地圖、離線地圖、問專家 AI 與 PDF 簡報。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/site.css?v=20260829c" />
+  <link rel="stylesheet" href="../css/site.css?v=20260915a" />
   <!-- Favicon: IconOnly brand. Absolute /favicon.ico first so tab + omnibox share one URL;
        48×48 PNG for Google Search; ?v= busts hard browser/CDN caches. -->
   <link rel="icon" href="/favicon.ico?v=20260829a" sizes="any" />
@@ -18,8 +18,8 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260829a" />
   <link rel="manifest" href="/assets/site.webmanifest?v=20260829a" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip</a>
+<body data-title-key="services.metaTitle" data-desc-key="services.metaDesc">
+  <a class="skip-link" href="#main" data-i18n="nav.skip">跳到主要內容</a>
   <div id="site-header"></div>
 
   <main id="main" class="section">
@@ -42,7 +42,7 @@
         </article>
         <article class="panel">
           <h3 data-i18n="services.item3Title"></h3>
-          <p data-i18n="services.item3Body"></p>
+          <p data-i18n="services.item3Body">語音轉文字加快現場輸入；問專家可按角色瀏覽過千條 FAQ，AI 即時搵到最相關答案並附出處。知識庫由我哋持續更新來源，跟住香港物業最新發展。印花稅、按揭計算機同土地查冊清單一按即用。</p>
           <p class="benefit" data-i18n="services.item3Benefit"></p>
         </article>
         <article class="panel">
@@ -109,9 +109,14 @@
                 <td data-i18n="services.compareAskP"></td>
               </tr>
               <tr>
-                <th scope="row" data-i18n="services.comparePolish"></th>
-                <td data-i18n="services.comparePolishF"></td>
-                <td data-i18n="services.comparePolishP"></td>
+                <th scope="row" data-i18n="services.comparePolish">AI 筆記潤飾</th>
+                <td data-i18n="services.comparePolishF">—</td>
+                <td data-i18n="services.comparePolishP">✓</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.comparePrefill">盤紙／圖片 AI 預填</th>
+                <td data-i18n="services.comparePrefillF">✓（每月上限）</td>
+                <td data-i18n="services.comparePrefillP">✓（更高上限）</td>
               </tr>
               <tr class="compare-group"><th colspan="3" data-i18n="services.compareGroup3"></th></tr>
               <tr>
@@ -125,12 +130,22 @@
                 <td data-i18n="services.compareNearbyP"></td>
               </tr>
               <tr>
-                <th scope="row" data-i18n="services.compareOzp"></th>
-                <td data-i18n="services.compareOzpF"></td>
-                <td data-i18n="services.compareOzpP"></td>
+                <th scope="row" data-i18n="services.compareOzp">OZP 分區圖則</th>
+                <td data-i18n="services.compareOzpF">✓</td>
+                <td data-i18n="services.compareOzpP">✓</td>
               </tr>
               <tr>
-                <th scope="row" data-i18n="services.compareAlerts"></th>
+                <th scope="row" data-i18n="services.compareOfflineNotes">離線翻睇已下載筆記</th>
+                <td data-i18n="services.compareOfflineNotesF">✓</td>
+                <td data-i18n="services.compareOfflineNotesP">✓</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareOfflineMap">全港離線地圖（官方底圖）</th>
+                <td data-i18n="services.compareOfflineMapF">—</td>
+                <td data-i18n="services.compareOfflineMapP">✓</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="services.compareAlerts">規劃通知</th>
                 <td data-i18n="services.compareAlertsF"></td>
                 <td data-i18n="services.compareAlertsP"></td>
               </tr>
@@ -166,8 +181,8 @@
     window.MapNotePage = { base: '../', active: 'services' };
   </script>
   <script src="../js/site-config.js?v=20260823a"></script>
-  <script src="../js/i18n.js?v=20260829c"></script>
-  <script src="../js/chrome.js?v=20260829a"></script>
-  <script src="../js/site.js?v=20260823a"></script>
+  <script src="../js/i18n.js?v=20260915b"></script>
+  <script src="../js/chrome.js?v=20260915a"></script>
+  <script src="../js/site.js?v=20260915a"></script>
 </body>
 </html>
