@@ -43,6 +43,22 @@ function setStatus(el, message, kind) {
 }
 
 /**
+ * Toggles a submit button's loading/disabled state during async POST.
+ * Input: the form and whether it is waiting. Output: void.
+ * @param {HTMLFormElement} form
+ * @param {boolean} waiting
+ * @returns {void}
+ */
+function setSubmitWaiting(form, waiting) {
+  const submit = form.querySelector('[type="submit"]');
+  if (!(submit instanceof HTMLButtonElement) && !(submit instanceof HTMLInputElement)) {
+    return;
+  }
+  submit.disabled = waiting;
+  submit.classList.toggle('is-loading', waiting);
+}
+
+/**
  * Binds contact and account-deletion forms if present on the page.
  * @returns {void}
  */
@@ -76,6 +92,7 @@ function MapNoteFormsInit() {
       }
 
       const payload = { form: 'contact', name, email, message };
+      setSubmitWaiting(contactForm, true);
       try {
         await postForm(cfg.contactEndpoint, payload);
         setStatus(status, window.MapNoteSite.t('contact.success', langOf()), 'ok');
@@ -83,6 +100,8 @@ function MapNoteFormsInit() {
       } catch (err) {
         console.warn('[MapNoteHK contact]', err);
         setStatus(status, window.MapNoteSite.t('contact.error', langOf()), 'err');
+      } finally {
+        setSubmitWaiting(contactForm, false);
       }
     });
   }
@@ -107,6 +126,7 @@ function MapNoteFormsInit() {
       }
 
       const payload = { form: 'launch-notify', email, submittedAt: new Date().toISOString() };
+      setSubmitWaiting(notifyForm, true);
       try {
         await postForm(cfg.notifyEndpoint, payload);
         setStatus(status, window.MapNoteSite.t('home.notifySuccess', langOf()), 'ok');
@@ -114,6 +134,8 @@ function MapNoteFormsInit() {
       } catch (err) {
         console.warn('[MapNoteHK launch-notify]', err);
         setStatus(status, window.MapNoteSite.t('home.notifyError', langOf()), 'err');
+      } finally {
+        setSubmitWaiting(notifyForm, false);
       }
     });
   }
@@ -137,6 +159,7 @@ function MapNoteFormsInit() {
         detail: String(fd.get('detail') || ''),
         submittedAt: new Date().toISOString(),
       };
+      setSubmitWaiting(deleteForm, true);
       try {
         await postForm(cfg.accountDeletionEndpoint, payload);
         setStatus(status, window.MapNoteSite.t('delete.success', langOf()), 'ok');
@@ -144,6 +167,8 @@ function MapNoteFormsInit() {
       } catch (err) {
         console.warn('[MapNoteHK account-deletion]', err);
         setStatus(status, window.MapNoteSite.t('delete.error', langOf()), 'err');
+      } finally {
+        setSubmitWaiting(deleteForm, false);
       }
     });
   }

@@ -56,8 +56,17 @@ function applyI18n(lang) {
   }
   const descKey = document.body.getAttribute('data-desc-key');
   const metaDesc = document.querySelector('meta[name="description"]');
+  const descText = descKey ? t(descKey, lang) : '';
   if (descKey && metaDesc) {
-    metaDesc.setAttribute('content', t(descKey, lang));
+    metaDesc.setAttribute('content', descText);
+  }
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (titleKey && ogTitle) {
+    ogTitle.setAttribute('content', t(titleKey, lang));
+  }
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (descKey && ogDesc && descText) {
+    ogDesc.setAttribute('content', descText);
   }
 
   document.querySelectorAll('[data-set-lang]').forEach((btn) => {
@@ -245,11 +254,29 @@ function initFeatureShowcase() {
   });
 }
 
+/**
+ * Pauses looping hero video when the visitor asked for reduced motion.
+ * CSS cannot stop <video autoplay loop>; this is the matching JS gate.
+ * Input: none. Output: void.
+ * @returns {void}
+ */
+function pauseHeroVideoIfReducedMotion() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) return;
+  document.querySelectorAll('.hero-video').forEach((node) => {
+    if (!(node instanceof HTMLVideoElement)) return;
+    node.pause();
+    node.removeAttribute('autoplay');
+    node.loop = false;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   window.MapNoteChrome.renderChrome();
   bindLangButtons();
   applyI18n(getLang());
   initFeatureShowcase();
+  pauseHeroVideoIfReducedMotion();
   if (typeof window.MapNoteFormsInit === 'function') {
     window.MapNoteFormsInit();
   }

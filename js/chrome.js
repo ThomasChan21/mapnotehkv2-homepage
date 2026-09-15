@@ -42,12 +42,10 @@ function renderChrome() {
         </a>
         <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" data-i18n="nav.menu">Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
-          <a href="${siteHref(base, '')}" data-nav="home" data-i18n="nav.home">Home</a>
-          <a href="${siteHref(base, 'services/')}" data-nav="services" data-i18n="nav.services">Services</a>
-          <a href="${siteHref(base, 'about/')}" data-nav="about" data-i18n="nav.about">About</a>
-          <a href="${siteHref(base, 'contact/')}" data-nav="contact" data-i18n="nav.contact">Contact</a>
-          <a href="${siteHref(base, 'privacy/')}" data-nav="privacy" data-i18n="nav.privacy">Privacy</a>
-          <a href="${siteHref(base, 'terms/')}" data-nav="terms" data-i18n="nav.terms">Terms</a>
+          <a href="${siteHref(base, '')}" data-nav="home" data-i18n="nav.home">首頁</a>
+          <a href="${siteHref(base, 'services/')}" data-nav="services" data-i18n="nav.services">功能與方案</a>
+          <a href="${siteHref(base, 'about/')}" data-nav="about" data-i18n="nav.about">關於我們</a>
+          <a href="${siteHref(base, 'contact/')}" data-nav="contact" data-i18n="nav.contact">聯絡我們</a>
         </nav>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language">
