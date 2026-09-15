@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MapNoteHK 地圖筆記｜一個物業，一條時間線</title>
   <meta name="description" content="MapNoteHK 即將登場：建基於香港地政總署官方地圖的物業筆記 App — 一個物業，一條時間線，考察、議價、客戶記錄 30 秒釘上地圖。代理、投資者、資產管理人、買家租客都適用，配合廣東話語音輸入、問專家 AI、規劃申請圖層與 PDF 簡報。" />
-  <meta property="og:title" content="MapNoteHK 地圖筆記" />
-  <meta property="og:image" content="./assets/og-image.jpg" />
+  <link rel="canonical" href="https://mapnotehk.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mapnotehk.com/" />
+  <meta property="og:title" content="MapNoteHK 地圖筆記｜一個物業，一條時間線" />
+  <meta property="og:description" content="MapNoteHK 即將登場：建基於香港地政總署官方地圖的物業筆記 App — 一個物業，一條時間線，考察、議價、客戶記錄 30 秒釘上地圖。" />
+  <meta property="og:image" content="https://mapnotehk.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/site.css?v=20260829c" />
+  <link rel="stylesheet" href="./css/site.css?v=20260915a" />
   <!-- Favicon: IconOnly brand. Absolute /favicon.ico first so tab + omnibox share one URL;
        48×48 PNG for Google Search; ?v= busts hard browser/CDN caches. -->
   <link rel="icon" href="/favicon.ico?v=20260829a" sizes="any" />
@@ -21,7 +26,7 @@
   <link rel="manifest" href="/assets/site.webmanifest?v=20260829a" />
 </head>
 <body data-title-key="meta.homeTitle" data-desc-key="meta.homeDesc">
-  <a class="skip-link" href="#main">Skip</a>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">跳到主要內容</a>
   <div id="site-header"></div>
 
   <main id="main">
@@ -29,22 +34,21 @@
     <section class="hero" aria-label="Hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-i18n="home.heroBadge"></span></p>
+          <p class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-i18n="home.heroBadge">全新推出 · 即將上架</span></p>
           <!-- Pain hook from the poster: a question line above the brand H1 -->
-          <p class="hero-pain" data-i18n="home.heroPain"></p>
-          <h1 data-i18n="home.heroTitle"></h1>
-          <p class="hero-lead" data-i18n="home.heroLead"></p>
-          <!-- site.js swaps these text CTAs for store badges when storeLinks are configured.
-               Pre-launch, the secondary CTA scrolls to the launch-notify band. -->
+          <p class="hero-pain" data-i18n="home.heroPain">資料散落，機會流失？</p>
+          <h1 data-i18n="home.heroTitle">一個物業，一條時間線。</h1>
+          <p class="hero-lead" data-i18n="home.heroLead">唯一建基於香港地政總署官方地圖的物業筆記 App。考察、議價、客戶記錄 30 秒釘上地圖，自動串成物業時間線 — 代理、投資者、資產管理人、買家租客，一個 App 各自用得著。</p>
+          <!-- Keep 探索功能 as the primary hero CTA; 上架通知我 stays secondary. -->
           <div class="hero-actions" id="hero-actions">
-            <a class="btn btn-primary" href="#features" data-i18n="home.ctaPrimary"></a>
-            <a class="btn btn-secondary" href="#notify-section" data-i18n="home.ctaSecondary"></a>
+            <a class="btn btn-primary" href="#features" data-i18n="home.ctaPrimary">探索功能</a>
+            <a class="btn btn-secondary" href="#notify-section" data-i18n="home.ctaSecondary">上架通知我</a>
           </div>
           <!-- PRD proof points under the CTAs: quick capture, one timeline, FAQ base -->
           <ul class="hero-stats">
-            <li><strong data-i18n="home.stat1Value"></strong><span data-i18n="home.stat1Label"></span></li>
-            <li><strong data-i18n="home.stat2Value"></strong><span data-i18n="home.stat2Label"></span></li>
-            <li><strong data-i18n="home.stat3Value"></strong><span data-i18n="home.stat3Label"></span></li>
+            <li><strong data-i18n="home.stat1Value">≤30 秒</strong><span data-i18n="home.stat1Label">快速記錄一則筆記</span></li>
+            <li><strong data-i18n="home.stat2Value">1 條時間線</strong><span data-i18n="home.stat2Label">每個物業由考察到成交</span></li>
+            <li><strong data-i18n="home.stat3Value">1,000+</strong><span data-i18n="home.stat3Label">問專家 AI 知識庫</span></li>
           </ul>
         </div>
         <!-- App demo loop in place of a static screenshot: muted autoplay is required for mobile -->
@@ -69,13 +73,22 @@
       </div>
     </section>
 
+    <!-- Compact shipped-work strip — not a changelog, just the three headlines. -->
+    <section class="news" aria-label="What’s new">
+      <div class="container news-inner">
+        <p class="news-label" data-i18n="home.newsLabel">今期更新</p>
+        <p data-i18n="home.newsBody">統一物業時間線 · Premium 全港離線地圖 · 問專家按角色瀏覽，答案附出處</p>
+      </div>
+    </section>
+
     <!-- Who it's for (v6): one property timeline serves four roles — each card
          names the role, its daily pain, and the feature that removes it -->
     <section class="section audience" aria-label="Who it's for">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="home.audienceTitle"></h2>
-          <p data-i18n="home.audienceLead"></p>
+          <h2 data-i18n="home.audienceTitle">為誰而設</h2>
+          <p data-i18n="home.audienceLead">代理、投資者、資產管理人、買家租客 — 同一條物業時間線，解決唔同角色嘅痛點。</p>
+          <p class="cards-hint" data-i18n="home.audienceHint">滑動睇更多角色</p>
         </div>
         <div class="cards-grid">
           <article class="info-card" style="--tc: #0369a1">
@@ -120,8 +133,8 @@
     <section class="section unified" aria-label="Unified property note">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="home.unifiedTitle"></h2>
-          <p data-i18n="home.unifiedLead"></p>
+          <h2 data-i18n="home.unifiedTitle">一個物業，一條時間線</h2>
+          <p data-i18n="home.unifiedLead">每個物業一個檔案；考察同議價自動排上時間線，由研究到成交一目了然。</p>
         </div>
         <div class="cards-grid">
           <article class="info-card" style="--tc: #0369a1">
@@ -142,90 +155,104 @@
             <span class="info-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" /></svg>
             </span>
-            <h3 data-i18n="home.unified3Title"></h3>
-            <p data-i18n="home.unified3Body"></p>
+            <h3 data-i18n="home.unified3Title">客戶連結，私隱優先</h3>
+            <p data-i18n="home.unified3Body">客戶獨立管理、預設私密，需要時先連上物業 — 你嘅客戶永遠屬於你。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Feature showcase: real app screenshots, alternating rows -->
+    <!-- Trust band: v6 ownership promise — private notebook, not a marketplace. -->
+    <section class="section trust" aria-label="Data ownership">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="home.trustTitle">你的資料屬於你</h2>
+          <p data-i18n="home.trustLead">MapNoteHK 是你的私人現場筆記，不是盤源市場。客戶與成交預設私密，我們不會轉售，也不會用來同你競爭。</p>
+        </div>
+        <ul class="trust-list">
+          <li data-i18n="home.trust1">預設私密 — 物業、客戶、議價只屬你</li>
+          <li data-i18n="home.trust2">不是 lead 市場 — 沒有公開客戶目錄</li>
+          <li data-i18n="home.trust3">可隨時匯出與刪除帳戶及相關資料</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Feature showcase: real app screenshots; map/timeline leads because
+         that is the v6 story — planning stays in the switcher, not first. -->
     <section class="section" id="features" aria-label="Features">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="home.featuresTitle"></h2>
-          <p data-i18n="home.featuresLead"></p>
+          <h2 data-i18n="home.featuresTitle">為現場工作而設的功能</h2>
+          <p data-i18n="home.featuresLead">由落區睇樓到匯報分享，每個功能都圍繞你嘅物業記錄而設。</p>
         </div>
 
         <!-- Feature switcher: pick a feature on the left, see the full app
              screenshot on the right. All five titles stay visible; one tap
              swaps the screenshot — nothing is cropped away. -->
         <div class="showcase" id="feature-showcase">
-          <div class="showcase-list" role="tablist" data-i18n-aria-label="home.showcaseLabel" aria-label="App features">
-            <!-- Planning intelligence leads: the 90% survey-scoring feature
-                 (progress report Slide 11) opens the showcase, not map notes -->
-            <button type="button" class="showcase-item is-active" role="tab" id="tab-f2" aria-controls="panel-f2" aria-selected="true">
+          <div class="showcase-list" role="tablist" data-i18n-aria-label="home.showcaseLabel" aria-label="App 功能預覽">
+            <!-- Map + timeline leads: matches the v6 hero story. -->
+            <button type="button" class="showcase-item is-active" role="tab" id="tab-f1" aria-controls="panel-f1" aria-selected="true">
               <span class="showcase-item-head">
-                <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
-                <span class="showcase-item-title" data-i18n="home.f2Title"></span>
+                <span class="tag tag-mix" data-i18n="home.tagFreePremium">免費 + Premium</span>
+                <span class="showcase-item-title" data-i18n="home.f1Title">筆記釘在香港官方地圖上</span>
               </span>
-              <span class="showcase-item-body" data-i18n="home.f2Body"></span>
+              <span class="showcase-item-body" data-i18n="home.f1Body">以地政總署地圖為底，附近學校、酒店與配套一開即睇。筆記跟住物業走。免費可離線翻睇已下載筆記；Premium 再下載全港離線地圖，地庫弱訊號都睇到底圖。</span>
             </button>
-            <button type="button" class="showcase-item" role="tab" id="tab-f1" aria-controls="panel-f1" aria-selected="false" tabindex="-1">
+            <button type="button" class="showcase-item" role="tab" id="tab-f2" aria-controls="panel-f2" aria-selected="false" tabindex="-1">
               <span class="showcase-item-head">
-                <span class="tag tag-free" data-i18n="home.tagFree"></span>
-                <span class="showcase-item-title" data-i18n="home.f1Title"></span>
+                <span class="tag tag-mix" data-i18n="home.tagFreePremium">免費 + Premium</span>
+                <span class="showcase-item-title" data-i18n="home.f2Title">城規會申請，地圖即睇</span>
               </span>
-              <span class="showcase-item-body" data-i18n="home.f1Body"></span>
+              <span class="showcase-item-body" data-i18n="home.f2Body">今年規劃申請個案與 OZP 分區圖則直接標記在地圖上；Premium 再解鎖規劃通知，高度放寬、改變用途，早人一步掌握。</span>
             </button>
             <button type="button" class="showcase-item" role="tab" id="tab-f3" aria-controls="panel-f3" aria-selected="false" tabindex="-1">
               <span class="showcase-item-head">
-                <span class="tag tag-free" data-i18n="home.tagFree"></span>
-                <span class="showcase-item-title" data-i18n="home.f3Title"></span>
+                <span class="tag tag-free" data-i18n="home.tagFree">免費</span>
+                <span class="showcase-item-title" data-i18n="home.f3Title">全部筆記，一搵就到</span>
               </span>
-              <span class="showcase-item-body" data-i18n="home.f3Body"></span>
+              <span class="showcase-item-body" data-i18n="home.f3Body">物業列表按階段、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在物業時間線內，不再散落 WhatsApp 與其他 App。</span>
             </button>
             <button type="button" class="showcase-item" role="tab" id="tab-f4" aria-controls="panel-f4" aria-selected="false" tabindex="-1">
               <span class="showcase-item-head">
-                <span class="tag tag-mix" data-i18n="home.tagFreePremium"></span>
-                <span class="showcase-item-title" data-i18n="home.f4Title"></span>
+                <span class="tag tag-mix" data-i18n="home.tagFreePremium">免費 + Premium</span>
+                <span class="showcase-item-title" data-i18n="home.f4Title">廣東話語音輸入 · 問專家 AI 即答</span>
               </span>
-              <span class="showcase-item-body" data-i18n="home.f4Body"></span>
+              <span class="showcase-item-body" data-i18n="home.f4Body">現場講完即轉文字。問專家可按角色瀏覽過千條 FAQ，AI 即時搵到最相關答案並附出處。</span>
             </button>
             <button type="button" class="showcase-item" role="tab" id="tab-f5" aria-controls="panel-f5" aria-selected="false" tabindex="-1">
               <span class="showcase-item-head">
-                <span class="tag tag-premium" data-i18n="home.tagPremium"></span>
-                <span class="showcase-item-title" data-i18n="home.f5Title"></span>
+                <span class="tag tag-premium" data-i18n="home.tagPremium">Premium</span>
+                <span class="showcase-item-title" data-i18n="home.f5Title">一鍵生成物業 PDF 簡報</span>
               </span>
-              <span class="showcase-item-body" data-i18n="home.f5Body"></span>
+              <span class="showcase-item-body" data-i18n="home.f5Body">相片、地址、呎吋、地圖自動排版成 PDF。住宅帶學校同交通配套，寫字樓用另一套附近設施。</span>
             </button>
           </div>
 
           <div class="showcase-stage">
-            <div class="showcase-panel is-active" role="tabpanel" id="panel-f2" aria-labelledby="tab-f2">
-              <!-- Planning applications: district pin map + case detail pair.
-                   First panel = no lazy loading on the lead screenshot. -->
-              <div class="showcase-duo">
-                <picture class="phone-frame">
-                  <source type="image/webp" srcset="./assets/feature-planning-pins-280.webp 280w, ./assets/feature-planning-pins-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-planning-pins-460.png" srcset="./assets/feature-planning-pins-280.png 280w, ./assets/feature-planning-pins-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2Alt" alt="" decoding="async" />
-                </picture>
-                <picture class="phone-frame">
-                  <source type="image/webp" srcset="./assets/feature-planning-detail-280.webp 280w, ./assets/feature-planning-detail-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-planning-detail-460.png" srcset="./assets/feature-planning-detail-280.png 280w, ./assets/feature-planning-detail-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2bAlt" alt="" loading="lazy" decoding="async" />
-                </picture>
-              </div>
-            </div>
-            <div class="showcase-panel" role="tabpanel" id="panel-f1" aria-labelledby="tab-f1" hidden>
-              <!-- Map note + layer overlays: two phone captures side by side -->
+            <div class="showcase-panel is-active" role="tabpanel" id="panel-f1" aria-labelledby="tab-f1">
+              <!-- Map note + layer overlays: first panel = no lazy load on the lead shot. -->
               <div class="showcase-duo">
                 <picture class="phone-frame">
                   <source type="image/webp" srcset="./assets/feature-map-280.webp 280w, ./assets/feature-map-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-map-460.png" srcset="./assets/feature-map-280.png 280w, ./assets/feature-map-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1Alt" alt="" loading="lazy" decoding="async" />
+                  <img src="./assets/feature-map-460.png" srcset="./assets/feature-map-280.png 280w, ./assets/feature-map-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1Alt" alt="App 截圖：釘在香港官方地圖上的筆記" decoding="async" />
                 </picture>
                 <picture class="phone-frame">
                   <source type="image/webp" srcset="./assets/feature-overlay-280.webp 280w, ./assets/feature-overlay-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
-                  <img src="./assets/feature-overlay-460.png" srcset="./assets/feature-overlay-280.png 280w, ./assets/feature-overlay-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1bAlt" alt="" loading="lazy" decoding="async" />
+                  <img src="./assets/feature-overlay-460.png" srcset="./assets/feature-overlay-280.png 280w, ./assets/feature-overlay-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f1bAlt" alt="App 截圖：地段界線、小一校網與配套圖層疊加顯示" loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            </div>
+            <div class="showcase-panel" role="tabpanel" id="panel-f2" aria-labelledby="tab-f2" hidden>
+              <!-- Planning applications: district pin map + case detail pair. -->
+              <div class="showcase-duo">
+                <picture class="phone-frame">
+                  <source type="image/webp" srcset="./assets/feature-planning-pins-280.webp 280w, ./assets/feature-planning-pins-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
+                  <img src="./assets/feature-planning-pins-460.png" srcset="./assets/feature-planning-pins-280.png 280w, ./assets/feature-planning-pins-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2Alt" alt="App 截圖：各區城規會規劃申請釘在地圖上" loading="lazy" decoding="async" />
+                </picture>
+                <picture class="phone-frame">
+                  <source type="image/webp" srcset="./assets/feature-planning-detail-280.webp 280w, ./assets/feature-planning-detail-460.webp 460w" sizes="(max-width: 860px) 42vw, 240px" />
+                  <img src="./assets/feature-planning-detail-460.png" srcset="./assets/feature-planning-detail-280.png 280w, ./assets/feature-planning-detail-460.png 460w" sizes="(max-width: 860px) 42vw, 240px" width="460" height="1024" data-i18n-alt="home.f2bAlt" alt="App 截圖：規劃申請個案詳情、申請用途與附件" loading="lazy" decoding="async" />
                 </picture>
               </div>
             </div>
@@ -277,23 +304,67 @@
     <section class="section plans" aria-label="Plans">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="home.plansTitle"></h2>
-          <p data-i18n="home.plansLead"></p>
+          <h2 data-i18n="home.plansTitle">免費開始，按需升級</h2>
+          <p data-i18n="home.plansLead">免費方案已涵蓋物業時間線筆記與規劃地圖；Premium 解鎖離線地圖與進階工具。</p>
         </div>
         <div class="plans-grid">
           <article class="plan-card">
-            <h3 data-i18n="home.plansFreeTitle"></h3>
-            <p class="plan-price" data-i18n="home.plansFreePrice"></p>
-            <p data-i18n="home.plansFreeBody"></p>
+            <h3 data-i18n="home.plansFreeTitle">Free 免費方案</h3>
+            <p class="plan-price" data-i18n="home.plansFreePrice">HK$0</p>
+            <ul class="plan-list">
+              <li data-i18n="home.plansFree1">物業時間線筆記（最多 30 則）</li>
+              <li data-i18n="home.plansFree2">規劃個案地圖、OZP 圖則、地段與配套圖層</li>
+              <li data-i18n="home.plansFree3">廣東話語音輸入（每月 5 次）</li>
+              <li data-i18n="home.plansFree4">每則筆記 3 張相片、3 份 PDF</li>
+              <li data-i18n="home.plansFree5">已下載筆記可離線翻睇（地圖底圖需網絡）</li>
+              <li data-i18n="home.plansFree6">盤紙圖片 AI 預填（每月有上限）</li>
+            </ul>
+            <a class="btn btn-secondary" href="./services/" data-i18n="home.plansCta">查看功能與方案</a>
           </article>
           <article class="plan-card is-premium">
-            <h3 data-i18n="home.plansProTitle"></h3>
-            <p class="plan-price" data-i18n="home.plansProPrice"></p>
-            <p data-i18n="home.plansProBody"></p>
+            <h3 data-i18n="home.plansProTitle">Premium</h3>
+            <p class="plan-price" data-i18n="home.plansProPrice">HK$98 / 月</p>
+            <ul class="plan-list">
+              <li data-i18n="home.plansPro1">筆記與附件無上限（每則 20 張相片、20 份 PDF，可加影片）</li>
+              <li data-i18n="home.plansPro2">全港離線地圖 — 地庫弱訊號都睇到底圖</li>
+              <li data-i18n="home.plansPro3">規劃通知、問專家專屬內容、AI 筆記潤飾</li>
+              <li data-i18n="home.plansPro4">PDF 簡報與團隊共享</li>
+              <li data-i18n="home.plansPro5">語音輸入無限；盤紙 AI 預填次數更高</li>
+            </ul>
+            <a class="btn btn-primary" href="./services/" data-i18n="home.plansCta">查看功能與方案</a>
           </article>
         </div>
-        <div class="plans-actions">
-          <a class="btn btn-secondary" href="./services/" data-i18n="home.plansCta"></a>
+      </div>
+    </section>
+
+    <!-- FAQ after plans: price, offline, privacy, Ask Expert — no social-proof quotes. -->
+    <section class="section home-faq" id="faq" aria-label="FAQ">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="home.faqTitle">常見問題</h2>
+          <p data-i18n="home.faqLead">收費、離線地圖、私隱同問專家，一次睇清。</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary data-i18n="home.faq1Q">免費方案包不包括官方地圖？</summary>
+            <p data-i18n="home.faq1A">包括。地政總署底圖、規劃個案、OZP 圖則同配套圖層都在免費方案。Premium 再加規劃通知同全港離線地圖。</p>
+          </details>
+          <details>
+            <summary data-i18n="home.faq2Q">點解 Premium 係每月 HK$98？</summary>
+            <p data-i18n="home.faq2A">Premium 解鎖現場最緊要用嘅進階工具：全港離線地圖、規劃通知、PDF 簡報、團隊共享、AI 潤飾，同埋更高嘅筆記／附件／語音／預填上限。</p>
+          </details>
+          <details>
+            <summary data-i18n="home.faq3Q">冇網絡可唔可以用地圖？</summary>
+            <p data-i18n="home.faq3A">免費可離線翻睇已下載嘅筆記。要喺地庫等弱訊號都睇到官方底圖，需要 Premium 下載全港離線地圖包。</p>
+          </details>
+          <details>
+            <summary data-i18n="home.faq4Q">客戶資料會唔會被平台拿走？</summary>
+            <p data-i18n="home.faq4A">唔會。MapNoteHK 係你嘅私人現場筆記，不是盤源市場。客戶同成交預設私密，我們唔會轉售或用來同你競爭。帳戶同資料可隨時刪除。</p>
+          </details>
+          <details>
+            <summary data-i18n="home.faq5Q">問專家同 FAQ 點樣用？</summary>
+            <p data-i18n="home.faq5A">可按代理、買家、租客、投資者、資產管理人瀏覽過千條 FAQ；AI 回答附出處。印花稅、按揭計算機同土地查冊清單都喺同一個分頁。專屬內容喺 Premium。</p>
+          </details>
         </div>
       </div>
     </section>
@@ -330,10 +401,10 @@
     window.MapNotePage = { base: './', active: 'home' };
   </script>
   <script src="./js/site-config.js?v=20260823a"></script>
-  <script src="./js/i18n.js?v=20260829c"></script>
-  <script src="./js/chrome.js?v=20260829a"></script>
+  <script src="./js/i18n.js?v=20260915a"></script>
+  <script src="./js/chrome.js?v=20260915a"></script>
   <!-- forms.js wires the launch-notify band; site.js calls MapNoteFormsInit when present -->
-  <script src="./js/forms.js?v=20260823a"></script>
-  <script src="./js/site.js?v=20260823a"></script>
+  <script src="./js/forms.js?v=20260915a"></script>
+  <script src="./js/site.js?v=20260915a"></script>
 </body>
 </html>
