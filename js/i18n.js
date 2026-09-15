@@ -44,12 +44,12 @@ window.MapNoteI18n = {
       'home.stat2Value': '1 條時間線',
       'home.stat2Label': '每個物業由考察到成交',
       'home.stat3Value': '1,000+',
-      'home.stat3Label': '問專家 AI 知識庫',
+      'home.stat3Label': '問專家 FAQ，持續更新',
       // Hero demo video (muted loop in place of a static screenshot).
       'home.heroVideoAria': 'MapNoteHK App 操作示範短片',
       // Compact "what's new" strip under the hero — names shipped work without a changelog page.
       'home.newsLabel': '今期更新',
-      'home.newsBody': '統一物業時間線 · Premium 全港離線地圖 · 問專家按角色瀏覽，答案附出處',
+      'home.newsBody': '統一物業時間線 · Premium 全港離線地圖 · 問專家知識庫由我哋持續更新',
       'home.storeSmall': '下載',
       'home.storeIos': 'App Store',
       'home.storeAndroid': 'Google Play',
@@ -107,9 +107,10 @@ window.MapNoteI18n = {
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
         '物業列表按階段、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在物業時間線內，不再散落 WhatsApp 與其他 App。',
+      // Ask Expert: RAG over a team-maintained FAQ set (not a generic web chatbot).
       'home.f4Title': '廣東話語音輸入 · 問專家 AI 即答',
       'home.f4Body':
-        '現場講完即轉文字。問專家可按代理、買家、租客、投資者、資產管理人瀏覽過千條 FAQ，AI 即時搵到最相關答案並附出處；印花稅、按揭計算機同土地查冊清單一按即用。盤紙截圖亦可 AI 預填資料欄。',
+        '現場講完即轉文字。問專家可按代理、買家、租客、投資者、資產管理人瀏覽過千條 FAQ，AI 即時搵到最相關答案並附出處。知識庫由我哋持續更新來源，跟住香港物業法規同實務走。印花稅、按揭計算機同土地查冊清單一按即用。盤紙截圖亦可 AI 預填資料欄。',
       'home.f5Title': '一鍵生成物業 PDF 簡報',
       'home.f5Body':
         '相片、地址、呎吋、地圖自動排版成 PDF。住宅帶學校同交通配套，寫字樓用另一套附近設施，即刻分享給客戶。',
@@ -136,6 +137,7 @@ window.MapNoteI18n = {
       'home.plansFree4': '每則筆記 3 張相片、3 份 PDF',
       'home.plansFree5': '已下載筆記可離線翻睇（地圖底圖需網絡）',
       'home.plansFree6': '盤紙圖片 AI 預填（每月有上限）',
+      'home.plansFreeAsk': '問專家 FAQ — 知識庫由我哋持續更新',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$98/month.
       'home.plansProPrice': 'HK$98 / 月',
@@ -162,7 +164,7 @@ window.MapNoteI18n = {
         '唔會。MapNoteHK 係你嘅私人現場筆記，不是盤源市場。客戶同成交預設私密，我們唔會轉售或用來同你競爭。帳戶同資料可隨時刪除。',
       'home.faq5Q': '問專家同 FAQ 點樣用？',
       'home.faq5A':
-        '可按代理、買家、租客、投資者、資產管理人瀏覽過千條 FAQ；AI 回答附出處。印花稅、按揭計算機同土地查冊清單都喺同一個分頁。專屬內容喺 Premium。',
+        '可按代理、買家、租客、投資者、資產管理人瀏覽過千條 FAQ；AI 回答附出處。知識庫由 MapNoteHK 團隊持續更新來源，跟住香港物業最新發展。印花稅、按揭計算機同土地查冊清單都喺同一個分頁。專屬內容喺 Premium。',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': '上架即裝，下次睇樓開始用。',
       'home.downloadBody': 'MapNoteHK 地圖筆記即將登陸 App Store 與 Google Play。',
@@ -187,7 +189,7 @@ window.MapNoteI18n = {
       'services.item2Body': '城規會規劃個案與 OZP 分區圖則標記在地圖上；Premium 加規劃通知。',
       'services.item2Benefit': '好處：周邊變化早人一步知道，減少手動搜尋。',
       'services.item3Title': '廣東話語音 · 問專家 AI',
-      'services.item3Body': '語音轉文字加快現場輸入；問專家可按角色瀏覽過千條 FAQ，AI 即時搵到最相關答案並附出處。印花稅、按揭計算機同土地查冊清單一按即用。',
+      'services.item3Body': '語音轉文字加快現場輸入；問專家可按角色瀏覽過千條 FAQ，AI 即時搵到最相關答案並附出處。知識庫由我哋持續更新來源，跟住香港物業最新發展。印花稅、按揭計算機同土地查冊清單一按即用。',
       'services.item3Benefit': '好處：少打字、內容更清晰，仍由你確認後才儲存。',
       'services.item4Title': 'PDF 簡報與團隊共享',
       'services.item4Body': 'Premium 一鍵生成物業 PDF 簡報；團隊共享筆記，內部協作更順。',
@@ -226,8 +228,8 @@ window.MapNoteI18n = {
       'services.compareVoiceF': '每月 5 次',
       'services.compareVoiceP': '無限',
       'services.compareAsk': '問專家 AI',
-      'services.compareAskF': '✓',
-      'services.compareAskP': '✓（含專屬內容）',
+      'services.compareAskF': '✓（持續更新）',
+      'services.compareAskP': '✓（專屬內容，持續更新）',
       'services.comparePolish': 'AI 筆記潤飾',
       'services.comparePolishF': '—',
       'services.comparePolishP': '✓',
@@ -277,7 +279,7 @@ window.MapNoteI18n = {
       'about.value1Title': '前線實用優先',
       'about.value1Body': '每個功能都先問：代理在現場會唔會用？唔會，就唔做。',
       'about.value2Title': '官方資料，香港為本',
-      'about.value2Body': '以地政總署官方地圖及城規會公開資料為底，你看到的資訊有據可查。',
+      'about.value2Body': '以地政總署官方地圖及城規會公開資料為底；問專家知識庫由我哋持續更新，跟住香港物業最新發展。',
       'about.value3Title': '你的資料屬於你',
       'about.value3Body': '筆記與客戶資料只屬於你；按 PDPO 處理，帳戶與資料可隨時刪除。',
       'about.value4Title': '與代理一起打磨',
@@ -376,12 +378,12 @@ window.MapNoteI18n = {
       'home.stat2Value': '1 timeline',
       'home.stat2Label': 'per property, viewing to closing',
       'home.stat3Value': '1,000+',
-      'home.stat3Label': 'Ask Expert FAQs, with sources',
+      'home.stat3Label': 'Ask Expert FAQs, kept current',
       // Hero demo video (muted loop in place of a static screenshot).
       'home.heroVideoAria': 'Short demo video of the MapNoteHK app in use',
       // Compact "what's new" strip under the hero — names shipped work without a changelog page.
       'home.newsLabel': 'What’s new',
-      'home.newsBody': 'Unified property timeline · Premium Hong Kong offline map · Ask Expert browse by role, with sources',
+      'home.newsBody': 'Unified property timeline · Premium Hong Kong offline map · Ask Expert sources we keep current',
       'home.storeSmall': 'Download on',
       'home.storeIos': 'App Store',
       'home.storeAndroid': 'Google Play',
@@ -439,9 +441,10 @@ window.MapNoteI18n = {
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
         'Filter properties by stage and district, or search by keyword. Site photos and PDFs attach straight to the property timeline — no more scattering across WhatsApp and other apps.',
+      // Ask Expert: RAG over a team-maintained FAQ set (not a generic web chatbot).
       'home.f4Title': 'Cantonese voice input · Ask Expert AI',
       'home.f4Body':
-        'Speak on site and get text. Browse 1,000+ FAQs by agent, buyer, renter, investor or asset manager — AI finds the most relevant answer with sources. Stamp-duty and mortgage calculators plus a land-search checklist are one tap away. Snap a particulars sheet to pre-fill fields.',
+        'Speak on site and get text. Browse 1,000+ FAQs by agent, buyer, renter, investor or asset manager — AI finds the most relevant answer with sources. We keep the knowledge base current as Hong Kong property rules and practice change. Stamp-duty and mortgage calculators plus a land-search checklist are one tap away. Snap a particulars sheet to pre-fill fields.',
       'home.f5Title': 'One-tap property PDF brochures',
       'home.f5Body':
         'Photos, address, specs and map auto-layout into a PDF. Flats get schools and transport; offices use a different amenity set. Share with clients on the spot.',
@@ -468,6 +471,7 @@ window.MapNoteI18n = {
       'home.plansFree4': '3 photos and 3 PDFs per note',
       'home.plansFree5': 'Downloaded notes readable offline (basemap needs a network)',
       'home.plansFree6': 'AI pre-fill from a particulars image (monthly cap)',
+      'home.plansFreeAsk': 'Ask Expert FAQs — sources we keep current',
       'home.plansProTitle': 'Premium',
       // Pricing decision: HK$98/month.
       'home.plansProPrice': 'HK$98 / month',
@@ -494,7 +498,7 @@ window.MapNoteI18n = {
         'No. MapNoteHK is your private field notebook, not a listing marketplace. Clients and deals are private by default. We do not resell them or use them to compete with you. You can delete the account and related data anytime.',
       'home.faq5Q': 'How do Ask Expert and the FAQ work?',
       'home.faq5A':
-        'Browse 1,000+ FAQs by agent, buyer, renter, investor or asset manager. AI answers cite sources. Stamp-duty and mortgage calculators and a land-search checklist live on the same tab. Exclusive content is on Premium.',
+        'Browse 1,000+ FAQs by agent, buyer, renter, investor or asset manager. AI answers cite sources. The MapNoteHK team maintains the sources so answers track Hong Kong property developments. Stamp-duty and mortgage calculators and a land-search checklist live on the same tab. Exclusive content is on Premium.',
       // Download band (badges rendered when store links are set in site-config.js).
       'home.downloadTitle': 'Get it at launch. Use it at your next viewing.',
       'home.downloadBody': 'MapNoteHK is launching soon on the App Store and Google Play.',
@@ -522,7 +526,7 @@ window.MapNoteI18n = {
       'services.item2Benefit': 'Benefit: know about neighbourhood change first — less manual searching.',
       'services.item3Title': 'Cantonese voice · Ask Expert AI',
       'services.item3Body':
-        'Speech-to-text speeds up field entry; Ask Expert browses 1,000+ FAQs by role and cites sources. Stamp-duty and mortgage calculators and a land-search checklist are one tap away.',
+        'Speech-to-text speeds up field entry; Ask Expert browses 1,000+ FAQs by role and cites sources. We keep the knowledge base current as Hong Kong property rules and practice change. Stamp-duty and mortgage calculators and a land-search checklist are one tap away.',
       'services.item3Benefit': 'Benefit: less typing, clearer notes — you approve before save.',
       'services.item4Title': 'PDF brochures & team sharing',
       'services.item4Body':
@@ -562,8 +566,8 @@ window.MapNoteI18n = {
       'services.compareVoiceF': '5 per month',
       'services.compareVoiceP': 'Unlimited',
       'services.compareAsk': 'Ask Expert AI',
-      'services.compareAskF': '✓',
-      'services.compareAskP': '✓ (incl. exclusive content)',
+      'services.compareAskF': '✓ (kept current)',
+      'services.compareAskP': '✓ (exclusive content, kept current)',
       'services.comparePolish': 'AI note polishing',
       'services.comparePolishF': '—',
       'services.comparePolishP': '✓',
@@ -613,7 +617,7 @@ window.MapNoteI18n = {
       'about.value1Title': 'Built for the field',
       'about.value1Body': 'Every feature starts with one question: will an agent actually use this on site? If not, we don’t build it.',
       'about.value2Title': 'Official data, Hong Kong first',
-      'about.value2Body': 'Built on the Lands Department basemap and Town Planning Board public records — information you can trace back to its source.',
+      'about.value2Body': 'Built on the Lands Department basemap and Town Planning Board public records. We also maintain Ask Expert sources as Hong Kong property rules and practice change.',
       'about.value3Title': 'Your data belongs to you',
       'about.value3Body': 'Your notes and client details are yours alone. Handled under the PDPO, with account and data deletion available anytime.',
       'about.value4Title': 'Shaped by agents',
