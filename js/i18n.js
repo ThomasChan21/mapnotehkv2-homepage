@@ -106,7 +106,7 @@ window.MapNoteI18n = {
         '今年規劃申請個案與 OZP 分區圖則直接標記在地圖上；Premium 再解鎖規劃通知，高度放寬、改變用途，早人一步掌握。',
       'home.f3Title': '全部筆記，一搵就到',
       'home.f3Body':
-        '物業列表按階段、地區篩選，關鍵字一搜即出；現場相片與 PDF 直接附在物業時間線內，不再散落 WhatsApp 與其他 App。',
+        '物業列表按階段篩選，關鍵字一搜即出；現場相片與 PDF 直接附在物業時間線內，不再散落 WhatsApp 與其他 App。',
       // Ask Expert: RAG over a team-maintained FAQ set (not a generic web chatbot).
       'home.f4Title': '廣東話語音輸入 · 問專家 AI 即答',
       'home.f4Body':
@@ -440,7 +440,7 @@ window.MapNoteI18n = {
         'Town Planning Board cases and OZP zoning plans pinned where they happen. Premium adds planning alerts — hear about height relaxations and change of use first.',
       'home.f3Title': 'Every note, easy to find',
       'home.f3Body':
-        'Filter properties by stage and district, or search by keyword. Site photos and PDFs attach straight to the property timeline — no more scattering across WhatsApp and other apps.',
+        'Filter properties by stage, or search by keyword. Site photos and PDFs attach straight to the property timeline — no more scattering across WhatsApp and other apps.',
       // Ask Expert: RAG over a team-maintained FAQ set (not a generic web chatbot).
       'home.f4Title': 'Cantonese voice input · Ask Expert AI',
       'home.f4Body':
