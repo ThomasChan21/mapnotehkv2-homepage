@@ -377,10 +377,10 @@ a:hover {
   color: white;
 }
 
-/* Larger rounded frame for the square demo clip. */
+/* Portrait frame cropped to the device so white margin does not shrink the phone. */
 .hero-shot {
   justify-self: center;
-  width: min(520px, 100%);
+  width: min(340px, 100%);
   overflow: hidden;
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -392,7 +392,7 @@ a:hover {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 5;
   object-fit: cover;
 }
 
@@ -1593,7 +1593,7 @@ textarea {
   }
 
   .hero-shot {
-    width: min(480px, 90vw);
+    width: min(300px, 86vw);
   }
 }
 
