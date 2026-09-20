@@ -89,7 +89,7 @@ window.MapNoteI18n = {
         'MapNoteHK 是你的私人現場筆記，不是盤源市場。客戶與成交預設私密，我們不會轉售，也不會用來同你競爭。',
       'home.trust1': '預設私密 — 物業、客戶、議價只屬你',
       'home.trust2': '不是 lead 市場 — 沒有公開客戶目錄',
-      'home.trust3': '可隨時匯出與刪除帳戶及相關資料',
+      'home.trust3': '可隨時刪除帳戶及相關資料',
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': '為現場工作而設的功能',
       'home.featuresLead': '由落區睇樓到匯報分享，每個功能都圍繞你嘅物業記錄而設。',
@@ -423,7 +423,7 @@ window.MapNoteI18n = {
         'MapNoteHK is your private field notebook — not a listing marketplace. Clients and deals are private by default. We do not resell them or use them to compete with you.',
       'home.trust1': 'Private by default — properties, clients and negotiations stay yours',
       'home.trust2': 'Not a lead marketplace — no public client directory',
-      'home.trust3': 'Export and delete your account and related data anytime',
+      'home.trust3': 'Delete your account and related data anytime',
       // Feature showcase rows (screenshots from the real app).
       'home.featuresTitle': 'Features built for the field',
       'home.featuresLead': 'From viewings to reporting and sharing, every feature is shaped around your property records.',
