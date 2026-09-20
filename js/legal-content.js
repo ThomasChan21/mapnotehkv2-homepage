@@ -477,7 +477,7 @@ window.MapNoteLegalContent = {
           "h": "11. Your Rights & Account Deletion",
           "p": [
             "Under the Hong Kong Personal Data (Privacy) Ordinance (PDPO), you have the right to request access to and correction of your personal data. You can update your profile details directly in the App at any time.",
-            "The App does not provide an in-app Export button. You may request a copy of personal data we hold about you by emailing support@mapnotehk.com.",
+            "You may request a copy of personal data we hold about you by emailing support@mapnotehk.com.",
             "You can request deletion of your account and associated data at any time via the account-deletion page (https://mapnotehk.com/account-deletion) or from the Account section in the App. Deleting the App without deleting your account does not erase server-side data."
           ],
           "b": []
@@ -609,7 +609,7 @@ window.MapNoteLegalContent = {
           "h": "11. 你的權利及刪除帳戶",
           "p": [
             "根據香港《個人資料（私隱）條例》（PDPO），你有權要求查閱及更正你的個人資料。你可隨時在應用程式內直接更新個人資料。",
-            "應用程式內沒有「匯出」按鈕。你可電郵 support@mapnotehk.com 要求帳戶資料副本。",
+            "如需帳戶資料副本，請電郵 support@mapnotehk.com。",
             "你可隨時透過刪除帳戶頁面（https://mapnotehk.com/account-deletion）或應用程式內的「帳戶」部分，申請刪除帳戶及相關資料。只刪除應用程式而不刪除帳戶，並不會清除伺服器上的資料。"
           ],
           "b": []
